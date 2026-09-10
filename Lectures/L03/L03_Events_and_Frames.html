@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Tim Thomay">
+  <meta name="dcterms.date" content="2026-09-01">
+  <title>PHY 208 · General Physics 4 – Events, Frames, and How to Measure Them</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-c38f885656c111dea1e214662b39c786.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Events, Frames, and How to Measure Them</h1>
+  <p class="subtitle">PHY 208 · Special Relativity · Lecture 3</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Tim Thomay
+</div>
+</div>
+</div>
+
+  <p class="date">2026-09-01</p>
+</section>
+<section id="before-we-start-presentation-pairs" class="slide level2">
+<h2>Before we start: presentation pairs</h2>
+<div class="housekeeping">
+<p><strong>Deadline: Thursday, end of class.</strong> The join button disappears at <strong>12:20</strong> — Brightspace enforces it. “Over the weekend” does not work.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="how-to-join">How to join</h3>
+<p><strong>Groups</strong> on the course navbar → <strong>View Available Groups</strong> → <strong>Join Group</strong></p>
+<p>Then <strong>tell your partner which group</strong> — they join the same one.</p>
+<p>Groups are named after physicists from this unit — Rømer, Bradley, Fizeau … Kennedy. Nothing distinguishes them; take whichever is free.</p>
+</div><div class="column" style="width:50%;">
+<h3 id="how-to-check">How to check</h3>
+<p>Go back to <strong>Groups</strong>.</p>
+<p>You should see <strong>both names</strong> in the group.</p>
+<p>One name means your partner has not joined — <strong>you are not paired</strong>.</p>
+</div></div>
+
+<aside><div>
+<p>No partner by Thursday? That is fine, and there is nothing to do — remaining students are paired based on early-semester performance, announced Tue Sep 8. Pairs reshuffle in October, so this is a seven-week arrangement.</p>
+</div></aside></section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="elicit">
+<p>Two observers moving relative to each other cannot agree about distances and times.</p>
+<p>Fine. But before we can say <em>how</em> they disagree —</p>
+</div>
+</section>
+<section id="thursdays-question" class="slide level2">
+<h2>Thursday’s question</h2>
+<div class="recap">
+<p>A rocket flies away from you at <span class="math inline">\(0.9c\)</span> and fires a laser pulse <strong>straight ahead</strong>.</p>
+<h3 id="how-fast-does-the-pulse-pull-away-from-the-rocket">How fast does the pulse pull away from the rocket?</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>pilot</strong> measures</th>
+<th><strong>you</strong> reckon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a)</strong></td>
+<td><span class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>(b)</strong></td>
+<td><span class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(0.1c\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>(c)</strong></td>
+<td><span class="math inline">\(0.1c\)</span></td>
+<td><span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>(d)</strong></td>
+<td><span class="math inline">\(0.1c\)</span></td>
+<td><span class="math inline">\(0.1c\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="of-you-said-c-and-c" class="slide level2">
+<h2>80% of you said <span class="math inline">\(c\)</span> and <span class="math inline">\(c\)</span></h2>
+<div id="fde57a7e" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-3-output-1.png" width="1006" height="115"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><em>“Light is always <span class="math inline">\(c\)</span>, so it must be <span class="math inline">\(c\)</span> for both.”</em> The first half is right.</p>
+</div>
+<div class="fragment">
+<div class="keyresult">
+<p><strong>(b)</strong> — pilot measures <span class="math inline">\(c\)</span>; in your frame the <strong>gap grows at</strong> <span class="math inline">\(0.1c\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="count-it-out-in-your-frame" class="slide level2">
+<h2>Count it out, in your frame</h2>
+<p>After <strong>1 second</strong>, measured by you:</p>
+<div id="cd5e90b4" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-4-output-1.png" width="1028" height="291"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>The gap opened by 0.1 light-seconds in 1 second. That is a <strong>rate of <span class="math inline">\(0.1c\)</span></strong> — and the pulse still moved a full light-second.</p>
+</div>
+</section>
+<section id="the-same-thing-without-any-light" class="slide level2">
+<h2>The same thing, without any light</h2>
+<div class="elicit">
+<p>Two cars leave a junction in <strong>opposite</strong> directions, each at 60 mph.</p>
+</div>
+<div class="fragment">
+<p>The distance between them grows at <strong>120 mph</strong> —</p>
+<p>but no car broke the speed limit.</p>
+</div>
+<div class="fragment">
+<div class="keyresult">
+<p>Nobody thinks 120 mph is a <em>speed of a car</em>. Same logic, same mistake.</p>
+</div>
+</div>
+</section>
+<section id="speed-of-what-measured-by-whom" class="slide level2">
+<h2>Speed of what, measured by whom?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="always-c">Always <span class="math inline">\(c\)</span></h3>
+<p>The pulse, measured by the <strong>pilot</strong>.</p>
+<p>The pulse, measured by <strong>you</strong>.</p>
+<p>Any light beam, any inertial frame.</p>
+</div><div class="column" style="width:50%;">
+<h3 id="not-a-speed-of-light">Not a speed of light</h3>
+<p>The <strong>gap</strong> between rocket and pulse: <span class="math inline">\(0.1c\)</span> in your frame.</p>
+<p>Two beams fired apart: the gap closes at <span class="math inline">\(2c\)</span> in your frame.</p>
+</div></div>
+<div class="fragment">
+<div class="keyresult">
+<p>Nothing <span class="wrong">travels</span> at <span class="math inline">\(0.1c\)</span> or <span class="math inline">\(2c\)</span> here. A gap is not an object.</p>
+</div>
+</div>
+<div class="fragment">
+<p>Both of you measure the pulse itself at exactly <span class="math inline">\(c\)</span> — even though one of you chases it at <span class="math inline">\(0.9c\)</span>. <strong>So what has to give?</strong></p>
+</div>
+</section>
+<section id="why-it-matters-the-100-m" class="slide level2">
+<h2>Why it matters: the 100 m</h2>
+<div class="columns">
+<div class="column" style="width:54%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Athlete</th>
+<th>Meet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>9.58</strong></td>
+<td>Bolt</td>
+<td>Berlin 2009</td>
+</tr>
+<tr class="even">
+<td>9.69</td>
+<td>Bolt</td>
+<td>Beijing 2008</td>
+</tr>
+<tr class="odd">
+<td>9.72</td>
+<td>Bolt</td>
+<td>New York 2008</td>
+</tr>
+<tr class="even">
+<td>9.72</td>
+<td>Powell</td>
+<td>Lausanne 2008</td>
+</tr>
+<tr class="odd">
+<td>9.74</td>
+<td>Powell</td>
+<td>Rieti 2007</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:44%;">
+<p><img data-src="img/sprint_start_london2012.jpg" class="photo" alt="Overhead view of the start of the London 2012 Olympic men's 100 m final: eight sprinters driving out of staggered starting blocks, with a white loudspeaker cable running to each block."></p>
+</div></div>
+<div class="fragment">
+<p>Sound crosses 100 m in <strong>0.29 s</strong> · light in <strong>330 ns</strong>.</p>
+<p>The sound delay is <span class="wrong">2.7× the gap</span> between first and second.</p>
+</div>
+</section>
+<section id="what-you-predicted-this-morning" class="slide level2">
+<h2>What you predicted this morning</h2>
+<p>Prep check 1: <em>name one everyday intuition that must break.</em> <strong>18 of you answered.</strong></p>
+<div id="e7a5de3a" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-5-output-1.png" width="1034" height="302"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="keyresult">
+<p><strong>Half of you named time.</strong> That is the right instinct — and it is not the thing that breaks <em>first</em>.</p>
+</div>
+</div>
+</section>
+<section id="two-of-you-went-further" class="slide level2">
+<h2>Two of you went further</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<blockquote>
+<p><em>“Either the distance <strong>or</strong> the time variable has to change.”</em></p>
+</blockquote>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p><em>“You would not be able to meet the family or friends you used to know.”</em></p>
+</blockquote>
+</div></div>
+<div class="fragment">
+<p>The first one has the whole argument in a sentence: <span class="math inline">\(v = d/t\)</span>, and if <span class="math inline">\(v\)</span> is nailed down, <strong>something else has to give</strong>.</p>
+</div>
+<div class="fragment">
+<div class="keyresult">
+<p>Today: what exactly is the <span class="math inline">\(d\)</span>, and what exactly is the <span class="math inline">\(t\)</span>?</p>
+</div>
+</div>
+</section>
+<section id="today-is-unglamorous-and-load-bearing" class="slide level2">
+<h2>Today is unglamorous and load-bearing</h2>
+<p>No paradoxes. No twins. No <span class="math inline">\(E = mc^2\)</span>.</p>
+<p>Instead: <strong>what does it actually mean to measure when and where something happened?</strong></p>
+
+<aside><div>
+<p>Every argument in the next five weeks runs on the machinery built today. The students who find simultaneity confusing in two weeks are almost always the ones who skipped this.</p>
+</div></aside></section>
+<section id="an-event" class="slide level2">
+<h2>An event</h2>
+<div class="keyresult">
+<p>An <strong>event</strong> is a single happening at a single place at a single moment.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:46%;">
+<p>Four numbers: <span class="math inline">\((t, x, y, z)\)</span></p>
+<ul>
+<li>Two particles collide</li>
+<li>A clock reads noon</li>
+<li>Light reaches a detector</li>
+<li>A firecracker’s <strong>first</strong> flash</li>
+</ul>
+</div><div class="column" style="width:52%;">
+<div id="968f3f44" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-6-output-1.png" width="676" height="192"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment">
+<p><em>“A firecracker explodes”</em> is <strong>not</strong> an event — milliseconds, centimetres.</p>
+</div>
+
+<aside><div>
+<p>Also not events: “the train” (an object, not a happening) · “3 pm” (a time, no place) · “the collision was elastic” (a description, not a happening).</p>
+</div></aside></section>
+<section id="what-a-reference-frame-is-not" class="slide level2">
+<h2>What a reference frame is <em>not</em></h2>
+<div class="keyresult">
+<p>A frame is <span class="wrong">not</span> a point of view.</p>
+<p>A frame is <span class="wrong">not</span> where somebody is standing.</p>
+</div>
+<div id="62fe0607" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-7-output-1.png" width="896" height="225"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-a-reference-frame-is" class="slide level2">
+<h2>What a reference frame <em>is</em></h2>
+<p>A <strong>latticework of rulers and synchronized clocks</strong>, filling all of space.</p>
+<div id="4452d750" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-8-output-1.png" width="617" height="412"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="why-this-construction-matters" class="slide level2">
+<h2>Why this construction matters</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>Naive picture</strong></p>
+<p>One observer, one clock, watching from a distance.</p>
+<p>Must correct for light travel time.</p>
+<p>Confuses <em>seeing</em> with <em>happening</em>.</p>
+</div><div class="column" style="width:48%;">
+<p><strong>Latticework</strong></p>
+<p>Clocks everywhere, each recording locally.</p>
+<p><span class="right">No corrections needed</span>.</p>
+<p>Data collected afterward at leisure.</p>
+</div></div>
+</section>
+<section id="now-the-hard-part" class="slide level2">
+<h2>Now the hard part</h2>
+<p>The lattice needs its clocks <strong>synchronized</strong>.</p>
+<p><br></p>
+<p>Two clocks, 300 m apart. How do you set them to the same time?</p>
+
+<aside><div>
+<p>You cannot carry one to the other — moving a clock changes what it reads, as we will see in L05. You need a signalling method, and every signal takes time.</p>
+</div></aside></section>
+<section id="einstein-synchronization" class="slide level2">
+<h2>Einstein synchronization</h2>
+<div id="04b3afdb" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L03_Events_and_Frames_files/figure-revealjs/cell-9-output-1.png" width="1127" height="368"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Flash a light at the <strong>midpoint</strong>. When it arrives, set both clocks to the same reading.</p>
+</section>
+<section id="section-1" class="slide level2 center">
+<h2></h2>
+<div class="concept">
+<p>You synchronize two clocks 300 m apart using a flash at the midpoint. Your friend, moving past at <span class="math inline">\(0.6c\)</span>, watches you do it.</p>
+<h3 id="does-your-friend-agree-the-clocks-are-synchronized">Does your friend agree the clocks are synchronized?</h3>
+<p><strong>(a)</strong> Yes — the procedure is symmetric</p>
+<p><strong>(b)</strong> No — she says one was set too early</p>
+<p><strong>(c)</strong> Only if she is also at the midpoint</p>
+<p><strong>(d)</strong> The question is meaningless</p>
+</div>
+<!-- ===== block_measuring_c (from Lectures/_shared/) =====
+     Replaces the former thin 'convention question' slide; the block
+     closes on the same one-way-speed point in full. Keep in sync with
+     the shared copy if that is edited. -->
+</section>
+<section id="how-fast-is-light-and-how-would-you-know" class="slide level2">
+<h2>How fast is light, and how would you know?</h2>
+<div class="elicit">
+<p>Galileo tried it. Two lanterns, two hilltops, two assistants, and a shutter.</p>
+<p>He concluded only that light is <em>“if not instantaneous, extraordinarily rapid.”</em></p>
+</div>
+<div class="fragment">
+<p>What would you need, to do better?</p>
+</div>
+</section>
+<section id="rømer-1676-the-first-number" class="slide level2">
+<h2>Rømer, 1676 — the first number</h2>
+<div class="columns">
+<div class="column" style="width:72%;">
+<p>Jupiter’s moon Io eclipses on a strict schedule.</p>
+<p>Except it <strong>runs late</strong> when Earth is far from Jupiter, and <strong>early</strong> when close.</p>
+</div><div class="column" style="width:26%;">
+<p><img data-src="img/romer.jpg" class="photo" alt="Painted portrait of the Danish astronomer Ole Rømer."></p>
+</div></div>
+<div id="5c89f410" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>  Extra distance across Earth's orbit : 2.992e+11 m
+  Accumulated delay Rømer measured    : 22 minutes
+
+  → c ≈ 2.267e+08 m/s
+    modern value  2.998e+08 m/s   (about 24% low)
+
+  Wrong by a quarter — and it settled the question that mattered:
+  light does not arrive instantly.</code></pre>
+</div>
+</div>
+</section>
+<section id="bradley-1728-aberration" class="slide level2">
+<h2>Bradley, 1728 — aberration</h2>
+<p>Starlight arrives <strong>tilted</strong> — Earth moves while the light comes down.</p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p>Like running through vertical rain: you tilt the umbrella forward.</p>
+</div><div class="column" style="width:26%;">
+<div id="9f0c4086" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>  tilt ≈ 20.5 arcsec
+  c = v/tan(θ)
+    ≈ 2.996e+08 m/s</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+<p><img data-src="img/bradley.jpg" class="photo" alt="Portrait of the astronomer James Bradley."></p>
+</div></div>
+
+<aside><div>
+<p>Bradley’s value was within about 1% — far better than Rømer’s, and from an effect nobody was looking for.</p>
+</div></aside></section>
+<section id="fizeau-and-foucault-bringing-it-to-the-lab" class="slide level2">
+<h2>Fizeau and Foucault — bringing it to the lab</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/fizeau.jpg" class="photo" alt="Portrait of Hippolyte Fizeau." width="88"></p>
+<p><strong>Fizeau, 1849</strong> — toothed wheel</p>
+<p>8 km to a mirror and back. <strong>313,300 km/s</strong></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/foucault.jpg" class="photo" alt="Portrait of Léon Foucault." width="88"></p>
+<p><strong>Foucault, 1850</strong> — rotating mirror</p>
+<p>Better precision — then light in <strong>water</strong>.</p>
+</div></div>
+
+<aside><div>
+<p>Light is <span class="wrong">slower</span> in water — Newton’s corpuscles required faster.</p>
+</div></aside></section>
+<section id="michelson-made-it-his-lifes-work" class="slide level2">
+<h2>Michelson made it his life’s work</h2>
+<div class="columns">
+<div class="column" style="width:72%;">
+<p>1879 — rotating mirror, improved · <strong>299,910 ± 50 km/s</strong></p>
+<p>1926 — Mt. Wilson to Mt. San Antonio, 35 km baseline · <strong>299,796 ± 4 km/s</strong></p>
+</div><div class="column" style="width:26%;">
+<p><img data-src="img/michelson.jpg" class="photo" alt="Portrait of Albert A. Michelson."></p>
+</div></div>
+
+<aside><div>
+<p>He was still refining the measurement when he died in 1931. The 1926 value is within 4 km/s of the modern one — a relative error of about <span class="math inline">\(10^{-5}\)</span>.</p>
+</div></aside></section>
+<section id="the-question-dissolves" class="slide level2">
+<h2>1983 — the question dissolves</h2>
+<div class="keyresult">
+<p>The metre is now <strong>defined</strong> as the distance light travels in <span class="math inline">\(1/299{,}792{,}458\)</span> of a second.</p>
+</div>
+<p>So <span class="math inline">\(c = 299{,}792{,}458\)</span> m/s — <span class="right">exactly</span>, by definition, with no uncertainty.</p>
+<p>You can no longer measure the speed of light.</p>
+<p>You measure <strong>lengths</strong> with it.</p>
+</section>
+<section id="the-catch-nobody-mentions" class="slide level2">
+<h2>The catch nobody mentions</h2>
+<p>Every method on the last five slides measured a <strong>round trip</strong>.</p>
+<ul>
+<li>Rømer — light out to Earth, but timed against a periodic source</li>
+<li>Fizeau, Foucault, Michelson — out to a mirror, and <strong>back</strong></li>
+<li>Modern interferometry — out and <strong>back</strong></li>
+</ul>
+<div class="keyresult">
+<p>We have never measured the <strong>one-way</strong> speed of light.</p>
+</div>
+<div class="fragment">
+<p>So why not put a clock at each end and time it one way?</p>
+</div>
+</section>
+<section id="convention-not-ignorance" class="slide level2">
+<h2>Convention, not ignorance</h2>
+<p>Einstein’s response: <strong>define</strong> the one-way speed to be <span class="math inline">\(c\)</span> in both directions.</p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<p>That is exactly what the midpoint-flash synchronization does — it <em>assumes</em> the two paths take equal time.</p>
+</div><div class="column" style="width:44%;">
+
+</div></div>
+<aside><div>
+<p>Not a gap in the theory. Every experimental prediction is unchanged whatever convention you adopt. But it is a choice, and knowing it is a choice is part of understanding what the theory claims.</p>
+</div></aside></section>
+<section id="why-not-just-carry-a-clock-over" class="slide level2">
+<h2>Why not just carry a clock over?</h2>
+<div class="elicit">
+<p>The obvious answer to synchronization: set two clocks side by side, then walk one of them 300 m down the track.</p>
+</div>
+<div class="keyresult">
+<p>This fails — and <em>how</em> it fails is the subject of L05.</p>
+</div>
+</section>
+<section id="you-are-the-lattice" class="slide level2">
+<h2>You are the lattice</h2>
+<div class="demo">
+<p><strong>Everyone: phone out → <a href="https://time.ms">time.ms</a>. You are a lattice point.</strong></p>
+<p>Read your <strong>Time Offset</strong> — in milliseconds — and the <strong>round-trip delay</strong>.</p>
+<p><strong>Predict first — write it in your notebook, before we compare:</strong></p>
+<ol type="1">
+<li><p>Your neighbours’ offsets match yours — <strong>yes or no?</strong></p></li>
+<li><p>If they differ, <strong>by how many ms</strong>? More or less than the time light needs to cross this room?</p></li>
+</ol>
+</div>
+
+<aside><div>
+<p>Then we read offsets down each row. Report <strong>your own</strong> clock — not the one at the front.</p>
+</div></aside></section>
+<section id="three-things-a-frame-is-not" class="slide level2">
+<h2>Three things a frame is not</h2>
+<div class="columns">
+<div class="column" style="width:32%;">
+<h3 id="not-a-person">Not a person</h3>
+<p>Nobody has to be watching. The lattice records whether or not anyone reads it.</p>
+</div><div class="column" style="width:32%;">
+<h3 id="not-a-place">Not a place</h3>
+<p>It fills <em>all</em> of space. There is no “where” the frame is.</p>
+</div><div class="column" style="width:32%;">
+<h3 id="not-a-view">Not a view</h3>
+<p>It measures. It does not see.</p>
+</div></div>
+<div class="fragment">
+<p>So — <strong>where is the train’s frame?</strong></p>
+</div>
+
+<aside><div>
+<p>“The frame of the train” means the lattice that moves with the train — clocks at every point, all along the track and beyond, at rest relative to the train.</p>
+</div></aside></section>
+<section id="reading-the-lattice-a-worked-case" class="slide level2">
+<h2>Reading the lattice: a worked case</h2>
+<p>A firecracker’s first flash — one event. Three lattice clocks are nearby.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Clock</th>
+<th>Position</th>
+<th>Reading at the flash</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(C_1\)</span></td>
+<td>at the firecracker</td>
+<td><strong>12.000000 s</strong></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(C_2\)</span></td>
+<td>300 m away</td>
+<td>12.000000 s (its own reading <em>later</em>, when light arrives)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_3\)</span></td>
+<td>900 m away</td>
+<td>12.000000 s (likewise)</td>
+</tr>
+</tbody>
+</table>
+<div class="keyresult">
+<p>The event’s time is <span class="math inline">\(t = 12.000000\)</span> s. Read off <span class="math inline">\(C_1\)</span> — the clock <span class="right">that was there</span>.</p>
+</div>
+</section>
+<section id="a-number-for-the-sceptics" class="slide level2">
+<h2>A number for the sceptics</h2>
+<p>Light covers <strong>30 cm in one nanosecond</strong>.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>Across this room (10 m): <strong>33 ns</strong></p>
+<p>Buffalo to New York (470 km): <strong>1.6 ms</strong></p>
+<p>Earth to Moon: <strong>1.3 s</strong></p>
+</div><div class="column" style="width:48%;">
+
+</div></div>
+<aside><div>
+<p>Grace Hopper handed out 30 cm wires and called them nanoseconds. It is still the best way to make <span class="math inline">\(c\)</span> feel finite rather than infinite.</p>
+</div></aside></section>
+<section id="where-this-leaves-us" class="slide level2">
+<h2>Where this leaves us</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>Settled today</strong></p>
+<p>An event is a happening: <span class="math inline">\((t,x,y,z)\)</span></p>
+<p>A frame is rulers + synchronized clocks</p>
+<p>Each event is read off the <em>local</em> clock</p>
+<p>Synchronization is a <strong>definition</strong></p>
+</div><div class="column" style="width:48%;">
+<p><strong>Open until Thursday</strong></p>
+<p>Does a <em>moving</em> observer agree the lattice is synchronized?</p>
+<p>You voted. Most of you said no.</p>
+<p>You were right — and it costs more than you think.</p>
+</div></div>
+</section>
+<section id="activity" class="slide level2">
+<h2>Activity</h2>
+<div class="activity">
+<p><strong>Self-check with a partner</strong> — events and reference frames</p>
+<p><strong>§II Events</strong> — classify: object, location, instant, or event?</p>
+<p><strong>§III Reference frames</strong> — the beeper and the horn.</p>
+<p>Then swap and mark each other.</p>
+<p><strong>Keep these pages</strong> — Milestone 1 builds on them.</p>
+</div>
+
+<aside><div>
+<p>Not your permanent partner — pairs are not fixed until next Tuesday. If you are still looking for one, this is a good way to find out who you work well with. Self-selection closes <strong>Thursday, end of class</strong>.</p>
+</div></aside></section>
+<section id="thursday" class="slide level2">
+<h2>Thursday</h2>
+<h3 id="the-relativity-of-simultaneity">The relativity of simultaneity</h3>
+<p>We return to the question you just voted on — and it turns out the answer breaks something you have believed your whole life.</p>
+<p><br></p>
+<p><strong>Reading:</strong> TW ch.&nbsp;3 · <strong>Watch:</strong> Khutoryansky, <em>Nature of Time and Simultaneity</em> (8 min)</p>
+
+<aside><div>
+<p>Optional, for the one-way speed question we left open: PBS Space Time, <em>The Speed of Light is NOT About Light</em> (12:46).</p>
+</div></aside></section>
+<section id="exit-ticket" class="slide level2">
+<h2>Exit ticket</h2>
+<div class="concept">
+<p>A classmate says: <em>“A reference frame is just where you’re standing and what you can see.”</em></p>
+<h3 id="in-one-or-two-sentences-what-is-wrong-with-that">In one or two sentences, what is wrong with that?</h3>
+</div>
+<div class="columns">
+<div class="column" style="width:66%;">
+<p><strong>Scan it, or find it on UB Learns.</strong> Due 11:59 tonight.</p>
+<p>Not graded, ever — I read these to decide what to spend class time on. <em>“I don’t follow this, and here is where I lost it”</em> is a useful answer.</p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/exit_qr.png" alt="QR code linking to today's exit ticket on UB Learns." width="150"></p>
+</div></div>
+</section>
+<section id="section-2" class="slide level2 smaller">
+<h2></h2>
+<p><strong>PHY 208 — Events, Frames, and How to Measure Them</strong> Tim Thomay · University at Buffalo · Fall 2026</p>
+<p>Course material licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+<p>Images retain their original licenses — see <code>img/CREDITS.md</code></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 800,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <!-- PHY 208 — unit mascot progress bar.
+         Included via `include-after-body` in each deck's front matter.
+         Set body class `unit-sr` or `unit-thermo` to pick the mascot. -->
+    <div id="phy-progress" data-unit="sr" aria-hidden="true">
+      <div class="track"><div class="fill"></div></div>
+      <div class="mascot"></div>
+      <div class="label"></div>
+    </div>
+
+    <script>
+    (function () {
+      function init() {
+        if (typeof Reveal === "undefined") { setTimeout(init, 120); return; }
+
+        var box    = document.getElementById("phy-progress");
+        var fill   = box.querySelector(".fill");
+        var mascot = box.querySelector(".mascot");
+        var label  = box.querySelector(".label");
+        var track  = box.querySelector(".track");
+
+        // Unit comes from the data attribute; also stamp <body> so the SCSS
+        // variables (--unit-accent, --mascot) resolve.
+        var u = (box.getAttribute("data-unit") || "sr").toLowerCase();
+        document.body.classList.add(u === "thermo" ? "unit-thermo" : "unit-sr");
+        var unit = u === "thermo" ? "Thermodynamics" : "Special Relativity";
+
+        function update() {
+          var idx   = Reveal.getSlidePastCount();
+          var total = Reveal.getTotalSlides() - 1;
+          var frac  = total > 0 ? idx / total : 0;
+
+          var r = track.getBoundingClientRect();
+          fill.style.width = (frac * 100) + "%";
+          mascot.style.left = (r.left + frac * r.width) + "px";
+          label.textContent = unit + " · " + (idx + 1) + " / " + (total + 1);
+        }
+
+        Reveal.on("slidechanged", update);
+        Reveal.on("ready", update);
+        window.addEventListener("resize", update);
+        update();
+      }
+      init();
+    })();
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

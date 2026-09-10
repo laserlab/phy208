@@ -1,0 +1,1577 @@
+[
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#before-we-start",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#before-we-start",
+    "title": "The Invariant Interval",
+    "section": "Before we start",
+    "text": "Before we start\n\nToday needs a device. One laptop or phone per pair, for the demonstration. Sit with your pair now.\nNotebook entry due 11:00 Tuesday — today’s demonstration. Prediction written before we run anything, as always.\nMilestone 1 due Tue Sep 29. Prep check 4 due Tue 10:30."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#tuesdays-exit-ticket",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#tuesdays-exit-ticket",
+    "title": "The Invariant Interval",
+    "section": "Tuesday’s exit ticket",
+    "text": "Tuesday’s exit ticket\n\n\nWhy does the position \\(x\\) appear in an equation for time?\n\n\nThe good answers all said the same thing: because simultaneity is frame-dependent. Two events at different \\(x\\) get different \\(t'\\) precisely because the frames disagree about which clocks are synchronised.\n\nAnd the loose answer to fix today: “because space and time are the same thing.”\nThey are mixed by a boost, not identified. One sign in the matrix keeps them apart, and that sign is today."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#tuesday-left-a-promise",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#tuesday-left-a-promise",
+    "title": "The Invariant Interval",
+    "section": "Tuesday left a promise",
+    "text": "Tuesday left a promise\n\n\nRotation\n\\[R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\\n                      \\sin\\theta & \\phantom{-}\\cos\\theta \\end{pmatrix}\\]\npreserves \\(x^{2} + y^{2}\\) — the length of the vector.\n\nBoost\n\\[\\Lambda = \\begin{pmatrix} \\cosh\\phi & -\\sinh\\phi \\\\\n                            -\\sinh\\phi & \\phantom{-}\\cosh\\phi \\end{pmatrix}\\]\npreserves ? — the thing I refused to name.\n\n\n\n\n\n\n\n\n\n\n\n\\(\\cos^{2} + \\sin^{2} = 1\\) → a sum is preserved.    \\(\\cosh^{2} - \\sinh^{2} = 1\\) → a difference is."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-demonstration-predict-first",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-demonstration-predict-first",
+    "title": "The Invariant Interval",
+    "section": "The demonstration: predict first",
+    "text": "The demonstration: predict first\n\nIn your pairs, on your own device. Open the page, enter your group name exactly as UB Learns spells it. You get your own pair of events — nobody else has your numbers.\n\n\nBefore you touch the slider, both of you write in your notebook:\n\nI am going to boost the frame to \\(0.90c\\). Of \\(\\Delta t\\), \\(\\Delta x\\) and \\(\\Delta s^{2} = \\Delta t^{2} - \\Delta x^{2}\\), which comes out unchanged? All three? None?\n\nCommit. Then press reveal.\n\nThen record three rows, at \\(v = 0\\), \\(0.60c\\), \\(0.90c\\):\n\\[\\Delta t \\qquad \\Delta x \\qquad \\gamma \\qquad \\Delta s^{2}\\]\nCopy the numbers by hand. They are your evidence."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#what-every-pair-just-found",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#what-every-pair-just-found",
+    "title": "The Invariant Interval",
+    "section": "What every pair just found",
+    "text": "What every pair just found\n\\[\\boxed{\\;\\Delta s^{2} = c^{2}\\Delta t^{2} - \\Delta x^{2}\\;}\\]\n\n\n   v/c        dt        dx        ds^2\n  0.00     3.000     1.000    8.000000\n  0.30     2.830     0.105    8.000000\n  0.60     3.000    -1.000    8.000000\n  0.90     4.818    -3.900    8.000000\n -0.75     5.669     4.914    8.000000\n\n\n\nBoth coordinates change in every frame. The combination does not, to every decimal place. Different pairs, different events, same finding."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#why-it-is-not-a-length",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#why-it-is-not-a-length",
+    "title": "The Invariant Interval",
+    "section": "Why it is not a length",
+    "text": "Why it is not a length\n\n\n\n\nrotation, in space\nboost, in spacetime\n\n\n\n\npreserves\n\\(x^{2} + y^{2}\\)\n\\(c^{2}t^{2} - x^{2}\\)\n\n\nthe sign\nalways positive\nany sign\n\n\ncurves of constant value\ncircles\nhyperbolae\n\n\nwhat it measures\ndistance\ninterval — a new thing\n\n\n\n\nThat minus sign is the difference between space and spacetime. It is not a distance with a typo: it can be positive, negative, or zero, and each case means something physical."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#three-signs-three-meanings",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#three-signs-three-meanings",
+    "title": "The Invariant Interval",
+    "section": "Three signs, three meanings",
+    "text": "Three signs, three meanings"
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#what-the-sign-protects",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#what-the-sign-protects",
+    "title": "The Invariant Interval",
+    "section": "What the sign protects",
+    "text": "What the sign protects\n\n\n\n\n\n\n\n\n\nseparation\n\\(\\Delta s^{2}\\)\ncan A cause B?\ndo frames agree on the order?\n\n\n\n\ntimelike\n\\(&gt; 0\\)\nyes\nyes — always\n\n\nlightlike\n\\(= 0\\)\nonly by light\nyes\n\n\nspacelike\n\\(&lt; 0\\)\nno\nno — order is frame-dependent\n\n\n\n\nThe two “no”s line up exactly. Order reverses only where nothing could have travelled — so no frame ever sees an effect precede its cause."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#proper-time-is-the-interval",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#proper-time-is-the-interval",
+    "title": "The Invariant Interval",
+    "section": "Proper time is the interval",
+    "text": "Proper time is the interval\n\n\n\n\n\n\n\n\n\nGo to the frame where both events happen at the same place — the one that rides along. There \\(\\Delta x' = 0\\), so \\(\\Delta s^{2} = c^{2}\\Delta\\tau^{2}\\).\n\nThe interval is the wristwatch time of whatever travels between the two events. \\(\\tau\\) from L05 was today’s invariant all along — we just did not have its name."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-longest-path-is-the-straight-one",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-longest-path-is-the-straight-one",
+    "title": "The Invariant Interval",
+    "section": "The longest path is the straight one",
+    "text": "The longest path is the straight one\n\n\n\n\n\n\n\n\n\nThe minus sign reverses the inequality: a detour through space costs proper time. Sitting still is the way to age the most."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-muon-one-last-time",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-muon-one-last-time",
+    "title": "The Invariant Interval",
+    "section": "The muon, one last time",
+    "text": "The muon, one last time\n\n\nground frame:  dt = 6.393 us   dx =   1907.0 m\nmuon frame:    dt = 0.761 us   dx =      0.0 m\n  ground:  ds^2 = 3.6641e+04 m^2   -&gt;  proper time 0.638 us\n  muon  :  ds^2 = 5.2059e+04 m^2   -&gt;  proper time 0.761 us\n\n\n\nTwo frames, two completely different stories, one interval — and it equals the muon’s own 2.2 μs, which is what actually decided whether it lived."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#nothing-is-absolute",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#nothing-is-absolute",
+    "title": "The Invariant Interval",
+    "section": "Nothing is absolute?",
+    "text": "Nothing is absolute?\n\n\n\n\n\n\n\nthe claim\nverdict\n\n\n\n\n“duration is relative”\ntrue\n\n\n“length is relative”\ntrue\n\n\n“simultaneity is relative”\ntrue\n\n\n“so nothing is absolute”\nfalse — the interval is, and so is every event\n\n\n\n\nRelativity is not the claim that everything is a matter of opinion. It is the discovery of what the frame-independent facts actually are — and they are the ones the physics is about."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#section-1",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#section-1",
+    "title": "The Invariant Interval",
+    "section": "",
+    "text": "Two events have \\(\\Delta s^{2} &lt; 0\\). In my frame A happens before B. Another observer, moving fast enough, measures B before A.\nDoes that let her use the pair to send a signal into her own past?\n(a) Yes, and that is a genuine inconsistency in the theory\n(b) Yes, but only for observers moving faster than \\(c\\), so it never happens\n(c) No — nothing could have travelled between those two events in the first place\n(d) No, because the reversal is an optical illusion caused by signal delay"
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-bound-is-on-information",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-bound-is-on-information",
+    "title": "The Invariant Interval",
+    "section": "The bound is on information",
+    "text": "The bound is on information\n\n\nA laser spot swept across the Moon easily exceeds \\(c\\).\n\n\nsweep 1 deg in 0.1 s\nspot speed = 6.709e+07 m/s = 0.22 c\n\n\nNothing is wrong. Every photon flew from Earth at \\(c\\); the “spot” is a sequence of unrelated arrivals.\n\n\n\n\ntravels faster than \\(c\\)?\ncarries information?\n\n\n\n\nlaser spot on the Moon\n✗\n\n\ncrossing point of shears\n✗\n\n\nphase velocity in a guide\n✗\n\n\ncosmological recession\n✗\n\n\n\n\n\nThe speed limit is not on motion. It is on causal influence — and that is precisely what \\(\\Delta s^{2} \\geq 0\\) encodes."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-scissors-and-why-nothing-is-at-the-crossing-point",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-scissors-and-why-nothing-is-at-the-crossing-point",
+    "title": "The Invariant Interval",
+    "section": "The scissors, and why nothing is at the crossing point",
+    "text": "The scissors, and why nothing is at the crossing point\n\n\n\n\n\n\n\n\n\nBlades of length \\(L\\) meeting at angle \\(\\theta\\) cross at \\(x = L/\\tan\\theta\\). As \\(\\theta \\to 0\\) the crossing point runs out without limit."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-statement-that-actually-holds",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-statement-that-actually-holds",
+    "title": "The Invariant Interval",
+    "section": "The statement that actually holds",
+    "text": "The statement that actually holds\n\n\nThe slogan\n\n“Nothing can travel faster than light.”\n\nFalse as stated — the spot and the crossing point both do.\n\nThe theorem\n\nNo causal influence propagates outside the light cone.\n\nTrue, and structural — it is what \\(\\Delta s^{2} \\geq 0\\) says.\n\n\n\n\n\n\n\n\n\n\n\nThe bound is on what can affect what — and \\(\\Delta s^{2}\\) is how spacetime encodes it."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#your-turn-classify-and-compute",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#your-turn-classify-and-compute",
+    "title": "The Invariant Interval",
+    "section": "Your turn: classify and compute",
+    "text": "Your turn: classify and compute\n\nIn your pairs, five minutes. For each pair of events, compute \\(\\Delta s^{2} = c^{2}\\Delta t^{2} - \\Delta x^{2}\\), say whether it is timelike, spacelike or lightlike, and answer the question in the last column.\n\n\n\n\n\n\n\n\n\n\n\\(\\Delta t\\)\n\\(\\Delta x\\)\nquestion\n\n\n\n\n1\n\\(2.0\\ \\mu\\)s\n300 m\ncould event 1 have caused event 2?\n\n\n2\n\\(1.0\\ \\mu\\)s\n600 m\ncan any frame reverse their order?\n\n\n3\n\\(2.0\\ \\mu\\)s\n599.6 m\nwhat does a clock riding between them read?\n\n\n\nRow 3 is the one to think about — check it before you trust it."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-three-rows-worked",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#the-three-rows-worked",
+    "title": "The Invariant Interval",
+    "section": "The three rows, worked",
+    "text": "The three rows, worked\n\n\n       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)\n1         599.6    300.0     2.695e+05   timelike     1.732\n2         299.8    600.0    -2.701e+05  spacelike       nan\n3         599.6    599.6     0.000e+00  lightlike       nan\n\n\n\nRow 3 is the trap: nearly lightlike, so a riding clock reads almost nothing — and no massive object could ride it at all."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#what-we-can-now-say-precisely",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#what-we-can-now-say-precisely",
+    "title": "The Invariant Interval",
+    "section": "What we can now say precisely",
+    "text": "What we can now say precisely\n\n\n\n\n\n\n\nL04 said\ntoday says\n\n\n\n\n“some pairs can be reordered”\n\\(\\Delta s^{2} &lt; 0\\), and only those\n\n\n“the light cone separates them”\nthe cone is \\(\\Delta s^{2} = 0\\)\n\n\n“causality survives”\nbecause reordering needs \\(\\Delta s^{2} &lt; 0\\), where no signal fits\n\n\n“proper time is what the muon has”\n\\(\\Delta\\tau = \\sqrt{\\Delta s^{2}}/c\\)\n\n\n\n\nSame four claims, now with a number behind each. That is what an invariant buys: pictures become computations."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#minkowski-1908",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#minkowski-1908",
+    "title": "The Invariant Interval",
+    "section": "Minkowski, 1908",
+    "text": "Minkowski, 1908\n\n\n\n“Henceforth space by itself, and time by itself, are doomed to fade away into mere shadows, and only a kind of union of the two will preserve an independent reality.”\n\nEinstein’s old mathematics teacher, three years after the 1905 paper, telling a room of natural scientists what the paper had actually been about.\n\n\n\n\n\nHe had called Einstein a “lazy dog” as a student. He also called this formulation “a revelation” — and Einstein initially dismissed the geometry as überflüssige Gelehrsamkeit, superfluous learnedness."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#tuesday",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#tuesday",
+    "title": "The Invariant Interval",
+    "section": "Tuesday",
+    "text": "Tuesday\nSpacetime diagrams\n\n\n\nWhat we get\nthe whole unit as one picture you can draw\n\n\nThe calibration\nthose hyperbolae you traced today become the ruler\n\n\nAlso Tuesday\npresentations round 1 begins\n\n\nPrep check 4\ndue Tue 10:30 — transformation & interval\n\n\nNotebook\ntoday’s demo entry due 11:00 Tuesday"
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#exit-ticket",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#exit-ticket",
+    "title": "The Invariant Interval",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nA student says: “Relativity proves that everything is relative and nothing is really true.”\nUsing today’s lecture, what is wrong with this? Name something that is not relative.\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#section-2",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#section-2",
+    "title": "The Invariant Interval",
+    "section": "",
+    "text": "PHY 208 — The Invariant Interval Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#before-we-start",
+    "href": "Lectures/L06/L06_Length_Contraction.html#before-we-start",
+    "title": "Length Contraction",
+    "section": "Before we start",
+    "text": "Before we start\n\nMilestone 1 is posted — events & reference frames. Due Tue Sep 29 on UB Learns. Pass / revise-once / miss; your ST-ERF pages from last Tuesday are the raw material — find them.\nAlso live: problem set 2, due Sun 11:59 pm · light-clock notebook entries were due 11:00 today — re-uploads are free until I grade."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#both-frames-honestly",
+    "href": "Lectures/L06/L06_Length_Contraction.html#both-frames-honestly",
+    "title": "Length Contraction",
+    "section": "Both frames, honestly",
+    "text": "Both frames, honestly\n\n\n\n\n\n\n\n\n\nground frame\nmuon frame\n\n\n\n\nmuon’s lifetime\n\\(\\gamma\\tau = 22\\ \\mu\\)s — dilated\n\\(\\tau = 2.2\\ \\mu\\)s — proper\n\n\natmosphere depth\n15 km — proper\n?\n\n\nmuon reaches ground\nyes\nmust be yes — same events\n\n\n\n\nWhether birth and landing are the same muon’s worldline is not a matter of frame. Only the story can differ — never the events."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#the-distance-is-what-gives",
+    "href": "Lectures/L06/L06_Length_Contraction.html#the-distance-is-what-gives",
+    "title": "Length Contraction",
+    "section": "The distance is what gives",
+    "text": "The distance is what gives\n\n\ngamma at 0.995c               = 10.0\natmosphere, ground frame      = 15.0 km  (proper)\natmosphere, muon frame        = 15.0/gamma = 1.5 km\ntime to cross it at 0.995c    = 5.0 us = 2.3 lifetimes\nsurviving:  e^(-2.3) = 10%   -- Tuesday's 10%, recovered\n\n\n\n\\[L = \\frac{L_0}{\\gamma}\\]\nA moving length is contracted — same \\(\\gamma\\), now in the denominator."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#proper-length-proper-time-the-pair",
+    "href": "Lectures/L06/L06_Length_Contraction.html#proper-length-proper-time-the-pair",
+    "title": "Length Contraction",
+    "section": "Proper length, proper time — the pair",
+    "text": "Proper length, proper time — the pair\n\n\n\n\n\n\n\n\n\n\ndefined as\nmeasured by\neveryone else gets\n\n\n\n\nproper time \\(\\tau\\)\ntime between two events\none clock at both events\nmore: \\(\\Delta t = \\gamma\\tau\\)\n\n\nproper length \\(L_0\\)\nlength of an object\nthe frame where it rests\nless: \\(L = L_0/\\gamma\\)\n\n\n\n\n\nProper time is the shortest time anyone measures; proper length is the longest length. Both are frame-invariant numbers everyone computes and agrees on."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#she-contracts-your-lab-right-back",
+    "href": "Lectures/L06/L06_Length_Contraction.html#she-contracts-your-lab-right-back",
+    "title": "Length Contraction",
+    "section": "She contracts your lab right back",
+    "text": "She contracts your lab right back\n\n\n\n\n\n\n\n\n\n\nYou measure her ship short. She measures your lab short. Symmetric — and both are correct, exactly like the clocks."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#what-measuring-a-moving-length-even-means",
+    "href": "Lectures/L06/L06_Length_Contraction.html#what-measuring-a-moving-length-even-means",
+    "title": "Length Contraction",
+    "section": "What “measuring a moving length” even means",
+    "text": "What “measuring a moving length” even means\n\n\n\n\n\n\n\n\n\n\nTwo marks — and they are only a length if they were made at the same time."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#contraction-is-simultaneity-in-disguise",
+    "href": "Lectures/L06/L06_Length_Contraction.html#contraction-is-simultaneity-in-disguise",
+    "title": "Length Contraction",
+    "section": "Contraction is simultaneity in disguise",
+    "text": "Contraction is simultaneity in disguise\n\n\n\n\n\n\n\n\n\nyour account\nthe train’s account\n\n\n\n\nthe two marks\nmade at 12:00:00 — simultaneous, by my lattice\nnot simultaneous — “you marked the nose first, then let the train run before marking the tail”\n\n\nthe result\n\\(L = L_0/\\gamma\\) — shorter, done\n“of course the marks came out short — nothing happened to my train”\n\n\n\n\nNo new postulate, no squashing force. Length contraction is the relativity of simultaneity, applied to rulers."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#only-along-the-motion",
+    "href": "Lectures/L06/L06_Length_Contraction.html#only-along-the-motion",
+    "title": "Length Contraction",
+    "section": "Only along the motion",
+    "text": "Only along the motion\n\n\n\n\n\n\n\n\n\nHeight and width are untouched — only the dimension along \\(v\\) contracts."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#the-scale-of-it",
+    "href": "Lectures/L06/L06_Length_Contraction.html#the-scale-of-it",
+    "title": "Length Contraction",
+    "section": "The scale of it",
+    "text": "The scale of it\n\n\nobject                       gamma          L/L0\nhigh-speed train          1.000000   1.000000000\nNew Horizons probe        1.000000   0.999999998\nmuon's atmosphere        10.012523   0.099874922\nLHC proton             7453.559961   0.000134164\n\n\n\nAn LHC proton, in the lab’s books, is a disc ~7000× thinner than it is wide. Not a metaphor — it is how the collision geometry is computed."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#section",
+    "href": "Lectures/L06/L06_Length_Contraction.html#section",
+    "title": "Length Contraction",
+    "section": "",
+    "text": "A 100 m train runs into a 100 m tunnel at high speed. In the tunnel’s frame the train is contracted, so it fits entirely inside — both doors could shut for an instant. In the train’s frame the tunnel is contracted.\nDoes it still fit?\n(a) Yes — fitting is a fact both must agree on\n(b) No — so one frame must be wrong\n(c) The train is destroyed, so (d) is impossible\n(d) No, and the two frames disagree about whether the doors were shut together"
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#the-tunnel-resolved",
+    "href": "Lectures/L06/L06_Length_Contraction.html#the-tunnel-resolved",
+    "title": "Length Contraction",
+    "section": "The tunnel, resolved",
+    "text": "The tunnel, resolved\n\n\n\n\n\n\n\n\n\n\n“Fits” = “both ends inside at the same time” — a simultaneity claim, not an event. Frames may disagree about it, and no door ever touches the train."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#one-muon-two-stories-with-real-data",
+    "href": "Lectures/L06/L06_Length_Contraction.html#one-muon-two-stories-with-real-data",
+    "title": "Length Contraction",
+    "section": "One muon, two stories — with real data",
+    "text": "One muon, two stories — with real data\n\n\n\nFrisch & Smith, 1963 — muons counted on Mt. Washington’s summit, then at sea level, 1907 m below: 563/hr → 408/hr (\\(v \\approx 0.995c\\), effective \\(\\gamma \\approx 8.4\\), \\(\\tau = 2.2\\ \\mu\\)s).\nSurvival: \\(N = N_0\\,e^{-t/\\text{lifetime}}\\)\n\n\n\nLeft half of the room — the ground’s story: transit time at \\(0.995c\\), survivors with the dilated lifetime \\(\\gamma\\tau\\) → sea-level rate.\nRight half — the muon’s story: contract the 1907 m, transit proper time, survivors with plain \\(\\tau\\) → rate. Then compare across the aisle — and check the classical answer while you wait."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#both-stories-one-answer",
+    "href": "Lectures/L06/L06_Length_Contraction.html#both-stories-one-answer",
+    "title": "Length Contraction",
+    "section": "Both stories, one answer",
+    "text": "Both stories, one answer\n\n\nground story:  t = 6.39 us of DILATED life 18.5 us -&gt; 563*e^-0.35 = 398/hr\nmuon story:    227 m at 0.995c = 0.76 us of PLAIN 2.2 us -&gt; 563*e^-0.35 = 398/hr\nmeasured:      408/hr        classical prediction: 31/hr\n\n\n\nTime dilation and length contraction are one effect, seen from two chairs. The frames share the events — the muon lands — and split the explanation."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#nothing-squashes",
+    "href": "Lectures/L06/L06_Length_Contraction.html#nothing-squashes",
+    "title": "Length Contraction",
+    "section": "Nothing squashes",
+    "text": "Nothing squashes\n\n\n\n\n\n\n\n\nthe claim\nwho measures it\nwhat it is\n\n\n\n\n“the ship is 44 m long”\nthe lab lattice\na correct measurement\n\n\n“the ship is 100 m long”\nthe crew\nits proper length — also correct\n\n\n“the hull is compressed”\nnobody\na property claim no frame verifies\n\n\n\n\nNo stress, no strain, no force along the hull. The crew notices nothing. Contraction is a relation between object and frame — not something that happens to the object."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#measured-is-not-photographed",
+    "href": "Lectures/L06/L06_Length_Contraction.html#measured-is-not-photographed",
+    "title": "Length Contraction",
+    "section": "Measured is not photographed",
+    "text": "Measured is not photographed\n\n\n\n\n\n\n\n\n\n\n\nA photograph collects light that arrives together — emitted at different times from different depths. A fast sphere photographs as a rotated sphere, not a flattened one. Measuring and seeing are different verbs — L03’s oldest lesson."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#the-man-who-almost-had-it",
+    "href": "Lectures/L06/L06_Length_Contraction.html#the-man-who-almost-had-it",
+    "title": "Length Contraction",
+    "section": "The man who almost had it",
+    "text": "The man who almost had it\n\n\n1892: Lorentz and FitzGerald propose that motion through the ether physically squeezes matter by exactly \\(1/\\gamma\\) — invented to rescue Michelson–Morley.\nRight formula. Wrong story.\n\n\n\n\n\nA physical squeeze would be one-sided — the “really moving” frame’s rods shrink. Einstein’s version is symmetric, needs no ether and no force, and follows from simultaneity alone."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#tuesdays-missing-ending-the-clocks-caught-up",
+    "href": "Lectures/L06/L06_Length_Contraction.html#tuesdays-missing-ending-the-clocks-caught-up",
+    "title": "Length Contraction",
+    "section": "Tuesday’s missing ending: the clocks caught up",
+    "text": "Tuesday’s missing ending: the clocks caught up\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\none tick\n9 192 631 770 swings\n\n\nNIST-F2\n1 s wrong in 300 Myr\n\n\n\n\n\n\nLaser cooling is pure optics — photons carry momentum, and enough of them stop an atom cold. Nobel 1997, Bill Phillips, NIST — the division where I did my postdoc."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#a-clock-built-from-nobel-prizes",
+    "href": "Lectures/L06/L06_Length_Contraction.html#a-clock-built-from-nobel-prizes",
+    "title": "Length Contraction",
+    "section": "A clock built from Nobel prizes",
+    "text": "A clock built from Nobel prizes\n\n\n\n\n\n\n\n\nyear\nfor\nwho\n\n\n\n\n1944\nmagnetic resonance — and with it, the atomic-clock idea\nRabi — Tuesday’s “who ordered that?” man\n\n\n1989\nthe interrogation method inside every cesium clock\nRamsey\n\n\n1997\nlaser cooling — cold, slow, watchable atoms\nChu · Cohen-Tannoudji · Phillips\n\n\n2005\nthe frequency comb — the gearbox to optical clocks\nHall · Hänsch\n\n\n2012\nquantum control of single trapped ions\nWineland\n\n\n\n\n\nWith that last generation, NIST watched a clock moving at 10 m/s run slow — bicycle speed. “Too small to ever notice” ended in 2010."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#what-this-week-actually-changed",
+    "href": "Lectures/L06/L06_Length_Contraction.html#what-this-week-actually-changed",
+    "title": "Length Contraction",
+    "section": "What this week actually changed",
+    "text": "What this week actually changed\n\n\n\n\n\n\n\n\n\nquantity\nat rest\nmoving past you\nsymmetric?\n\n\n\n\na clock’s tick\n\\(\\tau\\)\n\\(\\gamma\\tau\\) — slower\nyes — each sees the other slow\n\n\na rod’s length\n\\(L_0\\)\n\\(L_0/\\gamma\\) — shorter\nyes — each sees the other short\n\n\nthe mechanism\n—\nrelativity of simultaneity\none argument, two costumes"
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#when-does-the-math-start",
+    "href": "Lectures/L06/L06_Length_Contraction.html#when-does-the-math-start",
+    "title": "Length Contraction",
+    "section": "“When does the math start?”",
+    "text": "“When does the math start?”\nAsked after class Tuesday — and it is a fair question. We demolished absolute simultaneity without a single line of algebra.\n\n\n\n\n\n\n\nall we have used, L01–L06\nstill untouched\n\n\n\n\nlight at \\(c\\) for everyone — a postulate\nthe Lorentz transformation\n\n\none right triangle (Pythagoras)\nmatrices, four-vectors\n\n\nexponential decay, \\(N_0\\,e^{-t/\\tau}\\)\ncalculus\n\n\ndefinitions of measuring — mark, compare, at the same time\ntensors, metrics\n\n\n\n\n\nThat was not the warm-up before the physics. The arguments were the physics. \\(\\gamma\\) is the entire formula stock so far — and it came from a triangle."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#dont-take-my-word-for-it-annalen-der-physik-17-891-1905",
+    "href": "Lectures/L06/L06_Length_Contraction.html#dont-take-my-word-for-it-annalen-der-physik-17-891-1905",
+    "title": "Length Contraction",
+    "section": "Don’t take my word for it — Annalen der Physik 17, 891 (1905)",
+    "text": "Don’t take my word for it — Annalen der Physik 17, 891 (1905)\n\n\n§1, p. 893 — the definition. There is our train:\n\n\n\n§2, p. 897 — the punchline. And look what starts right below:\n\n\n\n\n“We must bear in mind that all our judgments in which time plays a role are always judgments about simultaneous events. If, for instance, I say ‘that train arrives here at 7 o’clock,’ I mean something like this: ‘the pointing of the small hand of my watch to 7 and the arrival of the train are simultaneous events.’”\n\n“So we see that we must not attach absolute meaning to the concept of simultaneity: two events which, viewed from one coordinate system, are simultaneous, can no longer be regarded as simultaneous when viewed from a system moving relative to it.” — and directly beneath it: §3, where the math starts."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#the-math-starts-tuesday",
+    "href": "Lectures/L06/L06_Length_Contraction.html#the-math-starts-tuesday",
+    "title": "Length Contraction",
+    "section": "The math starts Tuesday",
+    "text": "The math starts Tuesday\n\n\nThis week’s way\nThe train, the lightning, eight slides of argument → “B struck first, by \\(\\gamma vL/c^{2}\\).”\n\nTuesday’s way\n\\[t' = \\gamma\\left(t - \\frac{vx}{c^{2}}\\right),\\quad x' = \\gamma\\,(x - vt)\\]\n\n\nL04's lightning offset, one line: 0.75 us\n\n\n\n\nSame physics, industrialized: every thought experiment from L03–L06 becomes one line of algebra — and velocity addition, the speed limit, and the invariant interval come out as change."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#tuesday",
+    "href": "Lectures/L06/L06_Length_Contraction.html#tuesday",
+    "title": "Length Contraction",
+    "section": "Tuesday",
+    "text": "Tuesday\nThe Lorentz transformation\n\n\n\nWhat it is\nthe machine that does L04–L06 in one line\n\n\nBonus\nit is a matrix — MTH 309 students, your moment approaches\n\n\nPrep check 3\ndue Tue 10:30 — dilation & contraction\n\n\nProblem set 2\ndue Sun 11:59 pm"
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#exit-ticket",
+    "href": "Lectures/L06/L06_Length_Contraction.html#exit-ticket",
+    "title": "Length Contraction",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nA student says: “At \\(0.87c\\) a spaceship is measured at half its length — so the hull must be squeezed under enormous stress.”\nIn one or two sentences, what is wrong with this?\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L06/L06_Length_Contraction.html#section-1",
+    "href": "Lectures/L06/L06_Length_Contraction.html#section-1",
+    "title": "Length Contraction",
+    "section": "",
+    "text": "PHY 208 — Length Contraction Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#where-the-notebooks-stand",
+    "href": "Lectures/L04/L04_Simultaneity.html#where-the-notebooks-stand",
+    "title": "The Relativity of Simultaneity",
+    "section": "Where the notebooks stand",
+    "text": "Where the notebooks stand\n\n\n\nPrediction\nLanding. Almost everyone commits to something before the demo runs.\n\nObservation\nStrong. Particulars, sketches, first-attempt-vs-second.\n\nReconciliation\nStrongest of the three. And usually the hardest to keep doing.\n\n\n\n\nThe part that does the learning is the part you did best."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-trap-when-your-prediction-was-right",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-trap-when-your-prediction-was-right",
+    "title": "The Relativity of Simultaneity",
+    "section": "The trap: when your prediction was right",
+    "text": "The trap: when your prediction was right\n\nA prediction that matches feels finished. It is not.\nThe template still asks: what would have made it come out differently?\n\n\n\n“A different material.”\n\n\n\nThat answers a question nobody asked. The real one: which of my assumptions did this demo actually test?"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-a-good-entry-looks-like",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-a-good-entry-looks-like",
+    "title": "The Relativity of Simultaneity",
+    "section": "What a good entry looks like",
+    "text": "What a good entry looks like\n\nThe strongest entry was not the one that was right.\nIt was the one whose prediction was falsifiable in a useful way.\n\n\n\n“Refraction shouldn’t change once the table is done turning.”\n\n\n\nThat sentence forces you to watch during and after as separate events. It decides in advance what would count as being wrong."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#so-your-prediction-was-right.-now-what",
+    "href": "Lectures/L04/L04_Simultaneity.html#so-your-prediction-was-right.-now-what",
+    "title": "The Relativity of Simultaneity",
+    "section": "So your prediction was right. Now what?",
+    "text": "So your prediction was right. Now what?\n\nYou predicted no change. There was no change. Section 3 is not finished.\n\n\n\n\nInstead of “nothing to reconcile”\n\n\n\nAsk: what else would have produced exactly what I saw?\n\n\n\n\nTapping the table changed the pattern. Turning it did not.\nSo which did I actually test — the ether, or the table?"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-a-sketch-has-to-do",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-a-sketch-has-to-do",
+    "title": "The Relativity of Simultaneity",
+    "section": "What a sketch has to do",
+    "text": "What a sketch has to do\n\n\n[figure withheld from the public version]\n\n[figure withheld from the public version]\n\n\nBoth drew the apparatus well. Only one drew what the demo produced."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#two-practical-things",
+    "href": "Lectures/L04/L04_Simultaneity.html#two-practical-things",
+    "title": "The Relativity of Simultaneity",
+    "section": "Two practical things",
+    "text": "Two practical things\n\n\n\nPhotograph it flat, in daylight\nPortrait, from above, no shadow across the page. Dark pen beats pencil.\n\nName the file, name the demo\nLastname_Demo_p1of3. Fill in the Demonstration line at the top.\n\n\n\n\nOne dropbox for the whole unit — by mid-unit that is three or four files from you. Rolling upload, due 11:00 at the next meeting; re-uploading is free."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#section",
+    "href": "Lectures/L04/L04_Simultaneity.html#section",
+    "title": "The Relativity of Simultaneity",
+    "section": "",
+    "text": "Two lightning bolts strike the ends of a train.\nYou are on the platform. Your friend is on the train.\nYou say the strikes were simultaneous. Your friend says they were not."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#same-apparatus.-same-room.-different-reports.",
+    "href": "Lectures/L04/L04_Simultaneity.html#same-apparatus.-same-room.-different-reports.",
+    "title": "The Relativity of Simultaneity",
+    "section": "Same apparatus. Same room. Different reports.",
+    "text": "Same apparatus. Same room. Different reports.\n\n\n\n“The pattern did not change after moving 90°.”\n\n\n“It appeared to change the first time but did not.”\n\n\n\n“The pattern changed and fluctuated while it moved.”\n\n\n“Changed during the rotation, different after.”\n\n\n\n\nNobody misreported. Every one of these is correct."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-question-worth-stealing",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-question-worth-stealing",
+    "title": "The Relativity of Simultaneity",
+    "section": "The question worth stealing",
+    "text": "The question worth stealing\n\n\n“What if there is ether — but it just never gets windy?”\n\n\n\nThe Earth moves at \\(30\\) km/s. And in December it moves the other way."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#tuesdays-question-unresolved",
+    "href": "Lectures/L04/L04_Simultaneity.html#tuesdays-question-unresolved",
+    "title": "The Relativity of Simultaneity",
+    "section": "Tuesday’s question, unresolved",
+    "text": "Tuesday’s question, unresolved\nYou synchronized two clocks with a flash at the midpoint.\nYour friend, moving at \\(0.6c\\), said one was set too early.\n\nToday: she is right. And so are you."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-tuesday-gave-us",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-tuesday-gave-us",
+    "title": "The Relativity of Simultaneity",
+    "section": "What Tuesday gave us",
+    "text": "What Tuesday gave us\n\n\nA frame is a lattice of rulers and synchronized clocks.\nEach event is recorded by the local clock.\nSynchronization is a definition: midpoint flash, equal paths.\n\n\n\n\nEverything today is these three facts plus the second postulate. No new machinery."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-train",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-train",
+    "title": "The Relativity of Simultaneity",
+    "section": "The train",
+    "text": "The train\n\n\n\n\n\n\n\n\n\nLightning strikes both ends. Both of you are at the midpoint when it happens.\n\n\n\n\n\n\n\nThe strikes are events: one instant, one point at each end of the train."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#your-account-platform",
+    "href": "Lectures/L04/L04_Simultaneity.html#your-account-platform",
+    "title": "The Relativity of Simultaneity",
+    "section": "Your account (platform)",
+    "text": "Your account (platform)\nLight from A and light from B each travel half the train’s length to reach you.\nEqual distances. Equal speeds.\n\nThe two flashes reach you at the same instant.\nYou conclude: simultaneous."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#her-account-train",
+    "href": "Lectures/L04/L04_Simultaneity.html#her-account-train",
+    "title": "The Relativity of Simultaneity",
+    "section": "Her account (train)",
+    "text": "Her account (train)\nShe is moving toward B and away from A.\n\n\n\n\n\n\n\n\n\nThe light from B has less ground to cover. It arrives first."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#both-are-right",
+    "href": "Lectures/L04/L04_Simultaneity.html#both-are-right",
+    "title": "The Relativity of Simultaneity",
+    "section": "Both are right",
+    "text": "Both are right\n\n\nPlatform\nFlashes arrive together Equal distances → simultaneous\n\nTrain\nB arrives first Equal distances → B struck first\n\n\nThere is no fact of the matter about which came first.\n\n\n“But what REALLY happened?” — the question has no answer, any more than “which end of this train is really the front?”"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#a-new-kind-of-picture",
+    "href": "Lectures/L04/L04_Simultaneity.html#a-new-kind-of-picture",
+    "title": "The Relativity of Simultaneity",
+    "section": "A new kind of picture",
+    "text": "A new kind of picture\n\nStop drawing space. Start drawing space and time together.\n\n\n\n\n\n\n\n\n\n\n\nSitting still is a vertical line — you move through time, not space."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#light-sets-the-scale",
+    "href": "Lectures/L04/L04_Simultaneity.html#light-sets-the-scale",
+    "title": "The Relativity of Simultaneity",
+    "section": "Light sets the scale",
+    "text": "Light sets the scale\n\n\n\n\n\n\n\n\n\n\n\nChoose units where \\(c = 1\\) — seconds and light-seconds — and light runs at exactly 45°. That choice is what makes the picture worth drawing."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-simultaneous-looks-like",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-simultaneous-looks-like",
+    "title": "The Relativity of Simultaneity",
+    "section": "What “simultaneous” looks like",
+    "text": "What “simultaneous” looks like\n\n\n\n\n\n\n\n\n\n\n\nSimultaneous = level. One horizontal line is one moment of your time."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-man-who-drew-time",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-man-who-drew-time",
+    "title": "The Relativity of Simultaneity",
+    "section": "The man who drew time",
+    "text": "The man who drew time\n\n\n\n\nHermann Minkowski (1864–1909) — Einstein’s mathematics professor at ETH Zürich.\nSeptember 1908, Cologne: “Space by itself, and time by itself, are doomed to fade away into mere shadows.”\nDied four months later, at 44. Einstein first called the idea “superfluous learnedness” — then built general relativity on it."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#draw-your-own",
+    "href": "Lectures/L04/L04_Simultaneity.html#draw-your-own",
+    "title": "The Relativity of Simultaneity",
+    "section": "Draw your own",
+    "text": "Draw your own\n\nEveryone, on paper — four of you at the board.\n\nAxes: \\(t\\) up, \\(x\\) across. Units: seconds and light-seconds.\nYour own worldline — you are sitting still.\nA light flash from your position, both directions.\nMark one event: the door opens, now-ish, over there."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#two-pictures-one-light-line",
+    "href": "Lectures/L04/L04_Simultaneity.html#two-pictures-one-light-line",
+    "title": "The Relativity of Simultaneity",
+    "section": "Two pictures, one light line",
+    "text": "Two pictures, one light line\n\n\n\n\n\n\n\n\n\n\n\nDraw hers into yours: her light line lands on yours — her axes do not."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#section-1",
+    "href": "Lectures/L04/L04_Simultaneity.html#section-1",
+    "title": "The Relativity of Simultaneity",
+    "section": "",
+    "text": "Now watch it move — minkowski.html\nPredict first: as \\(v\\) grows, does A or B become earlier — and does the gold light line move?"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#section-3",
+    "href": "Lectures/L04/L04_Simultaneity.html#section-3",
+    "title": "The Relativity of Simultaneity",
+    "section": "",
+    "text": "Two events are spacelike separated — too far apart for light to travel between them.\nCan an observer see them in reverse order?\n(a) No — that would violate causality\n(b) Yes, and it violates nothing\n(c) Only for \\(v &gt; c\\)\n(d) Only if they are simultaneous in some frame"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#putting-numbers-on-it",
+    "href": "Lectures/L04/L04_Simultaneity.html#putting-numbers-on-it",
+    "title": "The Relativity of Simultaneity",
+    "section": "Putting numbers on it",
+    "text": "Putting numbers on it\nTrain of proper length \\(L = 300\\) m, moving at \\(v = 0.6c\\).\n\nOffset between the two strikes in her frame: \\(\\Delta t' = \\dfrac{\\gamma v L}{c^{2}}\\)\n\n\n\ngamma        = 1.2500\nDelta t'     = 0.7505 microseconds\nlight covers = 225.0 m in that time"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-scale-of-it",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-scale-of-it",
+    "title": "The Relativity of Simultaneity",
+    "section": "The scale of it",
+    "text": "The scale of it\n\n\n\nSpeed\nOffset across a 300 m train\n\n\n\n\n30 m/s (a real train)\n\\(1.0\\times10^{-13}\\) s\n\n\n0.001 \\(c\\)\n\\(1.0\\times10^{-9}\\) s\n\n\n0.6 \\(c\\)\n\\(7.5\\times10^{-7}\\) s\n\n\n\n\n\nThe effect was always there. It only became visible when we built things that move fast, or clocks precise enough to see \\(10^{-13}\\) s."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-light-cone",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-light-cone",
+    "title": "The Relativity of Simultaneity",
+    "section": "The light cone",
+    "text": "The light cone"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#timelike-spacelike-lightlike",
+    "href": "Lectures/L04/L04_Simultaneity.html#timelike-spacelike-lightlike",
+    "title": "The Relativity of Simultaneity",
+    "section": "Timelike, spacelike, lightlike",
+    "text": "Timelike, spacelike, lightlike\n\n\nTimelike\nInside the cone.\nA signal can connect them.\nTime order is fixed — every frame agrees.\n\nSpacelike\nOutside the cone.\nNo signal can connect them.\nTime order is frame-dependent.\n\nLightlike\nOn the cone.\nOnly light connects them.\nOrder fixed; separation zero.\n\n\nFrames disagree about order only where disagreement cannot cause trouble."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#the-objection-you-are-all-having",
+    "href": "Lectures/L04/L04_Simultaneity.html#the-objection-you-are-all-having",
+    "title": "The Relativity of Simultaneity",
+    "section": "The objection you are all having",
+    "text": "The objection you are all having\n\n“But she’s moving. Surely she should correct for that, and then she’d agree with the platform.”\n\n\nThere is nothing to correct. She is at rest in her own frame."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#two-frames-side-by-side",
+    "href": "Lectures/L04/L04_Simultaneity.html#two-frames-side-by-side",
+    "title": "The Relativity of Simultaneity",
+    "section": "Two frames, side by side",
+    "text": "Two frames, side by side\n\n\nPlatform frame\nThe train is moving.\nThe platform lattice is synchronized.\nThe train’s clocks are not synchronized — the front one lags.\n\nTrain frame\nThe platform is moving.\nThe train lattice is synchronized.\nThe platform’s clocks are not synchronized — by the same rule.\n\n\nEach says the other’s clocks are out of step. Both are correct."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#activity",
+    "href": "Lectures/L04/L04_Simultaneity.html#activity",
+    "title": "The Relativity of Simultaneity",
+    "section": "Activity",
+    "text": "Activity\n\nSelf-check with a partner — simultaneity\n§II on the handout: Alan on the ground, Beth on the train, two sparks.\nDo A (Alan’s frame), then B (Beth’s frame). Swap and mark.\n\n\n\nLast chance to choose a partner — self-selection closes at the end of today. Work with someone you would want, then declare it before you leave."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-today-actually-changed",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-today-actually-changed",
+    "title": "The Relativity of Simultaneity",
+    "section": "What today actually changed",
+    "text": "What today actually changed\n\n\nYou still have\nLight at \\(c\\) in every frame\nA lattice that measures cleanly\nAgreement on what happens at an event\nCausal order, wherever it matters\n\nYou have lost\nA universal “now”\nFrame-independent simultaneity\nThe idea that one frame is the real one"
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#where-this-actually-bites",
+    "href": "Lectures/L04/L04_Simultaneity.html#where-this-actually-bites",
+    "title": "The Relativity of Simultaneity",
+    "section": "Where this actually bites",
+    "text": "Where this actually bites\n\n\nGPS. Satellites move at ~3.9 km/s. Across the constellation the simultaneity offset runs to\n\\[\\Delta t' = \\frac{vL}{c^2} \\approx 860\\ \\text{ns}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nIgnore it and your position is wrong by about 260 m."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#and-where-it-decides-the-physics",
+    "href": "Lectures/L04/L04_Simultaneity.html#and-where-it-decides-the-physics",
+    "title": "The Relativity of Simultaneity",
+    "section": "And where it decides the physics",
+    "text": "And where it decides the physics\n\n\nParticle colliders. LHC bunches cross every 25 ns — light moves 7.5 m in that time. Which collision happened “first” is frame-dependent; the detector timing must be defined, not assumed.\n\nNeutrino timing, 2011. OPERA reported neutrinos arriving 60 ns early — apparently faster than light.\nThe error was a loose fibre-optic cable and a clock offset. A synchronization fault.\n\n\n\nThe claim survived six months of scrutiny before the cable was found. Nobody doubted the physics first — they doubted the clocks, and they were right to."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#what-this-costs-newton",
+    "href": "Lectures/L04/L04_Simultaneity.html#what-this-costs-newton",
+    "title": "The Relativity of Simultaneity",
+    "section": "What this costs Newton",
+    "text": "What this costs Newton\n\n\n\nNewton\nEinstein\n\n\n\n\nOne universal time for everyone\nEach frame has its own time\n\n\n“Now” extends across the universe\n“Now” is frame-dependent\n\n\nSimultaneity is a fact\nSimultaneity is a relation\n\n\nSpace and time independent\nMixed by motion\n\n\n\n\n\nNewtonian time is not wrong — it is the \\(v \\ll c\\) limit. At walking speed the disagreement between your “now” and a passing train’s “now” is about \\(3\\times10^{-15}\\) seconds across a room."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#next-week",
+    "href": "Lectures/L04/L04_Simultaneity.html#next-week",
+    "title": "The Relativity of Simultaneity",
+    "section": "Next week",
+    "text": "Next week\nTime dilation\nIf we cannot agree on which events are simultaneous, we certainly cannot agree on how long things take.\n\nReading: TW ch. 3 · Prep check 2 due Tue 10:30\n\n\nPair self-selection closes today. Unpaired students will be paired from early-semester performance and announced Tuesday."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#exit-ticket",
+    "href": "Lectures/L04/L04_Simultaneity.html#exit-ticket",
+    "title": "The Relativity of Simultaneity",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nA student says: “The train observer only THINKS the strikes weren’t simultaneous — she just received the light at different times.”\nIn one or two sentences, what is wrong with this?\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L04/L04_Simultaneity.html#section-4",
+    "href": "Lectures/L04/L04_Simultaneity.html#section-4",
+    "title": "The Relativity of Simultaneity",
+    "section": "",
+    "text": "PHY 208 — The Relativity of Simultaneity Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#section",
+    "href": "Lectures/L02/L02_Postulates.html#section",
+    "title": "The Null Result, and What It Cost",
+    "section": "",
+    "text": "While you settle in — on Top Hat, ungraded:\nHave you taken MTH 309 — Introductory Linear Algebra?\n(a) taken it    (b) taking it this semester\n(c) planning to take it    (d) not planning to"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#where-we-left-off",
+    "href": "Lectures/L02/L02_Postulates.html#where-we-left-off",
+    "title": "The Null Result, and What It Cost",
+    "section": "Where we left off",
+    "text": "Where we left off\nMichelson’s insight: compare a light wave to itself. The ruler is the wavelength — about 500 nm.\n\n\n  arm length (folded)   L = 11.0 m\n  wavelength            λ = 500 nm\n  Earth's speed       v/c = 9.94e-05\n\n  PREDICTED FRINGE SHIFT  = 0.43\n  their resolution        = 0.01\n  margin                  = 43×"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#today",
+    "href": "Lectures/L02/L02_Postulates.html#today",
+    "title": "The Null Result, and What It Cost",
+    "section": "Today",
+    "text": "Today\n\nA machine sensitive enough to feel a footstep — on this bench\nWhat that machine said in 1887, in Cleveland\nThe tidy story of what happened next — and why it is wrong\nTwo sentences from 1905 that replace all of it"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#the-first-try",
+    "href": "Lectures/L02/L02_Postulates.html#the-first-try",
+    "title": "The Null Result, and What It Cost",
+    "section": "1881: the first try",
+    "text": "1881: the first try\n\n\n\n\n\n\nBerlin, Helmholtz’s lab. Michelson is a 28-year-old US Navy officer on leave.\nArms \\(L \\approx 1.2\\) m → predicted shift 0.04 fringes\nBerlin traffic drowned the fringes → moved to a cellar in Potsdam. Stamping on the pavement 100 m away still shifted them.\nResult: nothing. And nobody was convinced.\n\n\n\nThe instrument was paid for by Alexander Graham Bell."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#the-machine-they-built-1887",
+    "href": "Lectures/L02/L02_Postulates.html#the-machine-they-built-1887",
+    "title": "The Null Result, and What It Cost",
+    "section": "The machine they built, 1887",
+    "text": "The machine they built, 1887\n\n\n\n\nA 1.5-ton sandstone slab, floating on liquid mercury.\nWhy floating? So it can rotate without vibration.\nMirrors fold the light path to \\(L = 11\\,\\mathrm{m}\\) per arm."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#section-1",
+    "href": "Lectures/L02/L02_Postulates.html#section-1",
+    "title": "The Null Result, and What It Cost",
+    "section": "",
+    "text": "Michelson interferometer\n\nWatch the fringes move when I tap the table.\nWrite your prediction — in the notebook, before we rotate.\nRotate 90°.\nSee what the ether predicted — same rotation, in simulation.\nReconcile what you predicted with what happened."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#what-they-measured-1887",
+    "href": "Lectures/L02/L02_Postulates.html#what-they-measured-1887",
+    "title": "The Null Result, and What It Cost",
+    "section": "What they measured, 1887",
+    "text": "What they measured, 1887\n\nDashed = the ether prediction, already reduced to one-eighth scale. Solid = what they measured.\nBehind this figure: about six hours of data, over four days in July 1887."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#in-their-own-words",
+    "href": "Lectures/L02/L02_Postulates.html#in-their-own-words",
+    "title": "The Null Result, and What It Cost",
+    "section": "In their own words",
+    "text": "In their own words\n\n\n\n\n\n“The Experiments on the relative motion of the earth and ether have been completed and the result decidedly negative.”\n— Michelson to Lord Rayleigh, August 1887\n\nHe considered the experiment a failure, and moved on to other work."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#the-most-famous-failed-experiment-in-history",
+    "href": "Lectures/L02/L02_Postulates.html#the-most-famous-failed-experiment-in-history",
+    "title": "The Null Result, and What It Cost",
+    "section": "“The most famous failed experiment in history”",
+    "text": "“The most famous failed experiment in history”\nIt was not a failure.\nMichelson himself was disappointed — he considered it a failure for years.\nHe was wrong about his own result.\n\nA null result from an instrument sensitive enough to have seen the effect is a discovery."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#what-became-of-it",
+    "href": "Lectures/L02/L02_Postulates.html#what-became-of-it",
+    "title": "The Null Result, and What It Cost",
+    "section": "What became of it",
+    "text": "What became of it\n\n\n\n\n\n\n1907 — America’s first science Nobel: “for his optical precision instruments…” The ether experiment is not mentioned.\n1902–04 — Morley and Miller do the seasonal repeats, bigger. Null.\n1920s — Miller, alone on Mount Wilson, claims a positive signal.\n1955 — traced to temperature gradients. Modern repeats: null, to parts in \\(10^{18}\\).\n\n\n\n“Without your work, this theory would today be scarcely more than an interesting speculation.”\n— Einstein, toasting Michelson, January 1931\n\n\n\n\nCaltech, January 1931 — Michelson, Einstein, Millikan. Michelson died four months later."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#what-a-null-result-destroys",
+    "href": "Lectures/L02/L02_Postulates.html#what-a-null-result-destroys",
+    "title": "The Null Result, and What It Cost",
+    "section": "What a null result destroys",
+    "text": "What a null result destroys\nNo detectable ether wind — so something in the chain that predicted 0.4 fringes is false. There are only three ways out:\n\n1. “Earth drags the ether along with it.” Then there is no wind at ground level, and the fringes rightly stay put. ✗ But dragged ether would also carry starlight along — and stellar aberration (Bradley’s tilted telescopes, from Tuesday) exists only if Earth moves through an undisturbed ether. One escape, two contradictory experiments.\n\n\n2. “Motion through the ether squeezes the arms.” FitzGerald (1889) and Lorentz (1892): if the along-wind arm contracts by exactly \\(\\sqrt{1-v^2/c^2}\\), the two delays cancel and the null is explained. ad hoc — a factor invented to erase this one experiment, with no mechanism and no independent prediction. But hold onto that factor: it is nearly right, for entirely different reasons — week 4.\n\n\n3. “There is no ether.” Light needs no medium, and \\(c\\) is the same in every inertial frame. Einstein, 1905 — the only escape that predicts new physics instead of explaining away old data."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#section-3",
+    "href": "Lectures/L02/L02_Postulates.html#section-3",
+    "title": "The Null Result, and What It Cost",
+    "section": "",
+    "text": "Here is the story every documentary and most textbooks tell:\nMichelson–Morley destroyed the ether — so Einstein invented relativity."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#einstein-1905",
+    "href": "Lectures/L02/L02_Postulates.html#einstein-1905",
+    "title": "The Null Result, and What It Cost",
+    "section": "Einstein, 1905",
+    "text": "Einstein, 1905\n\n\n\n\nBern, Switzerland. Age 26.\n\nNot a professor. A patent examiner, third class.\nReviews patent applications — many for electromagnetic devices and clock synchronization.\nIn one year, 1905, publishes four papers. Any one of them would have made a career."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#what-einstein-actually-wrote",
+    "href": "Lectures/L02/L02_Postulates.html#what-einstein-actually-wrote",
+    "title": "The Null Result, and What It Cost",
+    "section": "What Einstein actually wrote",
+    "text": "What Einstein actually wrote\n\n\n\n\n\n“It is known that Maxwell’s electrodynamics — as usually understood at the present time — when applied to moving bodies, leads to asymmetries which do not appear to be inherent in the phenomena.”\n— Zur Elektrodynamik bewegter Körper, opening sentence, 1905\n\n\n\n\nNot a word about Michelson–Morley. The paper mentions “unsuccessful attempts to discover any motion of the earth relative to the light medium” only in passing, a paragraph later."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#the-asymmetry-that-bothered-him",
+    "href": "Lectures/L02/L02_Postulates.html#the-asymmetry-that-bothered-him",
+    "title": "The Null Result, and What It Cost",
+    "section": "The asymmetry that bothered him",
+    "text": "The asymmetry that bothered him\n\n\nMagnet moves, coil at rest\nChanging \\(\\mathbf{B}\\) → induced electric field → current flows\n\nCoil moves, magnet at rest\nCharges move through \\(\\mathbf{B}\\) → force \\(q\\mathbf{v}\\times\\mathbf{B}\\) → current flows\n\n\nSame current. Same experiment. Two completely different explanations."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#two-postulates",
+    "href": "Lectures/L02/L02_Postulates.html#two-postulates",
+    "title": "The Null Result, and What It Cost",
+    "section": "Two postulates",
+    "text": "Two postulates\n\n1. The laws of physics are the same in every inertial frame.\n2. The speed of light in vacuum is the same in every inertial frame, regardless of the motion of the source or the observer.\n\n\nThe first is old — Galileo would have signed it.\nThe second is the radical one."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#postulate-1-is-273-years-older",
+    "href": "Lectures/L02/L02_Postulates.html#postulate-1-is-273-years-older",
+    "title": "The Null Result, and What It Cost",
+    "section": "Postulate 1 is 273 years older",
+    "text": "Postulate 1 is 273 years older\n\n\n\n\n\n“Shut yourself up with some friend in the main cabin below decks on some large ship … have the ship proceed with any speed you like, so long as the motion is uniform … You will discover not the least change in all the effects named, nor could you tell from any of them whether the ship was moving or standing still.”\n— Galileo, Dialogue Concerning the Two Chief World Systems, 1632"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#section-4",
+    "href": "Lectures/L02/L02_Postulates.html#section-4",
+    "title": "The Null Result, and What It Cost",
+    "section": "",
+    "text": "A rocket flies away from you at \\(0.9c\\) and fires a laser pulse straight ahead, in its direction of motion.\nHow fast does the pulse pull away from the rocket —\nas measured by the pilot?  ·  as reckoned in your frame?\n(a) \\(c\\) and \\(c\\)    (b) \\(c\\) and \\(0.1c\\)\n(c) \\(0.1c\\) and \\(c\\)    (d) \\(0.1c\\) and \\(0.1c\\)"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#something-has-to-give",
+    "href": "Lectures/L02/L02_Postulates.html#something-has-to-give",
+    "title": "The Null Result, and What It Cost",
+    "section": "Something has to give",
+    "text": "Something has to give\nSpeed is \\(\\dfrac{\\text{distance}}{\\text{time}}\\).\nIf everyone measures the same speed for light, but they are moving relative to each other…\n\nthen they cannot agree about distance and time"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#the-exchange-rate",
+    "href": "Lectures/L02/L02_Postulates.html#the-exchange-rate",
+    "title": "The Null Result, and What It Cost",
+    "section": "The exchange rate",
+    "text": "The exchange rate\n\n\n\n\n\n\n\nWe keep\nWe give up\n\n\n\n\nThe laws of physics, identical for everyone\nAbsolute simultaneity\n\n\nThe speed of light, identical for everyone\nAbsolute time intervals\n\n\nCausality · the spacetime interval\nAbsolute lengths · the ether"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#hendrik-lorentz",
+    "href": "Lectures/L02/L02_Postulates.html#hendrik-lorentz",
+    "title": "The Null Result, and What It Cost",
+    "section": "Hendrik Lorentz",
+    "text": "Hendrik Lorentz\n\n\n\n\nWrote down the transformation equations (1892–1904) — before Einstein.\nBelieved length contraction was a real physical compression of matter moving through the ether.\n\n\n“The chief cause of my failure was my clinging to the idea that the variable \\(t\\) only can be considered as the true time, and that my local time \\(t'\\) must be regarded as no more than an auxiliary mathematical quantity.”\n— Lorentz, The Theory of Electrons, 1915 edition"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#henri-poincaré",
+    "href": "Lectures/L02/L02_Postulates.html#henri-poincaré",
+    "title": "The Null Result, and What It Cost",
+    "section": "Henri Poincaré",
+    "text": "Henri Poincaré\n\n\n\n\nArgued simultaneity is a convention. Saw the group structure. And in September 1904 — a year early — said this:\n\n\n“… the principle of relativity, according to which the laws of physical phenomena should be the same, whether for an observer fixed, or for an observer carried along in a uniform movement of translation.”\n— Poincaré, address at St. Louis, September 1904"
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#so-why-einstein",
+    "href": "Lectures/L02/L02_Postulates.html#so-why-einstein",
+    "title": "The Null Result, and What It Cost",
+    "section": "So why Einstein?",
+    "text": "So why Einstein?\nLorentz had the mathematics. Poincaré had the principle, and the name.\n\nThey had the mathematics. Einstein supplied the meaning: no ether, no mechanism — just two postulates and the courage to follow them."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#tuesday",
+    "href": "Lectures/L02/L02_Postulates.html#tuesday",
+    "title": "The Null Result, and What It Cost",
+    "section": "Tuesday",
+    "text": "Tuesday\nEvents, frames, and clocks\nIf observers disagree about time and distance, we had better be precise about what it means to measure either one.\n\nWatch: PBS Space Time, How Luminiferous Aether Led to Relativity — and check its story against what Einstein actually wrote Reading: Taylor & Wheeler ch. 2 Prep check 1 due Tuesday, 10:30\n\n\nPartner deadline: end of class, September 3. Bring your demo notebook to every class."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#exit-ticket",
+    "href": "Lectures/L02/L02_Postulates.html#exit-ticket",
+    "title": "The Null Result, and What It Cost",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nRelativity is often summarized as “everything is relative.”\nFrom today: name one thing that is not relative, and one thing that — surprisingly — is. A sentence on each.\n\n\n\nScan it, or find it on UB Learns.\nNot graded, and it never will be — I read these to decide what to spend class time on, so write what you actually think. “I don’t follow this, and here is where I lost it” is a useful answer.\nDue 11:59 tonight."
+  },
+  {
+    "objectID": "Lectures/L02/L02_Postulates.html#section-5",
+    "href": "Lectures/L02/L02_Postulates.html#section-5",
+    "title": "The Null Result, and What It Cost",
+    "section": "",
+    "text": "PHY 208 — The Null Result, and What It Cost Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "index.html#lecture-slides",
+    "href": "index.html#lecture-slides",
+    "title": "PHY 208 · General Physics 4 · Fall 2026",
+    "section": "Lecture slides",
+    "text": "Lecture slides\n\nL01 — How This Course Works — and the Ether Problem\nL02 — The Postulates\nL03 — Events and Frames\nL04 — Simultaneity\n\nSlides are reveal.js presentations: press F for fullscreen, B for the chalkboard, C to draw on the current slide."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#general-physics-iv",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#general-physics-iv",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "General Physics IV",
+    "text": "General Physics IV\nSpecial Relativity and Thermodynamics\nTim Thomay · Fall 2026"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#what-this-course-is",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#what-this-course-is",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "What this course is",
+    "text": "What this course is\nTwo subjects that look unrelated and are not.\nSpecial relativity first — seven weeks. Then thermodynamics.\n\nBoth were settled by people arguing about light and heat engines, and both turned out to be about what cannot be done.\n\n\nEverything is in the syllabus on UB Learns — read it. I am not going to read it to you."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#dates-worth-writing-down",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#dates-worth-writing-down",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Dates worth writing down",
+    "text": "Dates worth writing down\n\n\n\nPrep check\nevery Tuesday, 10:30 — before class\n\n\nProblem set\nSunday 11:59 p.m.\n\n\nNotebook entry\n11:00 at the meeting after each demonstration\n\n\n\n\n\n\nIn-class exam\nTuesday, October 6 — the only exam\n\n\nPresentation 1\none session in weeks 5–7\n\n\nPresentation 2 · capstone\none session in weeks 12–15\n\n\nCapstone written questions\nWednesday, December 16\n\n\n\n\nThere is no final exam, and no meeting in the December exam period."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#how-the-weekly-work-runs",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#how-the-weekly-work-runs",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "How the weekly work runs",
+    "text": "How the weekly work runs\n\n\nBefore class\nPrep check — questions on the reading or video, graded on correctness, two attempts. Look things up.\nPlus one prediction prompt — completion only, answer honestly.\nProblem set — worked problems.\n\nIn class\nConcept questions on Top Hat — vote, argue, vote again.\nDemonstration notebook — predict, observe, reconcile.\n\n\n\nLowest two prep checks and lowest two problem sets are dropped. So are the lowest several in-class question scores."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#ai-in-both-directions",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#ai-in-both-directions",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "AI, in both directions",
+    "text": "AI, in both directions\n\n\nYou may use it\nProblem sets · preparation · project research\nSay what you used and how.\n\nYou may not\nThe in-class exam · presentations\nWhere you reason aloud, without notes or devices."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-demonstration-notebook",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-demonstration-notebook",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The demonstration notebook",
+    "text": "The demonstration notebook\nOne page per demonstration. Three things:\n\nPrediction — written before it runs\nObservation — what actually happened\nReconciliation — if they differ, why was your reasoning wrong?\n\n\nGraded on the quality of the reasoning, never on whether you were right.\n\nA confidently wrong prediction, honestly reconciled, earns full credit."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#pairs",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#pairs",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Pairs",
+    "text": "Pairs\nGroup work and both presentations happen in pairs.\n\nFind your own partner by the end of class, Thursday September 3.\n\nAnyone unpaired is paired on early-semester performance, announced the following week.\nPairs reshuffle for thermodynamics — you are with someone for seven weeks, not for the semester."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#top-hat-set-it-up-now",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#top-hat-set-it-up-now",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Top Hat — set it up now",
+    "text": "Top Hat — set it up now\nSign in with your UB account, not as a guest.\n\n\nJoin code on the board.\nToday’s questions are practice — nothing counts.\nFrom Thursday they count as normal.\n\n\n\nThe lowest several in-class scores are dropped, so a phone that will not connect, or a late add, costs you nothing."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#two-experiments-one-instrument",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#two-experiments-one-instrument",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Two experiments, one instrument",
+    "text": "Two experiments, one instrument\n\n\n\n1887 · Cleveland 11 m folded arms ### Found nothing\n\n\n2015 · Hanford & Livingston 4 km arms ### Found something"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#section",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#section",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "",
+    "text": "Sound waves travel through air.\nOcean waves travel through water.\nWaves on a string travel through the string."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#maxwell-1865",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#maxwell-1865",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Maxwell, 1865",
+    "text": "Maxwell, 1865\n\n\n\nJames Clerk Maxwell 1831–1879\n\n\n“We can scarcely avoid the inference that light consists in the transverse undulations of the same medium which is the cause of electric and magnetic phenomena.”\n— A Dynamical Theory of the Electromagnetic Field, 1865"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-equations",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-equations",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The equations",
+    "text": "The equations\n\n\nDifferential\n\\(\\nabla\\cdot\\mathbf{E}=\\rho/\\varepsilon_0\\)\n\\(\\nabla\\cdot\\mathbf{B}=0\\)\n\\(\\nabla\\times\\mathbf{E}=-\\partial\\mathbf{B}/\\partial t\\)\n\\(\\nabla\\times\\mathbf{B}=\\mu_0\\mathbf{J}+\\mu_0\\varepsilon_0\\,\\partial\\mathbf{E}/\\partial t\\)\n\nIntegral — the form from PHY 107\n\\(\\oint\\mathbf{E}\\cdot d\\mathbf{A}=Q_{\\text{enc}}/\\varepsilon_0\\)\n\\(\\oint\\mathbf{B}\\cdot d\\mathbf{A}=0\\)\n\\(\\oint\\mathbf{E}\\cdot d\\boldsymbol{\\ell}=-\\,d\\Phi_B/dt\\)\n\\(\\oint\\mathbf{B}\\cdot d\\boldsymbol{\\ell}=\\mu_0 I+\\mu_0\\varepsilon_0\\,d\\Phi_E/dt\\)\n\n\nIn vacuum these give a wave equation with speed \\(c=1/\\sqrt{\\varepsilon_0\\mu_0}\\)\n\n\n\nFrom electricity and magnetism alone:  c = 299,792,458 m/s\nFizeau's 1849 measurement of light:    c = 313,300,000 m/s\n\nMaxwell was not looking for light. It fell out."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#but-a-wave-in-what",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#but-a-wave-in-what",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "But a wave in what?",
+    "text": "But a wave in what?\n\n\n\nWave\nMedium\nSpeed set by\n\n\n\n\nString\nthe string\ntension, linear density\n\n\nSound\nair\nbulk modulus, density\n\n\nOcean\nwater\ndepth, gravity\n\n\nLight\n???\n\\(\\varepsilon_0,\\ \\mu_0\\)\n\n\n\n\n\\(\\varepsilon_0\\) and \\(\\mu_0\\) are the electric and magnetic properties of something.\n\n\n\nA fair objection: \\(\\varepsilon_0\\) and \\(\\mu_0\\) are artefacts of SI. In Gaussian units both are 1 and \\(c\\) appears directly. But that only moves the question — something still sets the speed, and in 1865 nobody could say what."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-luminiferous-ether",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-luminiferous-ether",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The luminiferous ether",
+    "text": "The luminiferous ether\nTo carry light, it must be:\n\nEverywhere — all of space, Sun to Earth included\nEnormously stiff — transverse waves at \\(3\\times10^{8}\\) m/s means stiffer than steel\nFrictionless — no measurable drag on planetary orbits over centuries\nInvisible, massless, undetectable by any direct means\n\n\n\nThis should bother you. It bothered them too — but a wave propagating through nothing was worse."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-ether-was-not-a-fringe-idea",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-ether-was-not-a-fringe-idea",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The ether was not a fringe idea",
+    "text": "The ether was not a fringe idea\nIt was the foundation of 19th-century optics — not idle metaphysics.\n\n\n\nYoung\n1801\ninterference demands a wave\n\n\nFresnel\n1818\ndiffraction and polarization explained\n\n\nBradley\n1727\nstellar aberration\n\n\n\nEvery one was read in ether terms, and the readings worked."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#young-1801",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#young-1801",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Young, 1801",
+    "text": "Young, 1801\n\n\n\n\n\n\n“The middle of the two portions is always light, and the bright stripes on each side are at such distances that the light coming to them from one of the apertures must have passed through a longer space than that which comes from the other by an interval which is equal to the breadth of one, two, three, or more of the supposed undulations.”\n— Young, Bakerian Lecture, 1803\n\n\n\nYoung’s own figure. Two sources; dark bands where they cancel."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#fresnel-1818",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#fresnel-1818",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Fresnel, 1818",
+    "text": "Fresnel, 1818\n\n\n\n1788–1827\n\nTook the wave theory and made it quantitative — diffraction, polarization, the whole apparatus of 19th-century optics.\nHis ether was a mechanical, elastic solid.\n\n\n\nPoisson objected that Fresnel’s theory absurdly required a bright spot at the centre of a circular shadow. Arago looked. The spot was there."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#bradley-1727-aberration",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#bradley-1727-aberration",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Bradley, 1727 — aberration",
+    "text": "Bradley, 1727 — aberration\n\n\n\n1693–1762\n\n\nStarlight arrives tilted, because Earth moves while the light comes down.\n\n\n\nRemember this one. On Thursday it closes off an escape route."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-ether-wind",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-ether-wind",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The ether wind",
+    "text": "The ether wind\n\n\nIf the ether is at rest and Earth orbits through it at 30 km/s, then from Earth’s frame there is a wind of ether streaming past.\nLight should travel at \\(c+v\\) downwind, \\(c-v\\) upwind — like sound in moving air.\n\n\n\n\n\n\nEarth's orbital speed:      v = 29,800 m/s\nRatio:                    v/c = 9.94e-05\nEffect on travel time:  (v/c)² = 9.88e-09\n\nA one-part-in-a-hundred-million effect.\nNo clock in 1887 could do that. No ruler could do that.\n\n\n\nAberration — the same effect that later ruled out ether drag."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#section-1",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#section-1",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "",
+    "text": "A swimmer moves at speed \\(c\\) relative to the water. A river flows at speed \\(v\\).\n\nSwimmer A swims 100 m downstream, then back.\nSwimmer B swims 100 m across, then back.\n\nWho returns first?\n(a) A    (b) B    (c) They tie    (d) Depends on \\(v\\)"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#why-the-river-matters-going-across",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#why-the-river-matters-going-across",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Why the river matters going across",
+    "text": "Why the river matters going across\nShe cannot aim straight across — the current would carry her downstream.\nShe must aim upstream and let the current push her back onto the line.\n\n\n\n\n\n\n\n\n\n\n\n\nOnly \\(\\sqrt{c^2-v^2}\\) is left for actually crossing.\n\nThe river costs her both ways — just less than it costs the downstream swimmer."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#downstream-and-back-the-derivation",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#downstream-and-back-the-derivation",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Downstream and back — the derivation",
+    "text": "Downstream and back — the derivation\nEach leg is just distance over speed. Only the speed relative to the bank changes.\n\\[t_\\parallel=\\underbrace{\\frac{L}{c+v}}_{\\text{with the current}}\n            +\\underbrace{\\frac{L}{c-v}}_{\\text{against it}}\\]\n\nCommon denominator \\((c+v)(c-v)=c^2-v^2\\):\n\\[t_\\parallel=\\frac{L(c-v)+L(c+v)}{c^2-v^2}=\\frac{2Lc}{c^2-v^2}\\]\n\n\nDivide top and bottom by \\(c^2\\):\n\\[t_\\parallel=\\frac{2L}{c}\\cdot\\frac{1}{1-v^2/c^2}\\]"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#across-and-back-the-derivation",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#across-and-back-the-derivation",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Across and back — the derivation",
+    "text": "Across and back — the derivation\nEffective crossing speed is \\(\\sqrt{c^2-v^2}\\) — from the triangle.\nBoth legs are the same, so:\n\\[t_\\perp=\\frac{2L}{\\sqrt{c^2-v^2}}\\]\n\nFactor \\(c^2\\) out of the square root:\n\\[\\sqrt{c^2-v^2}=c\\sqrt{1-v^2/c^2}\\]\n\n\n\\[t_\\perp=\\frac{2L}{c}\\cdot\\frac{1}{\\sqrt{1-v^2/c^2}}\\]"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#same-prefactor-different-power",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#same-prefactor-different-power",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Same prefactor, different power",
+    "text": "Same prefactor, different power\n\\[t_\\parallel=\\frac{2L}{c}\\cdot\\frac{1}{1-v^2/c^2}\n\\qquad\nt_\\perp=\\frac{2L}{c}\\cdot\\frac{1}{\\sqrt{1-v^2/c^2}}\\]\nWrite \\(\\beta^2 = v^2/c^2\\). Then the bracket is \\((1-\\beta^2) &lt; 1\\), and\n\\[\\frac{t_\\parallel}{t_\\perp}=\\frac{1}{\\sqrt{1-\\beta^2}}\\;&gt;\\;1\\]\n\n\\[t_\\parallel &gt; t_\\perp \\quad \\text{always}\\]\n\nThe downstream gain never compensates the upstream loss."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#with-numbers",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#with-numbers",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "With numbers",
+    "text": "With numbers\n\\(L = 100\\) m · swims at \\(c = 2\\) m/s · river \\(v = 1\\) m/s\n\n\n\nDownstream\n\\(100/(2+1)\\)\n33.3 s\n\n\nBack upstream\n\\(100/(2-1)\\)\n100.0 s\n\n\n\n\n133.3 s\n\n\nAcross and back\n\\(200/\\sqrt{3}\\)\n115.5 s\n\n\n\n\n\nIn still water both are 100 s. The river costs the parallel swimmer 33 s and the perpendicular swimmer 15 s — it hurts both, unequally."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#always-at-every-speed",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#always-at-every-speed",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Always, at every speed",
+    "text": "Always, at every speed\n\n\n\n\n\n\n\n\n\n\n\nThe gap grows with speed, but it never closes — and it never changes sign."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#albert-a.-michelson",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#albert-a.-michelson",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Albert A. Michelson",
+    "text": "Albert A. Michelson\n\n\n\n1852–1931\n\n\nNaval officer, then physicist\nObsessive about the speed of light — a career’s work\nFirst American Nobel laureate in the sciences, 1907\n\n\n\n“The more important fundamental laws and facts of physical science have all been discovered, and these are now so firmly established that the possibility of their ever being supplanted in consequence of new discoveries is exceedingly remote.”\n— Michelson, 1894"
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#and-edward-morley",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#and-edward-morley",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "…and Edward Morley",
+    "text": "…and Edward Morley\n\n\n\n1838–1923\n\nA chemist, not a physicist — and among the most precise experimentalists alive.\nHe had spent years measuring the atomic weight of oxygen to one part in ten thousand.\n\n\n\nThe experiment carries both names because it needed both skills: Michelson’s optics and Morley’s obsessive metrology."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#the-idea",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#the-idea",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "The idea",
+    "text": "The idea\nBuild an instrument that measures neither time nor distance,\nbut interference.\n\nYou are not timing anything. You are comparing a light wave to itself.\n\nThe ruler is the wavelength — about 500 nm."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#thursday",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#thursday",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "Thursday",
+    "text": "Thursday\nThe interferometer, and what it found\nBring your demonstration notebook — the first entry is Thursday, and it counts.\n\nReading: Taylor & Wheeler ch. 1 (§1.1–1.2); HRW 37-1\nWatch: PBS Space Time, How Luminiferous Aether Led to Relativity (18 min)\n\n\nStart looking for a partner. The deadline is the end of class on September 3."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#section-2",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#section-2",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "",
+    "text": "You are hunting an effect of one part in \\(10^8\\).\nIn one sentence: why does comparing light to itself work when a clock cannot?\n\n\n\nScan it, or find it on UB Learns.\nNot graded, and it never will be — I read these to decide what to spend class time on, so write what you actually think. “I don’t follow this, and here is where I lost it” is a useful answer.\nDue 11:59 tonight."
+  },
+  {
+    "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#section-3",
+    "href": "Lectures/L01/L01_Ether_and_Interferometer.html#section-3",
+    "title": "How This Course Works — and the Ether Problem",
+    "section": "",
+    "text": "PHY 208 — How This Course Works, and the Ether Problem Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#before-we-start-presentation-pairs",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#before-we-start-presentation-pairs",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Before we start: presentation pairs",
+    "text": "Before we start: presentation pairs\n\nDeadline: Thursday, end of class. The join button disappears at 12:20 — Brightspace enforces it. “Over the weekend” does not work.\n\n\n\nHow to join\nGroups on the course navbar → View Available Groups → Join Group\nThen tell your partner which group — they join the same one.\nGroups are named after physicists from this unit — Rømer, Bradley, Fizeau … Kennedy. Nothing distinguishes them; take whichever is free.\n\nHow to check\nGo back to Groups.\nYou should see both names in the group.\nOne name means your partner has not joined — you are not paired.\n\n\n\nNo partner by Thursday? That is fine, and there is nothing to do — remaining students are paired based on early-semester performance, announced Tue Sep 8. Pairs reshuffle in October, so this is a seven-week arrangement."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#section",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#section",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "",
+    "text": "Two observers moving relative to each other cannot agree about distances and times.\nFine. But before we can say how they disagree —"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#thursdays-question",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#thursdays-question",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Thursday’s question",
+    "text": "Thursday’s question\n\nA rocket flies away from you at \\(0.9c\\) and fires a laser pulse straight ahead.\nHow fast does the pulse pull away from the rocket?\n\n\n\n\npilot measures\nyou reckon\n\n\n\n\n(a)\n\\(c\\)\n\\(c\\)\n\n\n(b)\n\\(c\\)\n\\(0.1c\\)\n\n\n(c)\n\\(0.1c\\)\n\\(c\\)\n\n\n(d)\n\\(0.1c\\)\n\\(0.1c\\)"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#of-you-said-c-and-c",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#of-you-said-c-and-c",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "80% of you said \\(c\\) and \\(c\\)",
+    "text": "80% of you said \\(c\\) and \\(c\\)\n\n\n\n\n\n\n\n\n\n\n“Light is always \\(c\\), so it must be \\(c\\) for both.” The first half is right.\n\n\n\n(b) — pilot measures \\(c\\); in your frame the gap grows at \\(0.1c\\)."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#count-it-out-in-your-frame",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#count-it-out-in-your-frame",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Count it out, in your frame",
+    "text": "Count it out, in your frame\nAfter 1 second, measured by you:\n\n\n\n\n\n\n\n\n\n\nThe gap opened by 0.1 light-seconds in 1 second. That is a rate of \\(0.1c\\) — and the pulse still moved a full light-second."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#the-same-thing-without-any-light",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#the-same-thing-without-any-light",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "The same thing, without any light",
+    "text": "The same thing, without any light\n\nTwo cars leave a junction in opposite directions, each at 60 mph.\n\n\nThe distance between them grows at 120 mph —\nbut no car broke the speed limit.\n\n\n\nNobody thinks 120 mph is a speed of a car. Same logic, same mistake."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#speed-of-what-measured-by-whom",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#speed-of-what-measured-by-whom",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Speed of what, measured by whom?",
+    "text": "Speed of what, measured by whom?\n\n\nAlways \\(c\\)\nThe pulse, measured by the pilot.\nThe pulse, measured by you.\nAny light beam, any inertial frame.\n\nNot a speed of light\nThe gap between rocket and pulse: \\(0.1c\\) in your frame.\nTwo beams fired apart: the gap closes at \\(2c\\) in your frame.\n\n\n\nNothing travels at \\(0.1c\\) or \\(2c\\) here. A gap is not an object.\n\n\n\nBoth of you measure the pulse itself at exactly \\(c\\) — even though one of you chases it at \\(0.9c\\). So what has to give?"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#why-it-matters-the-100-m",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#why-it-matters-the-100-m",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Why it matters: the 100 m",
+    "text": "Why it matters: the 100 m\n\n\n\n\n\nTime\nAthlete\nMeet\n\n\n\n\n9.58\nBolt\nBerlin 2009\n\n\n9.69\nBolt\nBeijing 2008\n\n\n9.72\nBolt\nNew York 2008\n\n\n9.72\nPowell\nLausanne 2008\n\n\n9.74\nPowell\nRieti 2007\n\n\n\n\n\n\n\nSound crosses 100 m in 0.29 s · light in 330 ns.\nThe sound delay is 2.7× the gap between first and second."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#what-you-predicted-this-morning",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#what-you-predicted-this-morning",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "What you predicted this morning",
+    "text": "What you predicted this morning\nPrep check 1: name one everyday intuition that must break. 18 of you answered.\n\n\n\n\n\n\n\n\n\n\n\nHalf of you named time. That is the right instinct — and it is not the thing that breaks first."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#two-of-you-went-further",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#two-of-you-went-further",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Two of you went further",
+    "text": "Two of you went further\n\n\n\n“Either the distance or the time variable has to change.”\n\n\n\n“You would not be able to meet the family or friends you used to know.”\n\n\n\nThe first one has the whole argument in a sentence: \\(v = d/t\\), and if \\(v\\) is nailed down, something else has to give.\n\n\n\nToday: what exactly is the \\(d\\), and what exactly is the \\(t\\)?"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#today-is-unglamorous-and-load-bearing",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#today-is-unglamorous-and-load-bearing",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Today is unglamorous and load-bearing",
+    "text": "Today is unglamorous and load-bearing\nNo paradoxes. No twins. No \\(E = mc^2\\).\nInstead: what does it actually mean to measure when and where something happened?\n\n\nEvery argument in the next five weeks runs on the machinery built today. The students who find simultaneity confusing in two weeks are almost always the ones who skipped this."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#an-event",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#an-event",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "An event",
+    "text": "An event\n\nAn event is a single happening at a single place at a single moment.\n\n\n\nFour numbers: \\((t, x, y, z)\\)\n\nTwo particles collide\nA clock reads noon\nLight reaches a detector\nA firecracker’s first flash\n\n\n\n\n\n\n\n\n\n\n\n\n\n“A firecracker explodes” is not an event — milliseconds, centimetres.\n\n\n\nAlso not events: “the train” (an object, not a happening) · “3 pm” (a time, no place) · “the collision was elastic” (a description, not a happening)."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#what-a-reference-frame-is-not",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#what-a-reference-frame-is-not",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "What a reference frame is not",
+    "text": "What a reference frame is not\n\nA frame is not a point of view.\nA frame is not where somebody is standing."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#what-a-reference-frame-is",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#what-a-reference-frame-is",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "What a reference frame is",
+    "text": "What a reference frame is\nA latticework of rulers and synchronized clocks, filling all of space."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#why-this-construction-matters",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#why-this-construction-matters",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Why this construction matters",
+    "text": "Why this construction matters\n\n\nNaive picture\nOne observer, one clock, watching from a distance.\nMust correct for light travel time.\nConfuses seeing with happening.\n\nLatticework\nClocks everywhere, each recording locally.\nNo corrections needed.\nData collected afterward at leisure."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#now-the-hard-part",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#now-the-hard-part",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Now the hard part",
+    "text": "Now the hard part\nThe lattice needs its clocks synchronized.\n\nTwo clocks, 300 m apart. How do you set them to the same time?\n\n\nYou cannot carry one to the other — moving a clock changes what it reads, as we will see in L05. You need a signalling method, and every signal takes time."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#einstein-synchronization",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#einstein-synchronization",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Einstein synchronization",
+    "text": "Einstein synchronization\n\n\n\n\n\n\n\n\n\nFlash a light at the midpoint. When it arrives, set both clocks to the same reading."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#section-1",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#section-1",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "",
+    "text": "You synchronize two clocks 300 m apart using a flash at the midpoint. Your friend, moving past at \\(0.6c\\), watches you do it.\nDoes your friend agree the clocks are synchronized?\n(a) Yes — the procedure is symmetric\n(b) No — she says one was set too early\n(c) Only if she is also at the midpoint\n(d) The question is meaningless"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#how-fast-is-light-and-how-would-you-know",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#how-fast-is-light-and-how-would-you-know",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "How fast is light, and how would you know?",
+    "text": "How fast is light, and how would you know?\n\nGalileo tried it. Two lanterns, two hilltops, two assistants, and a shutter.\nHe concluded only that light is “if not instantaneous, extraordinarily rapid.”\n\n\nWhat would you need, to do better?"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#rømer-1676-the-first-number",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#rømer-1676-the-first-number",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Rømer, 1676 — the first number",
+    "text": "Rømer, 1676 — the first number\n\n\nJupiter’s moon Io eclipses on a strict schedule.\nExcept it runs late when Earth is far from Jupiter, and early when close.\n\n\n\n\n\n  Extra distance across Earth's orbit : 2.992e+11 m\n  Accumulated delay Rømer measured    : 22 minutes\n\n  → c ≈ 2.267e+08 m/s\n    modern value  2.998e+08 m/s   (about 24% low)\n\n  Wrong by a quarter — and it settled the question that mattered:\n  light does not arrive instantly."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#bradley-1728-aberration",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#bradley-1728-aberration",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Bradley, 1728 — aberration",
+    "text": "Bradley, 1728 — aberration\nStarlight arrives tilted — Earth moves while the light comes down.\n\n\nLike running through vertical rain: you tilt the umbrella forward.\n\n\n\n  tilt ≈ 20.5 arcsec\n  c = v/tan(θ)\n    ≈ 2.996e+08 m/s\n\n\n\n\n\n\n\nBradley’s value was within about 1% — far better than Rømer’s, and from an effect nobody was looking for."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#fizeau-and-foucault-bringing-it-to-the-lab",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#fizeau-and-foucault-bringing-it-to-the-lab",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Fizeau and Foucault — bringing it to the lab",
+    "text": "Fizeau and Foucault — bringing it to the lab\n\n\n\nFizeau, 1849 — toothed wheel\n8 km to a mirror and back. 313,300 km/s\n\n\nFoucault, 1850 — rotating mirror\nBetter precision — then light in water.\n\n\n\nLight is slower in water — Newton’s corpuscles required faster."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#michelson-made-it-his-lifes-work",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#michelson-made-it-his-lifes-work",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Michelson made it his life’s work",
+    "text": "Michelson made it his life’s work\n\n\n1879 — rotating mirror, improved · 299,910 ± 50 km/s\n1926 — Mt. Wilson to Mt. San Antonio, 35 km baseline · 299,796 ± 4 km/s\n\n\n\n\n\nHe was still refining the measurement when he died in 1931. The 1926 value is within 4 km/s of the modern one — a relative error of about \\(10^{-5}\\)."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#the-question-dissolves",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#the-question-dissolves",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "1983 — the question dissolves",
+    "text": "1983 — the question dissolves\n\nThe metre is now defined as the distance light travels in \\(1/299{,}792{,}458\\) of a second.\n\nSo \\(c = 299{,}792{,}458\\) m/s — exactly, by definition, with no uncertainty.\nYou can no longer measure the speed of light.\nYou measure lengths with it."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#the-catch-nobody-mentions",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#the-catch-nobody-mentions",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "The catch nobody mentions",
+    "text": "The catch nobody mentions\nEvery method on the last five slides measured a round trip.\n\nRømer — light out to Earth, but timed against a periodic source\nFizeau, Foucault, Michelson — out to a mirror, and back\nModern interferometry — out and back\n\n\nWe have never measured the one-way speed of light.\n\n\nSo why not put a clock at each end and time it one way?"
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#convention-not-ignorance",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#convention-not-ignorance",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Convention, not ignorance",
+    "text": "Convention, not ignorance\nEinstein’s response: define the one-way speed to be \\(c\\) in both directions.\n\n\nThat is exactly what the midpoint-flash synchronization does — it assumes the two paths take equal time.\n\n\n\n\nNot a gap in the theory. Every experimental prediction is unchanged whatever convention you adopt. But it is a choice, and knowing it is a choice is part of understanding what the theory claims."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#why-not-just-carry-a-clock-over",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#why-not-just-carry-a-clock-over",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Why not just carry a clock over?",
+    "text": "Why not just carry a clock over?\n\nThe obvious answer to synchronization: set two clocks side by side, then walk one of them 300 m down the track.\n\n\nThis fails — and how it fails is the subject of L05."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#you-are-the-lattice",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#you-are-the-lattice",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "You are the lattice",
+    "text": "You are the lattice\n\nEveryone: phone out → time.ms. You are a lattice point.\nRead your Time Offset — in milliseconds — and the round-trip delay.\nPredict first — write it in your notebook, before we compare:\n\nYour neighbours’ offsets match yours — yes or no?\nIf they differ, by how many ms? More or less than the time light needs to cross this room?\n\n\n\n\nThen we read offsets down each row. Report your own clock — not the one at the front."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#three-things-a-frame-is-not",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#three-things-a-frame-is-not",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Three things a frame is not",
+    "text": "Three things a frame is not\n\n\nNot a person\nNobody has to be watching. The lattice records whether or not anyone reads it.\n\nNot a place\nIt fills all of space. There is no “where” the frame is.\n\nNot a view\nIt measures. It does not see.\n\n\nSo — where is the train’s frame?\n\n\n\n“The frame of the train” means the lattice that moves with the train — clocks at every point, all along the track and beyond, at rest relative to the train."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#reading-the-lattice-a-worked-case",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#reading-the-lattice-a-worked-case",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Reading the lattice: a worked case",
+    "text": "Reading the lattice: a worked case\nA firecracker’s first flash — one event. Three lattice clocks are nearby.\n\n\n\n\n\n\n\n\nClock\nPosition\nReading at the flash\n\n\n\n\n\\(C_1\\)\nat the firecracker\n12.000000 s\n\n\n\\(C_2\\)\n300 m away\n12.000000 s (its own reading later, when light arrives)\n\n\n\\(C_3\\)\n900 m away\n12.000000 s (likewise)\n\n\n\n\nThe event’s time is \\(t = 12.000000\\) s. Read off \\(C_1\\) — the clock that was there."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#a-number-for-the-sceptics",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#a-number-for-the-sceptics",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "A number for the sceptics",
+    "text": "A number for the sceptics\nLight covers 30 cm in one nanosecond.\n\n\nAcross this room (10 m): 33 ns\nBuffalo to New York (470 km): 1.6 ms\nEarth to Moon: 1.3 s\n\n\n\n\nGrace Hopper handed out 30 cm wires and called them nanoseconds. It is still the best way to make \\(c\\) feel finite rather than infinite."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#where-this-leaves-us",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#where-this-leaves-us",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Where this leaves us",
+    "text": "Where this leaves us\n\n\nSettled today\nAn event is a happening: \\((t,x,y,z)\\)\nA frame is rulers + synchronized clocks\nEach event is read off the local clock\nSynchronization is a definition\n\nOpen until Thursday\nDoes a moving observer agree the lattice is synchronized?\nYou voted. Most of you said no.\nYou were right — and it costs more than you think."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#activity",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#activity",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Activity",
+    "text": "Activity\n\nSelf-check with a partner — events and reference frames\n§II Events — classify: object, location, instant, or event?\n§III Reference frames — the beeper and the horn.\nThen swap and mark each other.\nKeep these pages — Milestone 1 builds on them.\n\n\n\nNot your permanent partner — pairs are not fixed until next Tuesday. If you are still looking for one, this is a good way to find out who you work well with. Self-selection closes Thursday, end of class."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#thursday",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#thursday",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Thursday",
+    "text": "Thursday\nThe relativity of simultaneity\nWe return to the question you just voted on — and it turns out the answer breaks something you have believed your whole life.\n\nReading: TW ch. 3 · Watch: Khutoryansky, Nature of Time and Simultaneity (8 min)\n\n\nOptional, for the one-way speed question we left open: PBS Space Time, The Speed of Light is NOT About Light (12:46)."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#exit-ticket",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#exit-ticket",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nA classmate says: “A reference frame is just where you’re standing and what you can see.”\nIn one or two sentences, what is wrong with that?\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L03/L03_Events_and_Frames.html#section-2",
+    "href": "Lectures/L03/L03_Events_and_Frames.html#section-2",
+    "title": "Events, Frames, and How to Measure Them",
+    "section": "",
+    "text": "PHY 208 — Events, Frames, and How to Measure Them Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#before-we-start-pairs-are-live",
+    "href": "Lectures/L05/L05_Time_Dilation.html#before-we-start-pairs-are-live",
+    "title": "Time Dilation",
+    "section": "Before we start: pairs are live",
+    "text": "Before we start: pairs are live\n\nPairs are announced. UB Learns → Announcements → “Presentation pairs” — the link in that announcement shows your group, with both names.\nFrom today, “work in your pairs” means exactly that. First pair job is later this class.\n\n\n\nPairs hold through the relativity unit — presentations, milestone, in-class work — and reshuffle for thermodynamics in mid-October."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#thursdays-exit-ticket",
+    "href": "Lectures/L05/L05_Time_Dilation.html#thursdays-exit-ticket",
+    "title": "Time Dilation",
+    "section": "Thursday’s exit ticket",
+    "text": "Thursday’s exit ticket\n\n\n“The train observer only thinks the strikes weren’t simultaneous — she just received the light at different times.”\n\n\nTwo of your answers — two procedures, one verdict:\n\n\nCorrect the signal\n\n“Frame calculations subtract the light travel time… the events actually occurred at different times in her frame.”\n\n\nAsk the lattice\n\n“She is using a latticework of synchronised clocks… she checks the records of the strikes.”\n\n\n\nShe is not fooled — and today that starts costing time itself."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#the-question-we-owe-l03",
+    "href": "Lectures/L05/L05_Time_Dilation.html#the-question-we-owe-l03",
+    "title": "Time Dilation",
+    "section": "The question we owe L03",
+    "text": "The question we owe L03\n\n\n\n\n\n\n\n\n\nL03: “Why not synchronize by carrying one clock over?”\n\nBecause moving a clock changes what it reads. Today: by exactly how much."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#what-a-clock-actually-measures",
+    "href": "Lectures/L05/L05_Time_Dilation.html#what-a-clock-actually-measures",
+    "title": "Time Dilation",
+    "section": "What a clock actually measures",
+    "text": "What a clock actually measures\n\n\n\n\n\n\n\n\n\n\nProper time \\(\\Delta\\tau\\): the time between two events read off one clock that is present at both."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#the-most-honest-clock-in-physics",
+    "href": "Lectures/L05/L05_Time_Dilation.html#the-most-honest-clock-in-physics",
+    "title": "Time Dilation",
+    "section": "The most honest clock in physics",
+    "text": "The most honest clock in physics"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#section-1",
+    "href": "Lectures/L05/L05_Time_Dilation.html#section-1",
+    "title": "Time Dilation",
+    "section": "",
+    "text": "The light clock, live — predict first\nTwo identical light clocks. One sits still; one flies past at \\(0.8c\\). Both photons do exactly \\(c\\) — that is not negotiable.\nIn your notebook, before anything runs:\n\nWhen her clock shows 6 ticks, what does yours show — more, fewer, or the same? Commit — with a number if you dare, and one line of why.\nWe then slide the speed up toward \\(0.95c\\). What happens to her photon’s speed — and what does its path do instead?"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#what-you-just-watched-frozen",
+    "href": "Lectures/L05/L05_Time_Dilation.html#what-you-just-watched-frozen",
+    "title": "Time Dilation",
+    "section": "What you just watched, frozen",
+    "text": "What you just watched, frozen\n\n\n\n\n\n\n\n\n\nSame mirrors, same photon — but in your frame the photon travels a zigzag, and the zigzag is longer than the straight bounce.\n\n\nPostulate 2: the photon does \\(c\\) for you too. Longer path at the same speed → the moving clock’s tick takes longer."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#the-geometry-is-eighth-grade",
+    "href": "Lectures/L05/L05_Time_Dilation.html#the-geometry-is-eighth-grade",
+    "title": "Time Dilation",
+    "section": "The geometry is eighth grade",
+    "text": "The geometry is eighth grade\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\\left(\\frac{c\\,\\Delta t}{2}\\right)^{2} = d^{2} + \\left(\\frac{v\\,\\Delta t}{2}\\right)^{2}\\]\nSolve for \\(\\Delta t\\), use \\(\\Delta\\tau = 2d/c\\):\n\n\\[\\Delta t = \\frac{\\Delta\\tau}{\\sqrt{1 - v^{2}/c^{2}}} = \\gamma\\,\\Delta\\tau\\]"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#meet-gamma",
+    "href": "Lectures/L05/L05_Time_Dilation.html#meet-gamma",
+    "title": "Time Dilation",
+    "section": "Meet \\(\\gamma\\)",
+    "text": "Meet \\(\\gamma\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(\\gamma \\geq 1\\) always — flat and useless below \\(0.1c\\), vertical as \\(v \\to c\\). Both regimes matter today."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#section-3",
+    "href": "Lectures/L05/L05_Time_Dilation.html#section-3",
+    "title": "Time Dilation",
+    "section": "",
+    "text": "Your lab partner flies past at \\(0.8c\\). Each of you carries an identical clock. You measure her clock ticking slow.\nWhat does she measure about your clock?\n(a) It ticks fast\n(b) It ticks at the normal rate\n(c) It ticks slow\n(d) It depends on which of you accelerated in the past"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#both-see-the-other-slow.-that-is-not-a-contradiction",
+    "href": "Lectures/L05/L05_Time_Dilation.html#both-see-the-other-slow.-that-is-not-a-contradiction",
+    "title": "Time Dilation",
+    "section": "Both see the other slow. That is not a contradiction",
+    "text": "Both see the other slow. That is not a contradiction\n\n\n\n\n\n\n\n\n\nRating her clock takes two of yours — one where she starts, one where she ends. She answers: those two were never synchronized (Thursday!).\n\nEach comparison uses a different pair of clocks. No clock is ever caught disagreeing with itself."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#light-does-not-get-a-clock",
+    "href": "Lectures/L05/L05_Time_Dilation.html#light-does-not-get-a-clock",
+    "title": "Time Dilation",
+    "section": "Light does not get a clock",
+    "text": "Light does not get a clock\n\n\n\n\n\n\n\n\n\nphoton\nmassive object (you, a muon)\n\n\n\n\nspeed\n\\(c\\), always\nanything but \\(c\\)\n\n\nrest frame\nnone\none — its own\n\n\nproper time\nnone — no clock ticks\nticks between any two events\n\n\nneeds \\(\\gamma\\)?\nno\nyes\n\n\n\n\nThe light clock works because light carries no clock of its own — the photon is the ruler, never the thing being timed."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#the-muon",
+    "href": "Lectures/L05/L05_Time_Dilation.html#the-muon",
+    "title": "Time Dilation",
+    "section": "The muon",
+    "text": "The muon\n\n\n\n\n\n\n\n\n\nwhat\nthe electron’s heavy sibling — 207 × the mass, same charge\n\n\nborn\ncosmic-ray collisions ~15 km up, at \\(v \\approx 0.995c\\)\n\n\ndies\n\\(\\mu \\to e + \\nu + \\bar{\\nu}\\) — always, no exceptions\n\n\nlifetime\n\\(\\tau = 2.2\\ \\mu\\text{s}\\) (mean — next slide!), on its own wristwatch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiscovered 1936 — in this same cosmic rain, before any accelerator existed. So unexpected that I. I. Rabi asked: “Who ordered that?”"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#an-average-not-an-alarm-clock",
+    "href": "Lectures/L05/L05_Time_Dilation.html#an-average-not-an-alarm-clock",
+    "title": "Time Dilation",
+    "section": "An average, not an alarm clock",
+    "text": "An average, not an alarm clock\n\n\n\n\n\n\n\n\n\n\n\\(N = N_0\\,e^{-t/\\tau}\\) — no fuse, the same dice every instant. \\(\\tau = 2.2\\ \\mu\\)s is the mean, not a deadline."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#it-should-never-reach-the-floor",
+    "href": "Lectures/L05/L05_Time_Dilation.html#it-should-never-reach-the-floor",
+    "title": "Time Dilation",
+    "section": "It should never reach the floor",
+    "text": "It should never reach the floor\n\n\ndistance light-speed allows a 2.2 us clock:  c*tau = 660 m\ndistance it must cover:                              15000 m\nfraction surviving 15 km classically:  e^(-15000/660) = 1.3e-10\n\n\n\nNewton’s verdict: about one muon in ten billion survives. The measured rain says otherwise — they arrive in droves."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#time-dilation-saves-it",
+    "href": "Lectures/L05/L05_Time_Dilation.html#time-dilation-saves-it",
+    "title": "Time Dilation",
+    "section": "Time dilation saves it",
+    "text": "Time dilation saves it\n\n\ngamma at 0.995c                = 10.0\nlab-frame mean lifetime        = 22 us\ndecay length gamma*beta*c*tau  = 6.6 km\nsurviving 15 km:  e^(-15/6.6) = 10%\n\n\n\nIn your frame the muon’s clock runs slow by \\(\\gamma \\approx 10\\). Its 2.2 μs stretch to 22 μs — and one in ten arrives. That is the rain."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#they-checked-twice",
+    "href": "Lectures/L05/L05_Time_Dilation.html#they-checked-twice",
+    "title": "Time Dilation",
+    "section": "They checked, twice",
+    "text": "They checked, twice\n\n\n\n\n\n\n\n\n\nwhere\nfound\n\n\n\n\nRossi & Hall, 1941\nEcho Lake, CO → Denver\nmuon loss with altitude fits \\(\\gamma\\tau\\), not \\(\\tau\\)\n\n\nFrisch & Smith, 1963\nMt. Washington → sea level\nfilmed it: survival ~13× the classical prediction\n\n\n\n\n\nThursday’s activity: Frisch–Smith’s actual count rates, and you run both calculations — one in each frame."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#first-job-as-a-pair",
+    "href": "Lectures/L05/L05_Time_Dilation.html#first-job-as-a-pair",
+    "title": "Time Dilation",
+    "section": "First job as a pair",
+    "text": "First job as a pair\n\nHow much does motion cost YOU? With your pair, compute \\(\\gamma - 1\\) (use \\(\\gamma - 1 \\approx \\tfrac{1}{2}\\beta^{2}\\) for small \\(\\beta\\)) for:\n\nan airliner, \\(v = 250\\) m/s\nthe ISS, \\(v = 7.7\\) km/s\na GPS satellite, \\(v = 3.9\\) km/s\n\nThen turn each into time lost per day of flight (86 400 s). One phone calculator per pair; one page, both names, keep it."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#what-you-just-computed",
+    "href": "Lectures/L05/L05_Time_Dilation.html#what-you-just-computed",
+    "title": "Time Dilation",
+    "section": "What you just computed",
+    "text": "What you just computed\n\n\n                v (m/s)     gamma-1     per day\nairliner            250     3.5e-13     0.03 us\nISS                7700     3.3e-10    28.50 us\nGPS satellite      3900     8.5e-11     7.31 us\n\n\n\nNobody ever felt time dilation. Below \\(10^{-4}c\\), \\(\\gamma - 1\\) is parts per billion — which is why it took until 1905 to notice it in principle, and until 1941 to see it."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#and-yet-clocks-are-now-good-enough",
+    "href": "Lectures/L05/L05_Time_Dilation.html#and-yet-clocks-are-now-good-enough",
+    "title": "Time Dilation",
+    "section": "And yet clocks are now good enough",
+    "text": "And yet clocks are now good enough\n\n\nHafele–Keating, 1971. Four cesium clocks flown around the world on airliners, then compared with the ones left home.\n\n\n\ndirection\npredicted\nmeasured\n\n\n\n\neastward\n\\(-40 \\pm 23\\) ns\n\\(-59 \\pm 10\\) ns\n\n\nwestward\n\\(+275 \\pm 21\\) ns\n\\(+273 \\pm 7\\) ns"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#where-it-bites-gps-again",
+    "href": "Lectures/L05/L05_Time_Dilation.html#where-it-bites-gps-again",
+    "title": "Time Dilation",
+    "section": "Where it bites: GPS, again",
+    "text": "Where it bites: GPS, again\n\n\nSatellite clocks run slow by ~7 μs/day from their orbital speed — your pair just computed it.\nUncorrected, that is ~2 km of position error per day, growing.\n\n\n\n\n\nGravity speeds them up by ~45 μs/day — bigger, opposite sign. That story is general relativity; we point at it in L14."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#what-today-actually-changed",
+    "href": "Lectures/L05/L05_Time_Dilation.html#what-today-actually-changed",
+    "title": "Time Dilation",
+    "section": "What today actually changed",
+    "text": "What today actually changed\n\n\n\n\n\n\n\n\n\nbefore 11:00\nafter 12:20\n\n\n\n\none universal rate of time\neach worldline carries its own\n\n\n“how long” has one answer\nproper time vs. lattice time\n\n\nmoving clocks are odd\nmoving clocks run slow — by \\(\\gamma\\), symmetrically"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#thursday",
+    "href": "Lectures/L05/L05_Time_Dilation.html#thursday",
+    "title": "Time Dilation",
+    "section": "Thursday",
+    "text": "Thursday\nLength contraction\n\n\n\n\n\n\n\nThe muon’s own verdict\nits clock is fine — so the atmosphere must be short\n\n\nReading\nTW ch. 3 (same as this week)\n\n\nProblem set 2\ndue Sun 11:59 pm\n\n\nDemo notebook\nlight-clock entry due 11:00 Thursday"
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#exit-ticket",
+    "href": "Lectures/L05/L05_Time_Dilation.html#exit-ticket",
+    "title": "Time Dilation",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nA student says: “The muon result proves that moving clocks really run slower — the muon’s clock was truly the slow one.”\nIn one or two sentences, what is wrong with this?\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L05/L05_Time_Dilation.html#section-5",
+    "href": "Lectures/L05/L05_Time_Dilation.html#section-5",
+    "title": "Time Dilation",
+    "section": "",
+    "text": "PHY 208 — Time Dilation Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#before-we-start",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#before-we-start",
+    "title": "The Lorentz Transformation",
+    "section": "Before we start",
+    "text": "Before we start\n\nPrep check 3 was due 10:30 — dilation and contraction.\nProblem set 2 closed Sunday; solutions go up tonight. Problem set 3 posts today, due Sun Sep 20: the first set where the transformation does the work.\nMilestone 1 — due Tue Sep 29. That is two weeks out. Start it."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#thursdays-exit-ticket",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#thursdays-exit-ticket",
+    "title": "The Lorentz Transformation",
+    "section": "Thursday’s exit ticket",
+    "text": "Thursday’s exit ticket\n\n\n“At \\(0.87c\\) a spaceship is measured at half its length, so the hull must be squeezed under enormous stress.”\n\n\nMost of you got it: no stress, no strain, every gauge on board reads zero, and the shorter number is still a correct measurement.\n\nThe overcorrection to watch: “so it only looks shorter.” No. It is measured shorter — measurement is all “is” ever meant."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#what-the-transformation-has-to-do",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#what-the-transformation-has-to-do",
+    "title": "The Lorentz Transformation",
+    "section": "What the transformation has to do",
+    "text": "What the transformation has to do\nGiven an event at \\((t, x)\\) in my frame, return \\((t', x')\\) in hers, where she moves at \\(v\\) along \\(x\\).\n\n\n\n\n\n\n\nit must\nbecause\n\n\n\n\nbe linear\nuniform motion stays uniform motion in every inertial frame\n\n\nsend \\(x = vt \\to x' = 0\\)\nher origin is at rest in her frame, by definition\n\n\nsend \\(x = ct \\to x' = ct'\\)\npostulate 2: light is \\(c\\) for both of us\n\n\nreduce to \\(x' = x - vt\\) when \\(v \\ll c\\)\nNewton works, and we must reproduce him"
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#two-lines-of-algebra",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#two-lines-of-algebra",
+    "title": "The Lorentz Transformation",
+    "section": "Two lines of algebra",
+    "text": "Two lines of algebra\n\n\nLinearity plus “her origin has \\(x' = 0\\)” forces the form\n\\[x' = \\gamma\\,(x - vt)\\]\nfor some \\(\\gamma\\) that may depend on \\(v\\) but not on \\(x\\) or \\(t\\).\n\n\n\n\n\n\n\n\n\n\n\n\nBy postulate 1, her view of me is the same law with \\(v \\to -v\\):\n\\[x = \\gamma\\,(x' + vt')\\]\nThe same \\(\\gamma\\) — neither of us is the one “really moving”."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#now-let-light-do-the-work",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#now-let-light-do-the-work",
+    "title": "The Lorentz Transformation",
+    "section": "Now let light do the work",
+    "text": "Now let light do the work\n\n\n\n\n\n\n\n\n\nBoth of us must measure that pulse at \\(c\\):   \\(x = ct\\)   and   \\(x' = ct'\\).\n\nSubstitute both into the pair of equations, multiply them together, and every reference to the pulse cancels:\n\\[\\gamma^{2}\\left(1 - \\frac{v^{2}}{c^{2}}\\right) = 1\n\\qquad\\Longrightarrow\\qquad\n\\boxed{\\;\\gamma = \\frac{1}{\\sqrt{1 - v^{2}/c^{2}}}\\;}\\]"
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#the-transformation-both-directions",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#the-transformation-both-directions",
+    "title": "The Lorentz Transformation",
+    "section": "The transformation, both directions",
+    "text": "The transformation, both directions\n\n\nHers, from mine\n\\[x' = \\gamma\\,(x - vt)\\] \\[t' = \\gamma\\left(t - \\frac{vx}{c^{2}}\\right)\\]\n\nMine, from hers\n\\[x = \\gamma\\,(x' + vt')\\] \\[t = \\gamma\\left(t' + \\frac{vx'}{c^{2}}\\right)\\]\n\n\n\n\n\n\n\n\n\n\n\nThe \\(-vx/c^{2}\\) in the time equation is the relativity of simultaneity, sitting in the algebra where L04 spent a lecture putting it by hand."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#the-crank-turned-three-times",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#the-crank-turned-three-times",
+    "title": "The Lorentz Transformation",
+    "section": "The crank, turned three times",
+    "text": "The crank, turned three times\n\n\n\n\n\n\n\n\nset\nand you get\nwhich is\n\n\n\n\n\\(\\Delta x = 0\\) (one clock, two ticks)\n\\(\\Delta t' = \\gamma\\,\\Delta t\\)\ntime dilation\n\n\n\\(\\Delta t' = 0\\) (endpoints at once, her frame)\n\\(\\Delta x = \\Delta x'/\\gamma\\)\nlength contraction\n\n\n\\(\\Delta t = 0\\) (simultaneous for me)\n\\(\\Delta t' = -\\gamma v\\,\\Delta x/c^{2}\\)\nsimultaneity offset\n\n\n\n\nThree weeks of argument, three substitutions. The physics did not change, the bookkeeping did."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#velocity-addition-and-the-wall-at-c",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#velocity-addition-and-the-wall-at-c",
+    "title": "The Lorentz Transformation",
+    "section": "Velocity addition, and the wall at \\(c\\)",
+    "text": "Velocity addition, and the wall at \\(c\\)\nAn object moves at \\(u'\\) in her frame. In mine:\n\\[u = \\frac{u' + v}{1 + u'v/c^{2}}\\]\n\n\n   0.5c + 0.5c  -&gt;  0.800000c\n   0.9c + 0.9c  -&gt;  0.994475c\n  0.99c + 0.99c  -&gt;  0.999949c\n  light + 0.5c  -&gt;  1.000000c\n\n\n\nNothing you can do gets past \\(c\\), and light plus anything is still exactly \\(c\\). The wall is not a rule added on top — it falls out of the algebra."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#where-newton-went",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#where-newton-went",
+    "title": "The Lorentz Transformation",
+    "section": "Where Newton went",
+    "text": "Where Newton went\n\n\n\n\n\n\n\n\n\n\n\nSet \\(c \\to \\infty\\) and the transformation becomes \\(x' = x - vt\\), \\(t' = t\\) exactly. Newton is not wrong; he is the \\(v/c \\to 0\\) corner of a larger law."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#the-boost-as-a-matrix",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#the-boost-as-a-matrix",
+    "title": "The Lorentz Transformation",
+    "section": "The boost, as a matrix",
+    "text": "The boost, as a matrix\nUse \\(ct\\) rather than \\(t\\), so both entries carry units of length:\n\\[\\begin{pmatrix} ct' \\\\ x' \\end{pmatrix}\n= \\gamma\\begin{pmatrix} 1 & -\\beta \\\\ -\\beta & 1 \\end{pmatrix}\n  \\begin{pmatrix} ct \\\\ x \\end{pmatrix},\n\\qquad \\beta = \\frac{v}{c}\\]\n\n\n\nMultiply out the top row:\n\\(ct' = \\gamma(ct - \\beta x) = \\gamma(ct - vx/c)\\).\nDivide by \\(c\\) — the time equation from twenty minutes ago."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#set-it-beside-a-rotation",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#set-it-beside-a-rotation",
+    "title": "The Lorentz Transformation",
+    "section": "Set it beside a rotation",
+    "text": "Set it beside a rotation\n\n\nRotation in the \\((x, y)\\) plane\n\\[R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\\n                      \\sin\\theta & \\phantom{-}\\cos\\theta \\end{pmatrix}\\]\nPreserves \\(x^{2} + y^{2}\\).\n\nBoost in the \\((ct, x)\\) plane\n\\[\\Lambda = \\begin{pmatrix} \\cosh\\phi & -\\sinh\\phi \\\\\n                            -\\sinh\\phi & \\phantom{-}\\cosh\\phi \\end{pmatrix}\\]\nPreserves something we name on Thursday.\n\n\n\n\n\n\n\n\n\n\n\n\\(\\gamma = \\cosh\\phi\\) and \\(\\gamma\\beta = \\sinh\\phi\\). Same structure — one sign, flipped."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#composing-boosts-is-matrix-multiplication",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#composing-boosts-is-matrix-multiplication",
+    "title": "The Lorentz Transformation",
+    "section": "Composing boosts is matrix multiplication",
+    "text": "Composing boosts is matrix multiplication\n\n\nboost(0.6) then boost(0.7)  -&gt;  combined beta = 0.915493\nvelocity-addition formula   -&gt;  0.915493\nGalileo would have said     -&gt;  1.300000   (faster than light)\n\n\n\nTwo boosts multiply to one boost, and the speed that comes out is exactly the velocity-addition formula. It was matrix multiplication all along."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#what-the-matrix-makes-obvious",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#what-the-matrix-makes-obvious",
+    "title": "The Lorentz Transformation",
+    "section": "What the matrix makes obvious",
+    "text": "What the matrix makes obvious\n\n\n\n\n\n\n\nin equations\nin matrices\n\n\n\n\nfour coupled relations to keep straight\none object, four entries\n\n\n“combine two boosts” — messy substitution\nmultiply, then read off\n\n\n“does it ever exceed \\(c\\)?” — case analysis\nclosure: boost × boost = boost\n\n\ninverse: flip \\(v\\), re-derive\n\\(\\Lambda(-\\beta)\\), and \\(\\Lambda(-\\beta)\\Lambda(\\beta) = I\\)\n\n\n\n\n\nThis is what a change of representation buys: no new physics, a different set of facts sitting in plain view. MTH 309 is the course where that becomes a habit."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#your-turn-get-your-week-back",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#your-turn-get-your-week-back",
+    "title": "The Lorentz Transformation",
+    "section": "Your turn: get your week back",
+    "text": "Your turn: get your week back\n\nIn your pairs. One result each, then swap and check.\n\n\nStart from \\[t' = \\gamma\\left(t - \\frac{vx}{c^{2}}\\right),\\quad x' = \\gamma(x - vt)\\]\nLeft side of the room — time dilation. Two ticks of her clock, same place in her frame. Set \\(\\Delta x' = 0\\), find \\(\\Delta t\\).\n\nMiddle — length contraction. Her rod, endpoints marked at once in my frame. Set \\(\\Delta t = 0\\), find \\(\\Delta x\\) in terms of \\(\\Delta x'\\).\nRight side — the lightning offset. Two strikes simultaneous for me, \\(\\Delta t = 0\\), separated by \\(\\Delta x = L\\). Find \\(\\Delta t'\\), and say which strike she says came first.\n\nThen: trade with a pair from a different third and check their line."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#section-1",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#section-1",
+    "title": "The Lorentz Transformation",
+    "section": "",
+    "text": "Two events are simultaneous in my frame, separated by 600 m along the direction of her motion. She flies past at 0.6c.\nIn her frame, which event happens first, and does the answer depend on her speed?\n(a) The event at larger x comes first, and faster makes the gap larger\n(b) The event at smaller x comes first, and faster makes the gap larger\n(c) They are still simultaneous, since zero transforms to zero\n(d) The order depends on her speed: below some speed one comes first, above it the other"
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#the-answer-and-the-number",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#the-answer-and-the-number",
+    "title": "The Lorentz Transformation",
+    "section": "The answer, and the number",
+    "text": "The answer, and the number\n\n\ngamma at 0.6c        = 1.250\ndt' = -g*v*dx/c^2    = -1.501 us\nso the event at LARGER x is earlier for her, by 1.501 us\n  at 0.3c: gap = 0.629 us   (grows, never flips)\n  at 0.6c: gap = 1.501 us   (grows, never flips)\n  at 0.9c: gap = 4.132 us   (grows, never flips)\n\n\n\nThe sign is set by the direction of her motion, not its size. Faster only means further apart, never reversed."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#the-man-who-wrote-it-first",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#the-man-who-wrote-it-first",
+    "title": "The Lorentz Transformation",
+    "section": "The man who wrote it first",
+    "text": "The man who wrote it first\n\n\n1904: Lorentz publishes these equations, essentially in this form. 1905: Poincaré names them the Lorentz transformation and shows they form a group.\nBoth had the mathematics. Both kept the ether, and read \\(t'\\) as a convenient fiction — “local time” — with the real time still ticking somewhere underneath.\n\n\n \n\n\nEinstein’s move was not the algebra. It was deleting the ether and taking \\(t'\\) seriously: there is no underneath."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#thursday",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#thursday",
+    "title": "The Lorentz Transformation",
+    "section": "Thursday",
+    "text": "Thursday\nThe invariant interval\n\n\n\n\n\n\n\nThe question left open\nrotations preserve length — what does a boost preserve?\n\n\nThe answer\none number every frame agrees on, and you will find it\n\n\nBring\na laptop or a phone, one per pair\n\n\nPrep check 4\ndue Tue Sep 22 — transformation & interval"
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#exit-ticket",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#exit-ticket",
+    "title": "The Lorentz Transformation",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nStarting from \\(t' = \\gamma\\left(t - vx/c^{2}\\right)\\):\nWhy does the position \\(x\\) appear in an equation for time? What would be different if that term were not there?\n\n\n\nScan it, or find it on UB Learns. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+  },
+  {
+    "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#section-2",
+    "href": "Lectures/L07/L07_Lorentz_Transformation.html#section-2",
+    "title": "The Lorentz Transformation",
+    "section": "",
+    "text": "PHY 208 — The Lorentz Transformation Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+  }
+]

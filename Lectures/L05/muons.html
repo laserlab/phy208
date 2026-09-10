@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muon Rain — PHY 208</title>
+<style>
+  :root{
+    --bg:#0d1620; --panel:#152131; --ink:#e8eaf0; --muted:#98a0b3;
+    --line:#24354a; --accent:#6cb8f5; --warn:#e8a33d; --ok:#5fbf85;
+    --newton:#98a0b3; --einstein:#6cb8f5; --muon:#e8a33d; --dead:#d64541;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  /* 100dvh tracks Safari's collapsing toolbar; 100vh does not. */
+  body{margin:0;background:var(--bg);color:var(--ink);height:100vh;height:100dvh;
+       display:flex;flex-direction:column;overflow:hidden;
+       font:16px/1.5 "Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  header{padding:11px 22px;border-bottom:1px solid var(--line);
+          border-top:4px solid #005bbb;flex:none}
+  h1{margin:0;font-size:19px;font-weight:600}
+  header p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;
+        flex:1;min-height:0;overflow:hidden}
+  @media(max-width:920px){.wrap{grid-template-columns:1fr}}
+  .stage{padding:14px;display:flex;align-items:center;justify-content:center;
+         min-width:0;min-height:0;overflow:hidden}
+  .panel{background:var(--panel);border-left:1px solid var(--line);padding:18px;
+         display:flex;flex-direction:column;gap:14px;min-height:0;overflow-y:auto}
+  svg{width:auto;height:auto;max-width:100%;max-height:100%}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;
+        text-transform:uppercase;letter-spacing:.05em}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}
+  button{background:#1c2c3f;color:var(--ink);border:1px solid var(--line);
+         border-radius:7px;padding:8px 11px;font-size:13px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.on{background:var(--accent);color:#0d1620;border-color:var(--accent);font-weight:600}
+  .btnrow{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .readout{font-variant-numeric:tabular-nums;font-size:13px}
+  .readout div{display:flex;justify-content:space-between;padding:4px 0;
+               border-bottom:1px solid var(--line)}
+  .readout .k{color:var(--muted)}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+     color:var(--muted);margin:0 0 8px;font-weight:600}
+  .note{font-size:12px;color:var(--muted);line-height:1.45}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;
+          margin-right:5px;vertical-align:baseline}
+  /* Presentation mode: F toggles browser fullscreen; the button hides itself
+     once engaged so nothing overlaps the diagram on the projector. */
+  #fsbtn{position:fixed;top:9px;right:14px;z-index:50;background:rgba(0,0,0,.35);
+         color:var(--ink);border:1px solid var(--line);border-radius:6px;
+         padding:4px 9px;font-size:12px;cursor:pointer;opacity:.55}
+  #fsbtn:hover{opacity:1;border-color:var(--accent)}
+  :fullscreen #fsbtn{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Muon rain — the same sky, two sets of books</h1>
+  <p>PHY 208 · Identical muons, identical random lifetimes. Left: Newton's bookkeeping. Right: Einstein's. Watch what reaches the ground.</p>
+</header>
+
+<div class="wrap">
+  <div class="stage">
+    <svg id="dia" viewBox="0 0 960 560" role="img"
+         aria-label="Two side-by-side columns of atmosphere, 15 kilometers tall, with muons raining from the top. In the left column, computed without time dilation, almost every muon decays within the top kilometer and essentially none reach the ground. In the right column, computed with time dilation, about one muon in ten reaches the ground detector. Counters under each column show muons born and muons landed."></svg>
+  </div>
+
+  <div class="panel">
+
+    <div>
+      <div class="row">
+        <label for="gam" style="margin:0"><span style="text-transform:none">γ</span> in the right-hand books</label>
+        <span class="val" id="gval">10.0</span>
+      </div>
+      <input type="range" id="gam" min="10" max="150" step="1" value="100">
+      <div class="btnrow" style="margin-top:9px">
+        <button id="run">▶ Run</button>
+        <button id="reset">Reset counters</button>
+      </div>
+    </div>
+
+    <div class="readout">
+      <h2>Counters</h2>
+      <div><span class="k">muons born (each sky)</span><span id="rborn">0</span></div>
+      <div><span class="k"><span class="swatch" style="background:#98a0b3"></span>Newton: landed</span><span id="rnl">0 (0.0%)</span></div>
+      <div><span class="k"><span class="swatch" style="background:#6cb8f5"></span>Einstein: landed</span><span id="rel">0 (0.0%)</span></div>
+      <div><span class="k">theory, Newton</span><span id="rtn">—</span></div>
+      <div><span class="k">theory, Einstein</span><span id="rte">—</span></div>
+    </div>
+
+    <p class="note">
+      <strong>Same muons.</strong> Each pair shares one random proper lifetime
+      drawn from the 2.2 μs exponential. The only difference between the two
+      skies is whether the 15 km trip is charged against τ — or against γτ.
+    </p>
+
+    <p class="note">
+      Slide γ down to 1 and the two skies agree — and go dark. The measured
+      sea-level rain (~1 muon/cm²/min) is the right-hand column.
+    </p>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  const S  = document.getElementById('dia');
+  const NS = 'http://www.w3.org/2000/svg';
+  const $  = id => document.getElementById(id);
+  const gamSlider = $('gam');
+
+  // Geometry: 15 km of atmosphere mapped onto TOP..GND pixels.
+  const TOP = 78, GND = 470, H_PX = GND - TOP;
+  const H_KM = 15.0;
+  const PX_PER_KM = H_PX / H_KM;
+  const COLS = [
+    {x0: 60,  x1: 420, label: "Newton's books — no dilation", color: 'var(--newton)'},
+    {x0: 540, x1: 900, label: "Einstein's books — lifetime γτ", color: 'var(--einstein)'},
+  ];
+  const D0_KM = 0.66;          // v·τ at 0.995c: mean decay length with γ = 1, km
+  const FALL_PXS = 120;        // fall speed on screen, px/s
+  const SPAWN_S = 8;           // spawn rate, pairs per second
+
+  let running = false, tPrev = null, spawnAcc = 0;
+  let born = 0, landed = [0, 0];
+  let muons = [];              // {x, y, d0km} — x is offset within a column
+  let bursts = [];             // {col, x, y, ttl, hit}
+
+  function gamma(){ return gamSlider.value/10; }
+
+  function el(tag, attrs){
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function line(x1,y1,x2,y2,stroke,w,dash,op){
+    return el('line',{x1,y1,x2,y2,stroke,'stroke-width':w||1.6,
+                      ...(dash?{'stroke-dasharray':dash}:{}),
+                      ...(op!==undefined?{'opacity':op}:{})});
+  }
+  function text(x,y,s,fill,size,anchor,weight){
+    const t = el('text',{x,y,fill:fill||'#98a0b3','font-size':size||13,
+                         'text-anchor':anchor||'start','font-family':'inherit',
+                         ...(weight?{'font-weight':weight}:{})});
+    t.textContent = s; return t;
+  }
+
+  function draw(){
+    const g = gamma();
+    while (S.firstChild) S.removeChild(S.firstChild);
+
+    for (let c = 0; c < 2; c++){
+      const col = COLS[c], mid = (col.x0+col.x1)/2;
+      // production layer and ground
+      S.appendChild(line(col.x0, TOP, col.x1, TOP, 'var(--warn)', 2, '5 4', .8));
+      S.appendChild(text(mid, TOP-14, 'cosmic-ray collisions — 15 km', '#98a0b3', 11.5, 'middle'));
+      S.appendChild(line(col.x0, GND, col.x1, GND, '#8b93a5', 3));
+      S.appendChild(text(mid, GND+20, 'sea-level detector', '#98a0b3', 11.5, 'middle'));
+      S.appendChild(text(mid, 40, col.label, col.color, 15, 'middle', 600));
+      // altitude ticks every 5 km
+      for (const km of [5, 10]){
+        const y = GND - km*PX_PER_KM;
+        S.appendChild(line(col.x0, y, col.x0+10, y, '#24354a', 1.5));
+        S.appendChild(text(col.x0-6, y+4, km+' km', '#5b6577', 10, 'end'));
+      }
+      // mean decay altitude marker
+      const dk = (c === 0 ? D0_KM : g*D0_KM);
+      if (dk < H_KM){
+        const y = TOP + dk*PX_PER_KM;
+        S.appendChild(line(col.x0, y, col.x1, y, 'var(--dead)', 1.2, '2 5', .55));
+        S.appendChild(text(col.x1-4, y+14, 'mean decay depth', '#8a4a52', 10, 'end'));
+      }
+      // counter
+      S.appendChild(text(mid, GND+58, landed[c].toString(), col.color, 34, 'middle', 700));
+      S.appendChild(text(mid, GND+80, 'landed of ' + born + ' born', '#98a0b3', 11.5, 'middle'));
+    }
+
+    // muons — one dot per column, sharing the same lifetime draw
+    for (const m of muons){
+      const depthKm = (m.y - TOP)/PX_PER_KM;
+      for (let c = 0; c < 2; c++){
+        const dk = (c === 0 ? m.d0km : g*m.d0km);
+        if (depthKm <= dk){
+          S.appendChild(el('circle',{cx: COLS[c].x0 + m.x, cy: m.y, r: 4,
+                          fill:'var(--muon)', opacity: .95}));
+        }
+      }
+    }
+    // decay / landing bursts
+    for (const b of bursts){
+      const r = 4 + (1 - b.ttl)*10;
+      S.appendChild(el('circle',{cx: COLS[b.col].x0 + b.x, cy: b.y, r,
+                      fill:'none', stroke: b.hit ? 'var(--ok)' : 'var(--dead)',
+                      'stroke-width':1.8, opacity: Math.max(b.ttl, 0)}));
+    }
+
+    // readouts
+    const thN = Math.exp(-H_KM/D0_KM);
+    const thE = Math.exp(-H_KM/(g*D0_KM));
+    $('gval').textContent = g.toFixed(1);
+    $('rborn').textContent = born.toString();
+    $('rnl').textContent = `${landed[0]} (${born ? (100*landed[0]/born).toFixed(1) : '0.0'}%)`;
+    $('rel').textContent = `${landed[1]} (${born ? (100*landed[1]/born).toFixed(1) : '0.0'}%)`;
+    $('rtn').textContent = thN < 1e-4 ? thN.toExponential(1) : (100*thN).toFixed(1)+'%';
+    $('rte').textContent = thE < 1e-4 ? thE.toExponential(1) : (100*thE).toFixed(1)+'%';
+  }
+
+  function step(tNow){
+    if (!running) return;
+    if (tPrev === null) tPrev = tNow;
+    const dt = Math.min((tNow - tPrev)/1000, 0.05);
+    tPrev = tNow;
+    const g = gamma();
+
+    // spawn muon pairs; each pair shares one exponential lifetime draw
+    spawnAcc += dt*SPAWN_S;
+    while (spawnAcc >= 1){
+      spawnAcc -= 1;
+      born += 1;
+      muons.push({
+        x: 20 + Math.random()*(COLS[0].x1 - COLS[0].x0 - 40),
+        y: TOP,
+        d0km: -D0_KM*Math.log(1 - Math.random()),   // Exp(mean 0.66 km) at γ=1
+      });
+    }
+
+    // advance, decay, land
+    const keep = [];
+    for (const m of muons){
+      const yNew = m.y + FALL_PXS*dt;
+      for (let c = 0; c < 2; c++){
+        const dk = (c === 0 ? m.d0km : g*m.d0km);
+        const decayY = TOP + dk*PX_PER_KM;
+        const before = m.y, after = yNew;
+        if (before <= decayY && after > decayY && decayY < GND){
+          bursts.push({col: c, x: m.x, y: decayY, ttl: 1, hit: false});
+        }
+        if (before <= GND && after > GND && decayY >= GND){
+          landed[c] += 1;
+          bursts.push({col: c, x: m.x, y: GND, ttl: 1, hit: true});
+        }
+      }
+      m.y = yNew;
+      // keep while still visible in at least one column
+      const dkMax = Math.max(m.d0km, g*m.d0km);
+      if (yNew <= Math.min(GND, TOP + dkMax*PX_PER_KM)) keep.push(m);
+    }
+    muons = keep;
+
+    for (const b of bursts) b.ttl -= dt*2.2;
+    bursts = bursts.filter(b => b.ttl > 0);
+
+    draw();
+    requestAnimationFrame(step);
+  }
+
+  // ---- interaction ----
+  gamSlider.addEventListener('input', draw);
+  $('run').addEventListener('click', function(){
+    running = !running;
+    this.textContent = running ? '❚❚ Pause' : '▶ Run';
+    this.classList.toggle('on', running);
+    tPrev = null;
+    if (running) requestAnimationFrame(step);
+  });
+  $('reset').addEventListener('click', () => {
+    born = 0; landed = [0, 0]; muons = []; bursts = []; spawnAcc = 0;
+    draw();
+  });
+
+  draw();
+})();
+</script>
+
+<script>
+// Fullscreen for lecture use. Press F (or Esc to leave). Safari needs the
+// webkit-prefixed calls.
+(function(){
+  var b=document.createElement('button');
+  b.id='fsbtn'; b.textContent='⤢ Fullscreen (F)';
+  b.title='Toggle fullscreen — hides the Safari toolbar';
+  document.body.appendChild(b);
+  function on(){ return document.fullscreenElement||document.webkitFullscreenElement; }
+  function toggle(){
+    var e=document.documentElement;
+    if(on()){ (document.exitFullscreen||document.webkitExitFullscreen).call(document); }
+    else    { (e.requestFullscreen||e.webkitRequestFullscreen).call(e); }
+  }
+  b.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(ev){
+    if(ev.key==='f'||ev.key==='F'){
+      var t=ev.target.tagName;
+      if(t==='INPUT'||t==='TEXTAREA') return;
+      ev.preventDefault(); toggle();
+    }
+  });
+})();
+</script>
+</body>
+</html>

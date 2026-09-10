@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minkowski Diagram — PHY 208</title>
+<style>
+  :root{
+    --bg:#0d1620; --panel:#152131; --ink:#e8eaf0; --muted:#98a0b3;
+    --line:#24354a; --accent:#6cb8f5; --warn:#e8a33d; --ok:#5fbf85;
+    --light:#e8a33d; --primed:#ff7a8a; --evt:#5fbf85;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  /* 100dvh tracks Safari's collapsing toolbar; 100vh does not. */
+  body{margin:0;background:var(--bg);color:var(--ink);height:100vh;height:100dvh;
+       display:flex;flex-direction:column;overflow:hidden;
+       font:16px/1.5 "Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  header{padding:11px 22px;border-bottom:1px solid var(--line);
+          border-top:4px solid #005bbb;flex:none}
+  h1{margin:0;font-size:19px;font-weight:600}
+  header p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;
+        flex:1;min-height:0;overflow:hidden}
+  @media(max-width:920px){.wrap{grid-template-columns:1fr}}
+  .stage{padding:14px;display:flex;align-items:center;justify-content:center;
+         min-width:0;min-height:0;overflow:hidden}
+  .panel{background:var(--panel);border-left:1px solid var(--line);padding:18px;
+         display:flex;flex-direction:column;gap:14px;min-height:0;overflow-y:auto}
+  svg{width:auto;height:auto;max-width:100%;max-height:100%}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;
+        text-transform:uppercase;letter-spacing:.05em}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}
+  button{background:#1c2c3f;color:var(--ink);border:1px solid var(--line);
+         border-radius:7px;padding:8px 11px;font-size:13px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.on{background:var(--accent);color:#0d1620;border-color:var(--accent);font-weight:600}
+  .btnrow{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .readout{font-variant-numeric:tabular-nums;font-size:13px}
+  .readout div{display:flex;justify-content:space-between;padding:4px 0;
+               border-bottom:1px solid var(--line)}
+  .readout .k{color:var(--muted)}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+     color:var(--muted);margin:0 0 8px;font-weight:600}
+  .note{font-size:12px;color:var(--muted);line-height:1.45}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;
+          margin-right:5px;vertical-align:baseline}
+  /* Presentation mode: F toggles browser fullscreen; the button hides itself
+     once engaged so nothing overlaps the diagram on the projector. */
+  #fsbtn{position:fixed;top:9px;right:14px;z-index:50;background:rgba(0,0,0,.35);
+         color:var(--ink);border:1px solid var(--line);border-radius:6px;
+         padding:4px 9px;font-size:12px;cursor:pointer;opacity:.55}
+  #fsbtn:hover{opacity:1;border-color:var(--accent)}
+  :fullscreen #fsbtn{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Minkowski diagram — simultaneity, worldlines, and the interval</h1>
+  <p>PHY 208 · Drag the velocity slider. The primed axes tilt; the light cone never moves.</p>
+</header>
+
+<div class="wrap">
+  <div class="stage">
+    <svg id="dia" viewBox="0 0 640 640" role="img"
+         aria-label="Minkowski spacetime diagram. Vertical axis is time, horizontal axis is space. Yellow 45-degree lines are the light cone. Pink lines are the time and space axes of a moving observer, which tilt symmetrically toward the light cone as velocity increases."></svg>
+  </div>
+
+  <div class="panel">
+
+    <div>
+      <div class="row">
+        <label for="beta" style="margin:0">Velocity of primed frame</label>
+        <span class="val" id="bval">0.00c</span>
+      </div>
+      <input type="range" id="beta" min="-95" max="95" step="1" value="0">
+      <div class="btnrow" style="margin-top:9px">
+        <button id="anim">▶ Sweep</button>
+        <button id="zero">Reset to 0</button>
+      </div>
+    </div>
+
+    <div>
+      <h2>Show</h2>
+      <div class="btnrow">
+        <button id="tGrid" class="on">Primed axes</button>
+        <button id="tSim" class="on">Simultaneity</button>
+        <button id="tCone" class="on">Light cone</button>
+        <button id="tHyp">Invariant hyperbola</button>
+        <button id="tEvents" class="on">Events A, B</button>
+        <button id="tGridlines">Primed grid</button>
+      </div>
+    </div>
+
+    <div>
+      <h2>Event pairs</h2>
+      <div class="btnrow">
+        <button id="pLevel">level — spacelike</button>
+        <button id="pFlip">flips at 0.5c</button>
+        <button id="pTime">timelike</button>
+        <button id="pLight">lightlike</button>
+      </div>
+    </div>
+
+    <div class="readout">
+      <h2>Numbers</h2>
+      <div><span class="k">β = v/c</span><span id="rb">0.600</span></div>
+      <div><span class="k">γ</span><span id="rg">1.250</span></div>
+      <div><span class="k">axis tilt</span><span id="rt">31.0°</span></div>
+    </div>
+
+    <div class="readout">
+      <h2>Two events</h2>
+      <div><span class="k"><span class="swatch" style="background:#5fbf85"></span>A (unprimed)</span><span id="rA">(2.0, 1.0)</span></div>
+      <div><span class="k"><span class="swatch" style="background:#5fbf85"></span>B (unprimed)</span><span id="rB">(−2.0, 1.0)</span></div>
+      <div><span class="k">Δt in S</span><span id="rdt">0.00</span></div>
+      <div><span class="k">Δt′ in S′</span><span id="rdtp">0.00</span></div>
+      <div><span class="k">interval Δs²</span><span id="rint">−16.00</span></div>
+    </div>
+
+    <p class="note" id="verdict"></p>
+
+    <p class="note">
+      <strong>Reading it:</strong> lines parallel to the <em>x′</em> axis
+      connect events the primed observer calls simultaneous. Tilt the axes and
+      A and B stop being simultaneous — the order can even reverse.
+      The interval Δs² is the same in every frame.
+    </p>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  const S = document.getElementById('dia');
+  const NS = 'http://www.w3.org/2000/svg';
+  const CX = 320, CY = 320, U = 58;      // origin and units-per-cell (px)
+  const RANGE = 4.6;                      // half-width in units
+
+  const $ = id => document.getElementById(id);
+  const beta = $('beta');
+
+  // Events in the unprimed frame: (x, t)
+  const EV = { A: {x:  2, t: 1}, B: {x: -2, t: 1} };   // opens LEVEL (spacelike)
+
+  const show = {
+    axes: true, sim: true, cone: true,
+    hyp: false, events: true, grid: false
+  };
+
+  const X  = x => CX + x*U;
+  const Y  = t => CY - t*U;
+
+  function el(tag, attrs){
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function line(x1,y1,x2,y2,stroke,w,dash,op){
+    return el('line',{x1,y1,x2,y2,stroke,'stroke-width':w||1.6,
+                      ...(dash?{'stroke-dasharray':dash}:{}),
+                      ...(op?{'opacity':op}:{})});
+  }
+  function text(x,y,s,fill,size,anchor){
+    const t = el('text',{x,y,fill:fill||'#98a0b3','font-size':size||13,
+                         'text-anchor':anchor||'start','font-family':'inherit'});
+    t.textContent = s; return t;
+  }
+
+  function draw(){
+    const b = +beta.value/100;
+    const g = 1/Math.sqrt(1-b*b);
+    while (S.firstChild) S.removeChild(S.firstChild);
+
+    // ---- background grid (unprimed) ----
+    for (let i=-4;i<=4;i++){
+      S.appendChild(line(X(i),Y(-RANGE),X(i),Y(RANGE),'#1b2836',1));
+      S.appendChild(line(X(-RANGE),Y(i),X(RANGE),Y(i),'#1b2836',1));
+    }
+
+    // ---- primed grid lines ----
+    if (show.grid){
+      for (let i=-4;i<=4;i++){
+        // constant t' lines (parallel to x' axis): t = b*x + i/g
+        const x1=-RANGE, x2=RANGE;
+        S.appendChild(line(X(x1),Y(b*x1+i/g),X(x2),Y(b*x2+i/g),'#3a2b3d',1.2));
+        // constant x' lines (parallel to t' axis): x = b*t + i/g
+        const t1=-RANGE, t2=RANGE;
+        S.appendChild(line(X(b*t1+i/g),Y(t1),X(b*t2+i/g),Y(t2),'#3a2b3d',1.2));
+      }
+    }
+
+    // ---- light cone ----
+    if (show.cone){
+      S.appendChild(line(X(-RANGE),Y(-RANGE),X(RANGE),Y(RANGE),'var(--light)',2.4,null,.9));
+      S.appendChild(line(X(-RANGE),Y(RANGE),X(RANGE),Y(-RANGE),'var(--light)',2.4,null,.9));
+      S.appendChild(text(X(3.5),Y(3.9),'light',  'var(--light)',13));
+    }
+
+    // ---- unprimed axes ----
+    S.appendChild(line(X(-RANGE),CY,X(RANGE),CY,'#8b93a5',2.2));
+    S.appendChild(line(CX,Y(-RANGE),CX,Y(RANGE),'#8b93a5',2.2));
+    S.appendChild(text(X(RANGE)-16,CY+22,'x','#c8cedb',16));
+    S.appendChild(text(CX+10,Y(RANGE)+16,'t','#c8cedb',16));
+
+    // ---- primed axes ----
+    if (show.axes){
+      // t' axis: x = b t   |   x' axis: t = b x
+      S.appendChild(line(X(-b*RANGE),Y(-RANGE),X(b*RANGE),Y(RANGE),'var(--primed)',2.6));
+      S.appendChild(line(X(-RANGE),Y(-b*RANGE),X(RANGE),Y(b*RANGE),'var(--primed)',2.6));
+      S.appendChild(text(X(b*RANGE)+8,Y(RANGE)+18,"t′",'var(--primed)',16));
+      S.appendChild(text(X(RANGE)-18,Y(b*RANGE)-10,"x′",'var(--primed)',16));
+    }
+
+    // ---- invariant hyperbolae ----
+    if (show.hyp){
+      for (const s of [1,2,3]){
+        let dT='', dX='';
+        for (let i=0;i<=60;i++){
+          const th = -1.6 + i*(3.2/60);
+          const t = s*Math.cosh(th), x = s*Math.sinh(th);
+          if (Math.abs(x)<RANGE && Math.abs(t)<RANGE)
+            dT += (dT?' L ':'M ') + X(x) + ' ' + Y(t);
+          const t2 = s*Math.sinh(th), x2 = s*Math.cosh(th);
+          if (Math.abs(x2)<RANGE && Math.abs(t2)<RANGE)
+            dX += (dX?' L ':'M ') + X(x2) + ' ' + Y(t2);
+        }
+        if (dT) S.appendChild(el('path',{d:dT,fill:'none',stroke:'#6cb8f5',
+                 'stroke-width':1.4,'stroke-dasharray':'4 3',opacity:.75}));
+        if (dX) S.appendChild(el('path',{d:dX,fill:'none',stroke:'#6cb8f5',
+                 'stroke-width':1.4,'stroke-dasharray':'4 3',opacity:.75}));
+      }
+    }
+
+    // ---- events + simultaneity lines ----
+    if (show.events){
+      for (const k of ['A','B']){
+        const e = EV[k];
+        if (show.sim){
+          // line of constant t' through the event: slope b in (x,t)
+          const x1=-RANGE, x2=RANGE;
+          const c = e.t - b*e.x;
+          S.appendChild(line(X(x1),Y(b*x1+c),X(x2),Y(b*x2+c),
+                             'var(--primed)',1.5,'6 4',.65));
+        }
+        S.appendChild(el('circle',{cx:X(e.x),cy:Y(e.t),r:7,
+                        fill:'var(--evt)',stroke:'#0d1620','stroke-width':2}));
+        S.appendChild(text(X(e.x)+12,Y(e.t)-9,k,'var(--evt)',16));
+      }
+    }
+
+    // ---- readouts ----
+    const dt  = EV.B.t - EV.A.t;
+    const dx  = EV.B.x - EV.A.x;
+    const dtp = g*(dt - b*dx);
+    const s2  = dt*dt - dx*dx;
+
+    $('bval').textContent = (b>=0?'':'−') + Math.abs(b).toFixed(2) + 'c';
+    $('rb').textContent = b.toFixed(3);
+    $('rg').textContent = g.toFixed(3);
+    $('rt').textContent = (Math.atan(Math.abs(b))*180/Math.PI).toFixed(1) + '°';
+    $('rA').textContent = `(${EV.A.x.toFixed(1)}, ${EV.A.t.toFixed(1)})`;
+    $('rB').textContent = `(${EV.B.x.toFixed(1)}, ${EV.B.t.toFixed(1)})`;
+    $('rdt').textContent  = dt.toFixed(2);
+    $('rdtp').textContent = dtp.toFixed(2);
+    $('rint').textContent = (s2>=0?'+':'−') + Math.abs(s2).toFixed(2);
+
+    const v = $('verdict');
+    // Live order line: the classification above is invariant, but WHICH event
+    // is earlier in S' responds to the slider — show that, so sweeping gives
+    // visible feedback in the verdict itself.
+    const ord = Math.abs(dtp) < 0.005
+      ? 'At this β they are <em>simultaneous in S′</em>.'
+      : (dtp > 0 ? 'Right now in S′: <strong>A before B</strong>.'
+                 : 'Right now in S′: <strong>B before A</strong>.');
+    if (s2 > 0.001){
+      v.innerHTML = '<strong style="color:var(--ok)">Timelike separation.</strong> ' +
+        'A and B can be causally connected. Their time order is the same in every frame — ' +
+        'no observer sees B before A.';
+    } else if (s2 < -0.001){
+      v.innerHTML = '<strong style="color:var(--warn)">Spacelike separation.</strong> ' +
+        'No signal can link A and B. Their time order <em>depends on the frame</em>. ' + ord;
+    } else {
+      v.innerHTML = '<strong style="color:var(--light)">Lightlike (null) separation.</strong> ' +
+        'Only a light signal connects them. Δs² = 0 in every frame.';
+    }
+  }
+
+  // ---- interaction ----
+  beta.addEventListener('input', draw);
+  $('zero').addEventListener('click', ()=>{ beta.value=0; draw(); });
+
+  let raf=null, dir=1;
+  $('anim').addEventListener('click', function(){
+    if (raf){ cancelAnimationFrame(raf); raf=null; this.textContent='▶ Sweep';
+              this.classList.remove('on'); return; }
+    this.textContent='❚❚ Stop'; this.classList.add('on');
+    const step = () => {
+      let v = +beta.value + dir*0.9;
+      if (v >=  95){ v =  95; dir = -1; }
+      if (v <= -95){ v = -95; dir =  1; }
+      beta.value = v; draw(); raf = requestAnimationFrame(step);
+    };
+    step();
+  });
+
+  for (const [id,key] of [['tGrid','axes'],['tSim','sim'],['tCone','cone'],
+                          ['tHyp','hyp'],['tEvents','events'],['tGridlines','grid']]){
+    $(id).addEventListener('click', function(){
+      show[key] = !show[key];
+      this.classList.toggle('on', show[key]);
+      draw();
+    });
+  }
+
+  // Preset event pairs: one click per teaching case. A stays at (2, 1).
+  for (const [id, bx, bt] of [['pLevel',-2,1],['pFlip',4,2],
+                              ['pTime',2,3],['pLight',4,3]]){
+    $(id).addEventListener('click', ()=>{ EV.B.x = bx; EV.B.t = bt; draw(); });
+  }
+
+  // Click the diagram to move event B — makes "what if?" answerable live.
+  S.addEventListener('click', ev => {
+    const r = S.getBoundingClientRect();
+    const sx = 640/r.width, sy = 640/r.height;
+    const px = (ev.clientX - r.left)*sx, py = (ev.clientY - r.top)*sy;
+    EV.B.x = Math.round(((px - CX)/U)*2)/2;
+    EV.B.t = Math.round(((CY - py)/U)*2)/2;
+    draw();
+  });
+
+  draw();
+})();
+</script>
+
+<script>
+// Fullscreen for lecture use. Press F (or Esc to leave). Safari needs the
+// webkit-prefixed calls.
+(function(){
+  var b=document.createElement('button');
+  b.id='fsbtn'; b.textContent='⤢ Fullscreen (F)';
+  b.title='Toggle fullscreen — hides the Safari toolbar';
+  document.body.appendChild(b);
+  function on(){ return document.fullscreenElement||document.webkitFullscreenElement; }
+  function toggle(){
+    var e=document.documentElement;
+    if(on()){ (document.exitFullscreen||document.webkitExitFullscreen).call(document); }
+    else    { (e.requestFullscreen||e.webkitRequestFullscreen).call(e); }
+  }
+  b.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(ev){
+    if(ev.key==='f'||ev.key==='F'){
+      var t=ev.target.tagName;
+      if(t==='INPUT'||t==='TEXTAREA') return;
+      ev.preventDefault(); toggle();
+    }
+  });
+})();
+</script>
+</body>
+</html>
