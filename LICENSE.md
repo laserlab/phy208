@@ -18,6 +18,8 @@ Under the following terms:
 
 Full text: <https://creativecommons.org/licenses/by-sa/4.0/>
 
+The published site is <https://laserlab.github.io/phy208/>; the CC BY-SA grant above covers it.
+
 **Suggested attribution:**
 
 > "PHY 208: Special Relativity and Thermodynamics" by Tim Thomay,
@@ -42,7 +44,13 @@ Classroom display of such figures to enrolled students is covered in the United 
 §110(2)).
 That protection does **not** extend to public redistribution, which is why they are segregated.
 
-To build a shareable version of a deck, see `tools/build_public.sh`, which replaces restricted images with a citation placeholder.
+To build a shareable version, see `tools/publish_public.sh`, which renders under the `public` Quarto profile: speaker notes are removed, restricted images and student work become placeholders, non-redistributable credits rows are stripped, and `tools/check_public.py` verifies the result before anything is published.
+
+### Student work
+
+Figures produced by students (sketches, notebook pages, submitted work) are education records under FERPA.
+They are shown in class with the student's work de-identified, are excluded from version control, and are replaced by an unnamed placeholder in every public build.
+Unlike restricted third-party figures, they are **not** cited: the filename itself would identify the artefact.
 
 ---
 

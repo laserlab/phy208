@@ -781,7 +781,21 @@
     "href": "index.html#lecture-slides",
     "title": "PHY 208 · General Physics 4 · Fall 2026",
     "section": "Lecture slides",
-    "text": "Lecture slides\n\nL01 — How This Course Works — and the Ether Problem\nL02 — The Postulates\nL03 — Events and Frames\nL04 — Simultaneity\n\nSlides are reveal.js presentations: press F for fullscreen, B for the chalkboard, C to draw on the current slide."
+    "text": "Lecture slides\n\nL01 — How This Course Works, and the Ether Problem\nL02 — The Null Result, and What It Cost\nL03 — Events, Frames, and How to Measure Them\nL04 — The Relativity of Simultaneity\nL05 — Time Dilation\nL06 — Length Contraction\nL07 — The Lorentz Transformation\nL08 — The Invariant Interval\n\nSlides are reveal.js presentations: press F for fullscreen, B for the chalkboard, C to draw on the current slide."
+  },
+  {
+    "objectID": "index.html#interactive-simulations",
+    "href": "index.html#interactive-simulations",
+    "title": "PHY 208 · General Physics 4 · Fall 2026",
+    "section": "Interactive simulations",
+    "text": "Interactive simulations\nStandalone pages, also embedded in the lectures above.\n\nMichelson interferometer — rotate the apparatus and look for a fringe shift\nMinkowski diagram — boost the frame and watch simultaneity tilt\nLight clock — time dilation from one postulate\nMuons — why they reach the ground\nDetector"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "PHY 208 · General Physics 4 · Fall 2026",
+    "section": "License",
+    "text": "License\nCourse material by Tim Thomay, University at Buffalo, licensed CC BY-SA 4.0. Third-party images retain their original licenses; see the img/CREDITS.md in each lecture folder. Full terms: LICENSE.md."
   },
   {
     "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#general-physics-iv",
