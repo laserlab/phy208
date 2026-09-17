@@ -10,8 +10,8 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Tim Thomay">
-  <meta name="dcterms.date" content="2026-08-27">
-  <title>PHY 208 · General Physics 4 – The Null Result, and What It Cost</title>
+  <meta name="dcterms.date" content="2026-09-10">
+  <title>PHY 208 · General Physics 4 – Length Contraction</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -136,8 +136,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">The Null Result, and What It Cost</h1>
-  <p class="subtitle">PHY 208 · Special Relativity · Lecture 2</p>
+  <h1 class="title">Length Contraction</h1>
+  <p class="subtitle">PHY 208 · Special Relativity · Lecture 6</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -147,247 +147,480 @@ Tim Thomay
 </div>
 </div>
 
-  <p class="date">2026-08-27</p>
+  <p class="date">2026-09-10</p>
+</section>
+<section id="before-we-start" class="slide level2">
+<h2>Before we start</h2>
+<div class="housekeeping">
+<p><strong>Milestone 1 goes up today, right after class</strong> — group work, one submission per pair. Due <strong>Fri Oct 2</strong> on UB Learns. Pass / revise-once / miss; your notebook pages and ST-ERF pages are the raw material — find them.</p>
+<p><strong>Also live:</strong> problem set 2, due <strong>Sun 11:59 pm</strong> · light-clock notebook entries were due 11:00 today.</p>
+</div>
+</section>
+<section>
+<section id="nobody-told-the-muon" class="title-slide slide level1 center">
+<h1>Nobody told the muon</h1>
+<div class="elicit">
+<div class="columns">
+<div class="column" style="width:52%;">
+<p>In its own frame the muon’s clock is <strong>not slow</strong>. It has <span class="math inline">\(2.2\ \mu\text{s}\)</span> to live, and at <span class="math inline">\(0.995c\)</span> that covers <strong>660 m</strong>.</p>
+<p>The atmosphere is 15 000 m deep.</p>
+<p><strong>And yet it lands.</strong> Both frames agree it lands.</p>
+</div><div class="column" style="width:45%;">
+<div id="3d462067" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-3-output-1.png" width="544" height="390"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<section id="both-frames-honestly" class="slide level2">
+<h2>Both frames, honestly</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>ground frame</th>
+<th>muon frame</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>muon’s lifetime</td>
+<td><span class="math inline">\(\gamma\tau = 22\ \mu\)</span>s — <strong>dilated</strong></td>
+<td><span class="math inline">\(\tau = 2.2\ \mu\)</span>s — proper</td>
+</tr>
+<tr class="even">
+<td>atmosphere depth</td>
+<td>15 km — proper</td>
+<td><strong>?</strong></td>
+</tr>
+<tr class="odd">
+<td>muon reaches ground</td>
+<td>yes</td>
+<td>must be <strong>yes</strong> — same events</td>
+</tr>
+</tbody>
+</table>
+<div class="keyresult">
+<p>Whether birth and landing are the <em>same muon’s</em> worldline is not a matter of frame. Only the <strong>story</strong> can differ — never the events.</p>
+</div>
+</section>
+<section id="the-distance-is-what-gives" class="slide level2">
+<h2>The distance is what gives</h2>
+<div id="f05e518b" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>gamma at 0.995c               = 10.0
+atmosphere, ground frame      = 15.0 km  (proper)
+atmosphere, muon frame        = 15.0/gamma = 1.5 km
+time to cross it at 0.995c    = 5.0 us = 2.3 lifetimes
+surviving:  e^(-2.3) = 10%   -- Tuesday's 10%, recovered</code></pre>
+</div>
+</div>
+<div class="keyresult">
+<p><span class="math display">\[L = \frac{L_0}{\gamma}\]</span></p>
+<p>A moving length is <strong>contracted</strong> — same <span class="math inline">\(\gamma\)</span>, now in the denominator.</p>
+</div>
+</section>
+<section id="proper-length-proper-time-the-pair" class="slide level2">
+<h2>Proper length, proper time — the pair</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>defined as</th>
+<th>measured by</th>
+<th>everyone else gets</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>proper time <span class="math inline">\(\tau\)</span></td>
+<td>time between two events</td>
+<td><strong>one clock at both events</strong></td>
+<td><em>more</em>: <span class="math inline">\(\Delta t = \gamma\tau\)</span></td>
+</tr>
+<tr class="even">
+<td>proper length <span class="math inline">\(L_0\)</span></td>
+<td>length of an object</td>
+<td><strong>the frame where it rests</strong></td>
+<td><em>less</em>: <span class="math inline">\(L = L_0/\gamma\)</span></td>
+</tr>
+</tbody>
+</table>
+
+<aside><div>
+<p>Proper time is the <em>shortest</em> time anyone measures; proper length is the <em>longest</em> length. Both are frame-invariant numbers everyone computes and agrees on.</p>
+</div></aside></section>
+<section id="the-ship-contracts-your-lab-right-back" class="slide level2">
+<h2>The ship contracts your lab right back</h2>
+<div id="20946e50" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-5-output-1.png" width="1116" height="357"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="keyresult">
+<p>You measure <strong>the ship</strong> short. The crew measures <strong>your lab</strong> short. Symmetric — <span class="right">and both are correct</span>, exactly like the clocks.</p>
+</div>
+</section>
+<section id="what-measuring-a-moving-length-even-means" class="slide level2">
+<h2>What “measuring a moving length” even means</h2>
+<div id="b107f41c" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-6-output-1.png" width="1094" height="346"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Two marks — and they are only a <em>length</em> if they were made <span class="wrong"><strong>at the same time</strong></span>.</p>
+</div>
+</section>
+<section id="contraction-is-simultaneity-in-disguise" class="slide level2">
+<h2>Contraction is simultaneity in disguise</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>your account</th>
+<th>the train’s account</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>the two marks</td>
+<td>made at 12:00:00 — simultaneous, by <em>my</em> lattice</td>
+<td><span class="wrong">not simultaneous</span> — <em>“you marked the nose first, then let the train run before marking the tail”</em></td>
+</tr>
+<tr class="even">
+<td>the result</td>
+<td><span class="math inline">\(L = L_0/\gamma\)</span> — shorter, done</td>
+<td><em>“of course the marks came out short — nothing happened to my train”</em></td>
+</tr>
+</tbody>
+</table>
+<div class="keyresult">
+<p>No new postulate, no squashing force. <strong>Length contraction is the relativity of simultaneity, applied to rulers.</strong></p>
+</div>
+</section>
+<section id="only-along-the-motion" class="slide level2">
+<h2>Only along the motion</h2>
+<div id="3d01049c" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-7-output-1.png" width="984" height="368"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Height and width are untouched — <strong>only the dimension along <span class="math inline">\(v\)</span> contracts.</strong></p>
+</section>
+<section id="the-scale-of-it" class="slide level2">
+<h2>The scale of it</h2>
+<div id="ae5ab605" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>object                       gamma          L/L0
+high-speed train          1.000000   1.000000000
+New Horizons probe        1.000000   0.999999998
+muon's atmosphere        10.012523   0.099874922
+LHC proton             7453.559961   0.000134164</code></pre>
+</div>
+</div>
+<div class="keyresult">
+<p>An LHC proton, in the lab’s books, is a disc <strong>~7000× thinner</strong> than it is wide. Not a metaphor — it is how the collision geometry is computed.</p>
+</div>
 </section>
 <section id="section" class="slide level2 center">
 <h2></h2>
 <div class="concept">
-<p><strong>While you settle in</strong> — on Top Hat, ungraded:</p>
-<h3 id="have-you-taken-mth-309-introductory-linear-algebra">Have you taken MTH 309 — Introductory Linear Algebra?</h3>
-<p><strong>(a)</strong> taken it &nbsp;&nbsp; <strong>(b)</strong> taking it this semester</p>
-<p><strong>(c)</strong> planning to take it &nbsp;&nbsp; <strong>(d)</strong> not planning to</p>
-</div>
-</section>
-<section id="where-we-left-off" class="slide level2">
-<h2>Where we left off</h2>
-<p>Michelson’s insight: compare a light wave <strong>to itself</strong>. The ruler is the wavelength — about 500 nm.</p>
-<div id="8be179b1" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>  arm length (folded)   L = 11.0 m
-  wavelength            λ = 500 nm
-  Earth's speed       v/c = 9.94e-05
-
-  PREDICTED FRINGE SHIFT  = 0.43
-  their resolution        = 0.01
-  margin                  = 43×</code></pre>
+<p>A 100 m train runs into a 100 m tunnel at high speed. In the tunnel’s frame the train is contracted, so it <strong>fits entirely inside</strong> — both doors could shut for an instant. In the train’s frame the <strong>tunnel</strong> is contracted.</p>
+<div id="6053c22f" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-9-output-1.png" width="1050" height="181"></p>
+</figure>
 </div>
 </div>
+</div>
+<h3 id="does-it-still-fit">Does it still fit?</h3>
+<p><strong>(a)</strong> Yes — fitting is a fact both must agree on</p>
+<p><strong>(b)</strong> No — so one frame must be wrong</p>
+<p><strong>(c)</strong> The train is destroyed, so (d) is impossible</p>
+<p><strong>(d)</strong> No, and the two frames disagree about whether the doors were shut together</p>
+</div>
 </section>
-<section id="today" class="slide level2">
-<h2>Today</h2>
-<ul>
-<li class="fragment">A machine sensitive enough to feel a footstep — <strong>on this bench</strong></li>
-<li class="fragment">What that machine said in 1887, in Cleveland</li>
-<li class="fragment">The tidy story of what happened next — <strong>and why it is wrong</strong></li>
-<li class="fragment">Two sentences from 1905 that replace all of it</li>
-</ul>
+<section id="the-tunnel-resolved" class="slide level2">
+<h2>The tunnel, resolved</h2>
+<div id="13639c20" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-10-output-1.png" width="1138" height="368"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="keyresult">
+<p>“Fits” = <em>“both ends inside <strong>at the same time</strong>”</em> — a simultaneity claim, <span class="wrong">not an event</span>. Frames may disagree about it, and no door ever touches the train.</p>
+</div>
 </section>
-<section id="the-first-try" class="slide level2">
-<h2>1881: the first try</h2>
+<section id="one-muon-two-stories-with-real-data" class="slide level2">
+<h2>One muon, two stories — with real data</h2>
+<div class="activity">
+<p><strong>Frisch &amp; Smith, 1963</strong> — Mt. Washington summit → sea level, <strong>1907 m</strong>: <strong>563/hr → 408/hr</strong> · <span class="math inline">\(v \approx 0.995c\)</span> · <span class="math inline">\(\gamma \approx 8.4\)</span> · <span class="math inline">\(\tau = 2.2\ \mu\)</span>s · <span class="math inline">\(N = N_0\,e^{-t/\text{lifetime}}\)</span> · <strong><span class="math inline">\(c = 300\)</span> m/μs</strong></p>
 <div class="columns">
-<div class="column" style="width:46%;">
-<p><img data-src="img/mm_1881_instrument.jpg" class="photo" alt="Perspective engraving of Michelson's 1881 interferometer from his original paper: a small cross-shaped brass instrument mounted on a stone pier."></p>
+<div class="column" style="width:49%;">
+<p><strong>Left half — the ground’s story</strong></p>
+<ol type="1">
+<li>transit time: <span class="math inline">\(t = 1907\ \text{m} \div 0.995c\)</span></li>
+<li>lifetime in these books: <span class="math inline">\(\gamma\tau\)</span></li>
+<li>surviving fraction: <span class="math inline">\(e^{-t/\gamma\tau}\)</span></li>
+<li><span class="math inline">\(\times\ 563\)</span>/hr → compare to <strong>408</strong></li>
+</ol>
+</div><div class="column" style="width:49%;">
+<p><strong>Right half — the muon’s story</strong></p>
+<ol type="1">
+<li>contract the mountain: <span class="math inline">\(h = 1907\ \text{m} \div \gamma\)</span></li>
+<li>transit time: <span class="math inline">\(t = h \div 0.995c\)</span></li>
+<li>surviving fraction: <span class="math inline">\(e^{-t/\tau}\)</span></li>
+<li><span class="math inline">\(\times\ 563\)</span>/hr → compare to <strong>408</strong></li>
+</ol>
+</div></div>
+<p><strong>Compare across the aisle.</strong> Done early? <span class="math inline">\(\gamma = 1\)</span> → Newton’s prediction.</p>
+<div class="fragment">
+<p><strong>Checkpoint, step 1:</strong> left <span class="math inline">\(6.4\ \mu\)</span>s · right <span class="math inline">\(227\)</span> m — not there, hand up.</p>
+</div>
+</div>
+</section>
+<section id="both-stories-one-answer" class="slide level2">
+<h2>Both stories, one answer</h2>
+<div id="029504f2" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>ground story:  t = 6.39 us of DILATED life 18.5 us -&gt; 563*e^-0.35 = 398/hr
+muon story:    227 m at 0.995c = 0.76 us of PLAIN 2.2 us -&gt; 563*e^-0.35 = 398/hr
+measured:      408/hr        classical prediction: 31/hr</code></pre>
+</div>
+</div>
+<div class="keyresult">
+<p><strong>Time dilation and length contraction are one effect, seen from two chairs.</strong> The frames share the events — the muon lands — and split the explanation.</p>
+</div>
+</section>
+<section id="nothing-squashes" class="slide level2">
+<h2>Nothing squashes</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>the claim</th>
+<th>who measures it</th>
+<th>what it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“the ship is 44 m long”</td>
+<td>the lab lattice</td>
+<td>a correct <strong>measurement</strong></td>
+</tr>
+<tr class="even">
+<td>“the ship is 100 m long”</td>
+<td>the crew</td>
+<td>its proper length — also correct</td>
+</tr>
+<tr class="odd">
+<td>“the hull is compressed”</td>
+<td><span class="wrong">nobody</span></td>
+<td>a <strong>property claim</strong> no frame verifies</td>
+</tr>
+</tbody>
+</table>
+<div class="keyresult">
+<p>No stress, no strain, no force along the hull. The crew notices <em>nothing</em>. Contraction is a relation between object and frame — <span class="right">not something that happens <strong>to</strong> the object</span>.</p>
+</div>
+</section>
+<section id="measured-is-not-photographed" class="slide level2">
+<h2>Measured is not photographed</h2>
+<div id="0cd04cc1" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-12-output-1.png" width="1050" height="335"></p>
+</figure>
+</div>
+</div>
+</div>
 
-</div><div class="column" style="width:52%;">
-<ul>
-<li class="fragment">Berlin, Helmholtz’s lab. Michelson is a <strong>28-year-old US Navy officer</strong> on leave.</li>
-<li class="fragment">Arms <span class="math inline">\(L \approx 1.2\)</span> m → predicted shift <strong>0.04 fringes</strong></li>
-<li class="fragment">Berlin traffic drowned the fringes → moved to a cellar in <strong>Potsdam</strong>. Stamping on the pavement 100 m away still shifted them.</li>
-<li class="fragment">Result: nothing. <strong>And nobody was convinced.</strong></li>
-</ul>
+<aside><div>
+<p>A photograph collects light that <em>arrives</em> together — emitted at different times from different depths. A fast sphere photographs as a <strong>rotated</strong> sphere, not a flattened one. Measuring and seeing are different verbs — L03’s oldest lesson.</p>
+</div></aside></section>
+<section id="the-man-who-almost-had-it" class="slide level2">
+<h2>The man who almost had it</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>1892: Lorentz and FitzGerald propose that motion through the <strong>ether physically squeezes</strong> matter by exactly <span class="math inline">\(1/\gamma\)</span> — invented to rescue Michelson–Morley.</p>
+<p>Right formula. <span class="wrong">Wrong story.</span></p>
+
+</div><div class="column" style="width:36%;">
+<p><img data-src="img/lorentz.jpg" class="photo" alt="Portrait of Hendrik Antoon Lorentz."></p>
 </div></div>
 <aside><div>
-<p>The instrument was paid for by <strong>Alexander Graham Bell</strong>.</p>
+<p>A physical squeeze would be one-sided — the “really moving” frame’s rods shrink. Einstein’s version is <strong>symmetric</strong>, needs no ether and no force, and follows from simultaneity alone.</p>
 </div></aside></section>
-<section id="the-machine-they-built-1887" class="slide level2">
-<h2>The machine they built, 1887</h2>
+<section id="tuesdays-missing-ending-the-clocks-caught-up" class="slide level2">
+<h2>Tuesday’s missing ending: the clocks caught up</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p><img data-src="img/mm_apparatus.jpg" class="photo" alt="The 1887 Michelson-Morley interferometer: a massive square sandstone slab carrying the mirrors and optics, floating in an annular trough of mercury so it can be rotated smoothly."></p>
-</div><div class="column" style="width:43%;">
-<p>A 1.5-ton sandstone slab, <strong>floating on liquid mercury</strong>.</p>
-<p><span class="fragment">Why floating? So it can <strong>rotate</strong> without vibration.</span></p>
-<p><span class="fragment">Mirrors fold the light path to <span class="math inline">\(L = 11\,\mathrm{m}\)</span> per arm.</span></p>
-</div></div>
-</section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
-<div class="demo">
-<p><strong>Michelson interferometer</strong></p>
-<ol type="1">
-<li><p>Watch the fringes move when I <strong>tap the table</strong>.</p></li>
-<li><p><strong>Write your prediction</strong> — in the notebook, before we rotate.</p></li>
-<li><p>Rotate 90°.</p></li>
-<li><p><strong>See what the ether predicted</strong> — same rotation, in simulation.</p></li>
-<li><p><strong>Reconcile</strong> what you predicted with what happened.</p></li>
-</ol>
+<div id="0a85b322" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L06_Length_Contraction_files/figure-revealjs/cell-13-output-1.png" width="593" height="412"></p>
+</figure>
 </div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-</section>
-<section id="what-they-measured-1887" class="slide level2">
-<h2>What they measured, 1887</h2>
-<p><img data-src="img/mm_data_1887.png" style="width:68.0%" alt="Figure 6 from the original 1887 Michelson-Morley paper. Two panels, noon and evening observations. In each, a dashed sinusoid shows the ether-drift prediction and a nearly flat solid line shows the observed fringe shift."></p>
-<p><strong>Dashed</strong> = the ether prediction, <em>already reduced to one-eighth scale</em>. <strong>Solid</strong> = what they measured.</p>
-<p><span class="fragment">Behind this figure: <strong>about six hours of data</strong>, over four days in July 1887.</span></p>
-</section>
-<section id="in-their-own-words" class="slide level2">
-<h2>In their own words</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="img/michelson.jpg" class="photo" alt="Portrait photograph of Albert Abraham Michelson."></p>
-</div><div class="column" style="width:68%;">
-<blockquote>
-<p>“The Experiments on the relative motion of the earth and ether have been completed and the result decidedly negative.”</p>
-<p>— Michelson to Lord Rayleigh, August 1887</p>
-</blockquote>
-<p><span class="fragment">He considered the experiment a <strong>failure</strong>, and moved on to other work.</span></p>
-</div></div>
-</section>
-<section id="the-most-famous-failed-experiment-in-history" class="slide level2">
-<h2>“The most famous failed experiment in history”</h2>
-<h3 id="it-was-not-a-failure.">It was not a failure.</h3>
-<p>Michelson himself was disappointed — he considered it a failure for years.</p>
-<p><span class="fragment"><strong>He was wrong about his own result.</strong></span></p>
-<div class="keyresult fragment">
-<p>A null result from an instrument sensitive enough to have seen the effect is a <span class="right">discovery</span>.</p>
 </div>
-</section>
-<section id="what-became-of-it" class="slide level2 smaller">
-<h2>What became of it</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="img/michelson_einstein_1931.jpg" class="photo" alt="Group portrait at Caltech in 1931: six men in formal dress, among them Albert Michelson, Albert Einstein, and Robert Millikan, seated and standing together."></p>
+</div>
+</div><div class="column" style="width:42%;">
+<p><img data-src="img/nist_f2.jpg" class="photo" alt="NIST physicists Steve Jefferts and Tom Heavner, wearing near-infrared laser goggles, adjusting the laser optics at the base of the NIST-F2 cesium fountain atomic clock." width="330"></p>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>one tick</td>
+<td>9 192 631 770 swings</td>
+</tr>
+<tr class="even">
+<td>NIST-F2</td>
+<td>1 s wrong in <strong>300 Myr</strong></td>
+</tr>
+</tbody>
+</table>
+</div></div>
 
-</div><div class="column" style="width:58%;">
-<ul>
-<li class="fragment"><strong>1907</strong> — America’s first science Nobel: <em>“for his optical precision instruments…”</em> The ether experiment is <strong>not mentioned</strong>.</li>
-<li class="fragment"><strong>1902–04</strong> — Morley and Miller do the seasonal repeats, bigger. Null.</li>
-<li class="fragment"><strong>1920s</strong> — Miller, alone on Mount Wilson, claims a <strong>positive</strong> signal.</li>
-<li class="fragment"><strong>1955</strong> — traced to temperature gradients. Modern repeats: null, to parts in <span class="math inline">\(10^{18}\)</span>.</li>
-</ul>
-<div class="fragment">
-<blockquote>
-<p>“Without your work, this theory would today be scarcely more than an interesting speculation.”</p>
-<p>— Einstein, toasting Michelson, January 1931</p>
-</blockquote>
-</div>
-</div></div>
 <aside><div>
-<p>Caltech, January 1931 — Michelson, Einstein, Millikan. Michelson died four months later.</p>
+<p>Laser cooling is <strong>pure optics</strong> — photons carry momentum, and enough of them stop an atom cold. Nobel 1997, Bill Phillips, NIST — the division where I did my postdoc.</p>
 </div></aside></section>
-<section id="what-a-null-result-destroys" class="slide level2 smaller">
-<h2>What a null result destroys</h2>
-<p>No detectable ether wind — so something in the chain that predicted 0.4 fringes is <strong>false</strong>. There are only three ways out:</p>
+<section id="a-clock-built-from-nobel-prizes" class="slide level2">
+<h2>A clock built from Nobel prizes</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>year</th>
+<th>for</th>
+<th>who</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1944</td>
+<td>magnetic resonance — and with it, the atomic-clock idea</td>
+<td>Rabi — <em>Tuesday’s “who ordered that?” man</em></td>
+</tr>
+<tr class="even">
+<td>1989</td>
+<td>the interrogation method inside every cesium clock</td>
+<td>Ramsey</td>
+</tr>
+<tr class="odd">
+<td>1997</td>
+<td>laser cooling — cold, slow, watchable atoms</td>
+<td>Chu · Cohen-Tannoudji · <strong>Phillips</strong></td>
+</tr>
+<tr class="even">
+<td>2005</td>
+<td>the frequency comb — the gearbox to optical clocks</td>
+<td>Hall · Hänsch</td>
+</tr>
+<tr class="odd">
+<td>2012</td>
+<td>quantum control of single trapped ions</td>
+<td>Wineland</td>
+</tr>
+</tbody>
+</table>
 <div class="fragment">
-<p><strong>1. “Earth drags the ether along with it.”</strong> Then there is no wind at ground level, and the fringes rightly stay put. <span class="wrong">✗</span> But dragged ether would also carry starlight along — and <strong>stellar aberration</strong> (Bradley’s tilted telescopes, from Tuesday) exists only if Earth moves <em>through</em> an undisturbed ether. One escape, two contradictory experiments.</p>
-</div>
-<div class="fragment">
-<p><strong>2. “Motion through the ether squeezes the arms.”</strong> FitzGerald (1889) and Lorentz (1892): if the along-wind arm contracts by exactly <span class="math inline">\(\sqrt{1-v^2/c^2}\)</span>, the two delays cancel and the null is explained. <span class="wrong"><em>ad hoc</em></span> — a factor invented to erase this one experiment, with no mechanism and no independent prediction. <em>But hold onto that factor: it is nearly right, for entirely different reasons — week 4.</em></p>
-</div>
-<div class="fragment">
-<p><strong>3. “There is no ether.”</strong> Light needs no medium, and <span class="math inline">\(c\)</span> is the same in every inertial frame. <span class="right">Einstein, 1905</span> — the only escape that predicts <strong>new physics</strong> instead of explaining away old data.</p>
-</div>
-</section>
-<section id="section-3" class="slide level2 center">
-<h2></h2>
-<div class="elicit">
-<p>Here is the story every documentary and most textbooks tell:</p>
-<p><em>Michelson–Morley destroyed the ether — <strong>so</strong> Einstein invented relativity.</em></p>
-</div>
-</section>
-<section>
-<section id="is-that-what-happened" class="title-slide slide level1 center">
-<h1>Is that what happened?</h1>
-
-</section>
-<section id="einstein-1905" class="slide level2">
-<h2>Einstein, 1905</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<p><img data-src="img/einstein_1904.jpg" class="photo" alt="Albert Einstein around 1904, aged 25, seated at his desk at the Swiss patent office in Bern."></p>
-</div><div class="column" style="width:64%;">
-<p>Bern, Switzerland. Age 26.</p>
-<ul>
-<li class="fragment"><strong>Not a professor.</strong> A patent examiner, third class.</li>
-<li class="fragment">Reviews patent applications — many for <strong>electromagnetic devices</strong> and <strong>clock synchronization</strong>.</li>
-<li class="fragment">In one year, 1905, publishes four papers. Any one of them would have made a career.</li>
-</ul>
-</div></div>
-</section>
-<section id="what-einstein-actually-wrote" class="slide level2">
-<h2>What Einstein actually wrote</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<p><img data-src="img/einstein_1905_page1.jpg" class="photo" alt="First page of Einstein's 1905 paper 'Zur Elektrodynamik bewegter Körper' as printed in Annalen der Physik, page 891."></p>
-</div><div class="column" style="width:64%;">
-<blockquote>
-<p>“It is known that Maxwell’s electrodynamics — as usually understood at the present time — when applied to moving bodies, leads to asymmetries which do not appear to be inherent in the phenomena.”</p>
-<p>— <em>Zur Elektrodynamik bewegter Körper</em>, opening sentence, 1905</p>
-</blockquote>
-
-</div></div>
-<aside><div>
-<p>Not a word about Michelson–Morley. The paper mentions “unsuccessful attempts to discover any motion of the earth relative to the light medium” only in passing, a paragraph later.</p>
-</div></aside></section>
-<section id="the-asymmetry-that-bothered-him" class="slide level2">
-<h2>The asymmetry that bothered him</h2>
-<div class="columns">
-<div class="column fragment" style="width:49%;">
-<p><strong>Magnet moves, coil at rest</strong></p>
-<p>Changing <span class="math inline">\(\mathbf{B}\)</span> → induced electric field → current flows</p>
-</div><div class="column fragment" style="width:49%;">
-<p><strong>Coil moves, magnet at rest</strong></p>
-<p>Charges move through <span class="math inline">\(\mathbf{B}\)</span> → force <span class="math inline">\(q\mathbf{v}\times\mathbf{B}\)</span> → current flows</p>
-</div></div>
-<div class="keyresult fragment">
-<p><strong>Same current. Same experiment. Two completely different explanations.</strong></p>
-</div>
-</section>
-<section id="two-postulates" class="slide level2">
-<h2>Two postulates</h2>
 <div class="keyresult">
-<p><strong>1. The laws of physics are the same in every inertial frame.</strong></p>
-<p><span class="fragment"><strong>2. The speed of light in vacuum is the same in every inertial frame,</strong> <strong>regardless of the motion of the source or the observer.</strong></span></p>
+<p>With that last generation, NIST watched a clock moving at <strong>10 m/s</strong> run slow — bicycle speed. “Too small to ever notice” ended in 2010.</p>
 </div>
-<div class="fragment">
-<p>The first is old — Galileo would have signed it.</p>
-<p>The second is <span class="wrong">the radical one</span>.</p>
 </div>
 </section>
-<section id="postulate-1-is-273-years-older" class="slide level2">
-<h2>Postulate 1 is 273 years older</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="img/galileo.jpg" class="photo" alt="Portrait of Galileo Galilei by Justus Sustermans, 1636."></p>
-</div><div class="column" style="width:68%;">
-<blockquote>
-<p>“Shut yourself up with some friend in the main cabin below decks on some large ship … have the ship proceed with any speed you like, so long as the motion is uniform … You will discover not the least change in all the effects named, nor could you tell from any of them whether the ship was moving or standing still.”</p>
-<p>— Galileo, <em>Dialogue Concerning the Two Chief World Systems</em>, 1632</p>
-</blockquote>
-</div></div>
+<section id="what-this-week-actually-changed" class="slide level2">
+<h2>What this week actually changed</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>quantity</th>
+<th>at rest</th>
+<th>moving past you</th>
+<th>symmetric?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a clock’s tick</td>
+<td><span class="math inline">\(\tau\)</span></td>
+<td><span class="math inline">\(\gamma\tau\)</span> — slower</td>
+<td>yes — each sees the other slow</td>
+</tr>
+<tr class="even">
+<td>a rod’s length</td>
+<td><span class="math inline">\(L_0\)</span></td>
+<td><span class="math inline">\(L_0/\gamma\)</span> — shorter</td>
+<td>yes — each sees the other short</td>
+</tr>
+<tr class="odd">
+<td>the mechanism</td>
+<td>—</td>
+<td><strong>relativity of simultaneity</strong></td>
+<td>one argument, two costumes</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="section-4" class="slide level2 center">
-<h2></h2>
-<div class="concept">
-<p>A rocket flies away from you at <span class="math inline">\(0.9c\)</span> and fires a laser pulse <strong>straight ahead</strong>, in its direction of motion.</p>
-<h3 id="how-fast-does-the-pulse-pull-away-from-the-rocket">How fast does the pulse pull away from the rocket —</h3>
-<h3 id="as-measured-by-the-pilot-as-reckoned-in-your-frame">as measured by <strong>the pilot</strong>? &nbsp;·&nbsp; as reckoned in <strong>your</strong> frame?</h3>
-<p><strong>(a)</strong> <span class="math inline">\(c\)</span> and <span class="math inline">\(c\)</span> &nbsp;&nbsp; <strong>(b)</strong> <span class="math inline">\(c\)</span> and <span class="math inline">\(0.1c\)</span></p>
-<p><strong>(c)</strong> <span class="math inline">\(0.1c\)</span> and <span class="math inline">\(c\)</span> &nbsp;&nbsp; <strong>(d)</strong> <span class="math inline">\(0.1c\)</span> and <span class="math inline">\(0.1c\)</span></p>
-</div>
-</section>
-<section id="something-has-to-give" class="slide level2">
-<h2>Something has to give</h2>
-<p>Speed is <span class="math inline">\(\dfrac{\text{distance}}{\text{time}}\)</span>.</p>
-<p>If everyone measures the <strong>same speed</strong> for light, but they are <strong>moving relative to each other</strong>…</p>
-<div class="keyresult fragment">
-<p>then they cannot agree about <strong>distance</strong> and <strong>time</strong></p>
-</div>
-</section>
-<section id="the-exchange-rate" class="slide level2">
-<h2>The exchange rate</h2>
+<section id="when-does-the-math-start" class="slide level2">
+<h2>“When does the math start?”</h2>
+<p>Asked after class Tuesday — and it is a fair question. We demolished absolute simultaneity <strong>without a single line of algebra</strong>.</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -395,92 +628,112 @@ Tim Thomay
 </colgroup>
 <thead>
 <tr class="header">
-<th>We keep</th>
-<th>We give up</th>
+<th>all we have used, L01–L06</th>
+<th>still untouched</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>The laws of physics, identical for everyone</td>
-<td><span class="fragment">Absolute simultaneity</span></td>
+<td>light at <span class="math inline">\(c\)</span> for everyone — a postulate</td>
+<td>the Lorentz transformation</td>
 </tr>
 <tr class="even">
-<td>The speed of light, identical for everyone</td>
-<td><span class="fragment">Absolute time intervals</span></td>
+<td>one right triangle (Pythagoras)</td>
+<td>matrices, four-vectors</td>
 </tr>
 <tr class="odd">
-<td>Causality · the spacetime interval</td>
-<td><span class="fragment">Absolute lengths · the ether</span></td>
+<td>exponential decay, <span class="math inline">\(N_0\,e^{-t/\tau}\)</span></td>
+<td>calculus</td>
+</tr>
+<tr class="even">
+<td>definitions of <em>measuring</em> — mark, compare, at the same time</td>
+<td>tensors, metrics</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="hendrik-lorentz" class="slide level2">
-<h2>Hendrik Lorentz</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="img/lorentz.jpg" class="photo" alt="Portrait photograph of Hendrik Antoon Lorentz."></p>
-</div><div class="column" style="width:68%;">
-<p>Wrote down the transformation equations (1892–1904) — before Einstein.</p>
-<p>Believed length contraction was a <em>real physical compression</em> of matter moving through the ether.</p>
 <div class="fragment">
-<blockquote>
-<p>“The chief cause of my failure was my clinging to the idea that the variable <span class="math inline">\(t\)</span> only can be considered as the true time, and that my local time <span class="math inline">\(t'\)</span> must be regarded as no more than an auxiliary mathematical quantity.”</p>
-<p>— Lorentz, <em>The Theory of Electrons</em>, 1915 edition</p>
-</blockquote>
+<div class="keyresult">
+<p>That was not the warm-up before the physics. <span class="right">The arguments <strong>were</strong> the physics.</span> <span class="math inline">\(\gamma\)</span> is the entire formula stock so far — and it came from a triangle.</p>
+</div>
+</div>
+</section>
+<section id="dont-take-my-word-for-it-annalen-der-physik-17-891-1905" class="slide level2">
+<h2>Don’t take my word for it — Annalen der Physik 17, 891 (1905)</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<p><strong>§1, p.&nbsp;893 — the definition. There is our train:</strong></p>
+<p><img data-src="img/einstein1905_zug.jpg" alt="Passage from page 893 of the 1905 paper: 'Wenn ich z. B. sage: Jener Zug kommt hier um 7 Uhr an, so heißt dies etwa: Das Zeigen des kleinen Zeigers meiner Uhr auf 7 und das Ankommen des Zuges sind gleichzeitige Ereignisse.'"></p>
+
+</div><div class="column" style="width:49%;">
+<p><strong>§2, p.&nbsp;897 — the punchline. And look what starts right below:</strong></p>
+<p><img data-src="img/einstein1905_gleichzeitigkeit.jpg" alt="Passage from page 897: 'Wir sehen also, daß wir dem Begriffe der Gleichzeitigkeit keine absolute Bedeutung beimessen dürfen' — followed immediately by the heading of section 3, Theorie der Koordinaten- und Zeittransformation."></p>
+
+</div></div>
+<aside><div>
+<p><em>“We must bear in mind that all our judgments in which time plays a role are always judgments about <strong>simultaneous events</strong>. If, for instance, I say ‘that train arrives here at 7 o’clock,’ I mean something like this: ‘the pointing of the small hand of my watch to 7 and the arrival of the train are simultaneous events.’”</em></p>
+</div><div>
+<p><em>“So we see that we must not attach <strong>absolute</strong> meaning to the concept of simultaneity: two events which, viewed from one coordinate system, are simultaneous, can no longer be regarded as simultaneous when viewed from a system moving relative to it.”</em> — and directly beneath it: <strong>§3, where the math starts.</strong></p>
+</div></aside></section>
+<section id="the-math-starts-tuesday" class="slide level2">
+<h2>The math starts Tuesday</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>This week’s way</strong></p>
+<p>The train, the lightning, eight slides of argument → <em>“B struck first, by <span class="math inline">\(\gamma vL/c^{2}\)</span>.”</em></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Tuesday’s way</strong></p>
+<p><span class="math display">\[t' = \gamma\left(t - \frac{vx}{c^{2}}\right),\quad x' = \gamma\,(x - vt)\]</span></p>
+<div id="26e67d14" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-stdout">
+<pre><code>L04's lightning offset, one line: 0.75 us</code></pre>
+</div>
 </div>
 </div></div>
-</section>
-<section id="henri-poincaré" class="slide level2">
-<h2>Henri Poincaré</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="img/poincare.jpg" class="photo" alt="Portrait photograph of Henri Poincaré."></p>
-</div><div class="column" style="width:68%;">
-<p>Argued simultaneity is a convention. Saw the group structure. And in September 1904 — a year early — said this:</p>
-<div class="fragment">
-<blockquote>
-<p>“… the principle of relativity, according to which the laws of physical phenomena should be the same, whether for an observer fixed, or for an observer carried along in a uniform movement of translation.”</p>
-<p>— Poincaré, address at St.&nbsp;Louis, September 1904</p>
-</blockquote>
-</div>
-</div></div>
-</section>
-<section id="so-why-einstein" class="slide level2">
-<h2>So why Einstein?</h2>
-<p><strong>Lorentz</strong> had the mathematics. <strong>Poincaré</strong> had the principle, and the name.</p>
-<div class="keyresult fragment">
-<p>They had the <span class="quiet">mathematics</span>. Einstein supplied the <span class="right">meaning</span>: no ether, no mechanism — just two postulates and the courage to follow them.</p>
+<div class="keyresult">
+<p>Same physics, <strong>industrialized</strong>: every thought experiment from L03–L06 becomes one line of algebra — and velocity addition, the speed limit, and the invariant interval come out as change.</p>
 </div>
 </section>
 <section id="tuesday" class="slide level2">
 <h2>Tuesday</h2>
-<h3 id="events-frames-and-clocks">Events, frames, and clocks</h3>
-<p>If observers disagree about time and distance, we had better be precise about what it means to <strong>measure</strong> either one.</p>
-<p><br></p>
-<p><strong>Watch:</strong> PBS Space Time, <em>How Luminiferous Aether Led to Relativity</em> — and check its story against what Einstein actually wrote <strong>Reading:</strong> Taylor &amp; Wheeler ch.&nbsp;2 <strong>Prep check 1 due Tuesday, 10:30</strong></p>
-
-<aside><div>
-<p>Partner deadline: end of class, September 3. Bring your demo notebook to every class.</p>
-</div></aside></section>
-<section id="exit-ticket" class="slide level2 center">
+<h3 id="the-lorentz-transformation">The Lorentz transformation</h3>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>What it is</td>
+<td>the machine that does L04–L06 in one line</td>
+</tr>
+<tr class="even">
+<td>Bonus</td>
+<td>it is a matrix — MTH 309 students, your moment approaches</td>
+</tr>
+<tr class="odd">
+<td>Prep check 3</td>
+<td>due <strong>Tue 10:30</strong> — dilation &amp; contraction</td>
+</tr>
+<tr class="even">
+<td>Problem set 2</td>
+<td>due <strong>Sun 11:59 pm</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exit-ticket" class="slide level2">
 <h2>Exit ticket</h2>
 <div class="concept">
-<p>Relativity is often summarized as <em>“everything is relative.”</em></p>
-<h3 id="from-today-name-one-thing-that-is-not-relative-and-one-thing-that-surprisingly-is.-a-sentence-on-each.">From today: name <strong>one thing that is not relative</strong>, and <strong>one thing that — surprisingly — is</strong>. A sentence on each.</h3>
+<p>A student says: <em>“At <span class="math inline">\(0.87c\)</span> a spaceship is measured at half its length — so the hull must be squeezed under enormous stress.”</em></p>
+<h3 id="in-one-or-two-sentences-what-is-wrong-with-this">In one or two sentences, what is wrong with this?</h3>
 </div>
 <div class="columns">
-<div class="column" style="width:62%;">
-<p><strong>Scan it, or find it on UB Learns.</strong></p>
-<p>Not graded, and it never will be — I read these to decide what to spend class time on, so write what you actually think. <em>“I don’t follow this, and here is where I lost it”</em> is a useful answer.</p>
-<p>Due 11:59 tonight.</p>
-</div><div class="column" style="width:34%;">
-<p><img data-src="img/exit_qr.png" alt="QR code linking to today's exit ticket on UB Learns." width="190"></p>
+<div class="column" style="width:66%;">
+<p><strong>Scan it, or find it on UB Learns.</strong> Due 11:59 tonight.</p>
+<p>Not graded, ever — I read these to decide what to spend class time on. <em>“I don’t follow this, and here is where I lost it”</em> is a useful answer.</p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/exit_qr.png" alt="QR code linking to today's exit ticket on UB Learns." width="150"></p>
 </div></div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
-<p><strong>PHY 208 — The Null Result, and What It Cost</strong> Tim Thomay · University at Buffalo · Fall 2026</p>
+<p><strong>PHY 208 — Length Contraction</strong> Tim Thomay · University at Buffalo · Fall 2026</p>
 <p>Course material licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p>Images retain their original licenses — see <code>img/CREDITS.md</code></p>
 
@@ -544,7 +797,7 @@ Tim Thomay
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

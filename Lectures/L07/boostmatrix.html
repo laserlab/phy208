@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Boost Matrix — PHY 208</title>
+<style>
+  :root{
+    --bg:#0d1620; --panel:#152131; --ink:#e8eaf0; --muted:#98a0b3;
+    --line:#24354a; --accent:#6cb8f5; --warn:#e8a33d; --ok:#5fbf85;
+    --primed:#ff7a8a; --evt:#5fbf85;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);height:100vh;height:100dvh;
+       display:flex;flex-direction:column;overflow:hidden;
+       font:16px/1.5 "Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  header{padding:11px 22px;border-bottom:1px solid var(--line);
+          border-top:4px solid #005bbb;flex:none}
+  h1{margin:0;font-size:19px;font-weight:600}
+  header p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;
+        flex:1;min-height:0;overflow:hidden}
+  @media(max-width:920px){.wrap{grid-template-columns:1fr}}
+  .stage{padding:16px;display:flex;flex-direction:column;align-items:center;
+         justify-content:center;gap:14px;min-width:0;min-height:0;overflow:auto}
+  .panel{background:var(--panel);border-left:1px solid var(--line);padding:18px;
+         display:flex;flex-direction:column;gap:14px;min-height:0;overflow-y:auto}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;
+        text-transform:uppercase;letter-spacing:.05em}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}
+  button{background:#1c2c3f;color:var(--ink);border:1px solid var(--line);
+         border-radius:7px;padding:8px 11px;font-size:13px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.on{background:var(--accent);color:#0d1620;border-color:var(--accent);font-weight:600}
+  .btnrow{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .btnrow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+     color:var(--muted);margin:0 0 8px;font-weight:600}
+  .note{font-size:12px;color:var(--muted);line-height:1.45}
+  .readout{font-variant-numeric:tabular-nums;font-size:13px}
+  .readout div{display:flex;justify-content:space-between;padding:4px 0;
+               border-bottom:1px solid var(--line)}
+  .readout .k{color:var(--muted)}
+  svg{width:auto;height:auto;max-width:100%}
+  #fsbtn{position:fixed;top:9px;right:14px;z-index:50;background:rgba(0,0,0,.35);
+         color:var(--ink);border:1px solid var(--line);border-radius:6px;
+         padding:4px 9px;font-size:12px;cursor:pointer;opacity:.55}
+  #fsbtn:hover{opacity:1;border-color:var(--accent)}
+  :fullscreen #fsbtn{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>The boost, as a matrix</h1>
+  <p>Slide &beta;. The four numbers in the matrix are the transformation &mdash;
+     watch them multiply out into the equations you derived.</p>
+</header>
+
+<div class="wrap">
+  <div class="stage">
+    <svg id="mat" viewBox="0 0 810 250" role="img"
+         aria-label="The boost matrix multiplying a column vector, with every entry shown as a live number."></svg>
+    <svg id="geo" viewBox="0 0 810 330" role="img"
+         aria-label="The same transformation drawn as a grid of coordinate lines tilting under the boost."></svg>
+  </div>
+
+  <div class="panel">
+    <div>
+      <div class="row"><label for="b">Boost &beta; = v/c</label><span class="val" id="bv">0.60</span></div>
+      <input id="b" type="range" min="-0.95" max="0.95" step="0.01" value="0.6">
+    </div>
+
+    <div>
+      <h2>The event being transformed</h2>
+      <div class="row"><label for="ct">ct</label><span class="val" id="ctv">1.00</span></div>
+      <input id="ct" type="range" min="-2" max="2" step="0.05" value="1">
+      <div class="row" style="margin-top:8px"><label for="x">x</label><span class="val" id="xv">0.00</span></div>
+      <input id="x" type="range" min="-2" max="2" step="0.05" value="0">
+    </div>
+
+    <div>
+      <h2>Run a case</h2>
+      <div class="btnrow">
+        <button id="t-dil">1 &middot; Time dilation</button>
+        <button id="t-con">2 &middot; Contraction</button>
+      </div>
+      <div class="btnrow" style="margin-top:7px">
+        <button id="t-lig">3 &middot; Light stays light</button>
+        <button id="t-new">4 &middot; Newton limit</button>
+      </div>
+      <p class="note" id="caption" style="margin:9px 0 0;min-height:52px">
+        Each button sets the column and sweeps &beta; for you. Same matrix
+        every time &mdash; only the column changes.
+      </p>
+    </div>
+
+    <div>
+      <h2>Compose two boosts</h2>
+      <div class="btnrow">
+        <button id="cmp">&Lambda;(0.7) &Lambda;(0.6)</button>
+        <button id="rst">reset</button>
+      </div>
+      <div class="readout" id="cmpout" style="margin-top:9px;display:none"></div>
+    </div>
+
+    <div class="readout">
+      <div><span class="k">&gamma;</span><span id="g">1.2500</span></div>
+      <div><span class="k">&gamma;&beta;</span><span id="gb">0.7500</span></div>
+      <div><span class="k">det &Lambda;</span><span id="det">1.0000</span></div>
+      <div><span class="k">(ct)&sup2; &minus; x&sup2;</span><span id="s2">1.0000</span></div>
+      <div><span class="k">(ct&prime;)&sup2; &minus; (x&prime;)&sup2;</span><span id="s2p">1.0000</span></div>
+    </div>
+
+    <p class="note">
+      <span class="swatch" style="background:var(--ok)"></span><b>The green
+      curve</b> is every frame&rsquo;s version of <i>this</i> event: slide
+      &beta; and the dot slides along it, never off it. The curve is the set
+      of points with the same (ct)&sup2; &minus; x&sup2;.
+    </p>
+    <p class="note">
+      So the last two readouts stay equal at every &beta;. Nobody built that
+      in &mdash; it falls out of the four entries. That is Thursday.
+    </p>
+  </div>
+</div>
+
+<script>
+(function(){
+  const M = document.getElementById('mat'), G = document.getElementById('geo');
+  const NS = 'http://www.w3.org/2000/svg';
+  const bs = document.getElementById('b'), cts = document.getElementById('ct'),
+        xs = document.getElementById('x');
+  let composed = null;          // non-null while showing the product of two boosts
+
+  const f = (v, n) => (v < 0 ? '−' : '') + Math.abs(v).toFixed(n === undefined ? 2 : n);
+
+  function el(p, tag, attrs, text){
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    p.appendChild(e);
+    return e;
+  }
+
+  // A pair of square brackets around a box, drawn as three strokes each side.
+  function bracket(p, x, y, w, h, col){
+    const t = Math.min(11, w * 0.22);
+    [[x, 1], [x + w, -1]].forEach(([bx, dir]) => {
+      el(p, 'path', {d: `M ${bx + dir*t} ${y} L ${bx} ${y} L ${bx} ${y+h} L ${bx + dir*t} ${y+h}`,
+                     fill: 'none', stroke: col, 'stroke-width': 2.2,
+                     'stroke-linecap': 'round', 'stroke-linejoin': 'round'});
+    });
+  }
+
+  function gamma(b){ return 1/Math.sqrt(1 - b*b); }
+
+  function drawMatrix(b, ct, x){
+    M.textContent = '';
+    const g = gamma(b);
+    // Λ entries. When two boosts are composed we show the product instead.
+    const L = composed ? composed.L
+                       : [[g, -g*b], [-g*b, g]];
+    const ctp = L[0][0]*ct + L[0][1]*x;
+    const xp  = L[1][0]*ct + L[1][1]*x;
+
+    // --- result column (left of the equals sign) ---
+    const RY = 55, RH = 110;
+    bracket(M, 18, RY, 92, RH, 'var(--primed)');
+    el(M, 'text', {x: 64, y: RY+42, fill: 'var(--primed)', 'font-size': 23,
+                   'text-anchor': 'middle', 'font-variant-numeric': 'tabular-nums'}, f(ctp));
+    el(M, 'text', {x: 64, y: RY+88, fill: 'var(--primed)', 'font-size': 23,
+                   'text-anchor': 'middle', 'font-variant-numeric': 'tabular-nums'}, f(xp));
+    el(M, 'text', {x: 64, y: RY-12, fill: 'var(--muted)', 'font-size': 13,
+                   'text-anchor': 'middle'}, 'ct′,  x′');
+
+    el(M, 'text', {x: 133, y: RY+70, fill: 'var(--ink)', 'font-size': 26,
+                   'text-anchor': 'middle'}, '=');
+
+    // --- the matrix ---
+    const MX = 168, MW = 250;
+    bracket(M, MX, RY, MW, RH, 'var(--accent)');
+    const colx = [MX + MW*0.30, MX + MW*0.70];
+    const rowy = [RY+42, RY+88];
+    for (let r = 0; r < 2; r++) for (let c = 0; c < 2; c++){
+      el(M, 'text', {x: colx[c], y: rowy[r], fill: 'var(--accent)', 'font-size': 23,
+                     'text-anchor': 'middle', 'font-variant-numeric': 'tabular-nums'},
+         f(L[r][c], 3));
+    }
+    el(M, 'text', {x: MX + MW/2, y: RY-12, fill: 'var(--muted)', 'font-size': 13,
+                   'text-anchor': 'middle'},
+       composed ? 'Λ(0.7) Λ(0.6)  —  one boost again' : 'Λ(β)');
+
+    // --- the column being transformed ---
+    const CX0 = 448;
+    bracket(M, CX0, RY, 92, RH, 'var(--evt)');
+    el(M, 'text', {x: CX0+46, y: RY+42, fill: 'var(--evt)', 'font-size': 23,
+                   'text-anchor': 'middle', 'font-variant-numeric': 'tabular-nums'}, f(ct));
+    el(M, 'text', {x: CX0+46, y: RY+88, fill: 'var(--evt)', 'font-size': 23,
+                   'text-anchor': 'middle', 'font-variant-numeric': 'tabular-nums'}, f(x));
+    el(M, 'text', {x: CX0+46, y: RY-12, fill: 'var(--muted)', 'font-size': 13,
+                   'text-anchor': 'middle'}, 'ct,  x');
+
+    // --- the top row, multiplied out in words ---
+    el(M, 'text', {x: 575, y: RY+42, fill: 'var(--muted)', 'font-size': 14,
+                   'font-variant-numeric': 'tabular-nums'},
+       `${f(L[0][0],3)}·${f(ct)} + ${f(L[0][1],3)}·${f(x)} = ${f(ctp)}`);
+    el(M, 'text', {x: 575, y: RY+88, fill: 'var(--muted)', 'font-size': 14,
+                   'font-variant-numeric': 'tabular-nums'},
+       `${f(L[1][0],3)}·${f(ct)} + ${f(L[1][1],3)}·${f(x)} = ${f(xp)}`);
+
+    el(M, 'text', {x: 390, y: 218, fill: 'var(--muted)', 'font-size': 14,
+                   'text-anchor': 'middle'},
+       'row times column, twice — that is the whole of matrix multiplication');
+
+    return {ctp, xp, L};
+  }
+
+  function drawGeo(b, ct, x, ctp, xp){
+    G.textContent = '';
+    const CXp = 405, CY = 162, U = 45;
+    const P = (px, py) => [CXp + px*U, CY - py*U];
+
+    // light cone
+    [[1,1],[-1,1]].forEach(([sx]) => {
+      const [x1,y1] = P(-3.1*sx, -3.1), [x2,y2] = P(3.1*sx, 3.1);
+      el(G, 'line', {x1, y1, x2, y2, stroke: 'var(--warn)', 'stroke-width': 1.3,
+                     'stroke-dasharray': '5 4', opacity: .75});
+    });
+
+    // unprimed axes
+    el(G, 'line', {x1: CXp-330, y1: CY, x2: CXp+330, y2: CY,
+                   stroke: '#3d5169', 'stroke-width': 1.4});
+    el(G, 'line', {x1: CXp, y1: CY-145, x2: CXp, y2: CY+145,
+                   stroke: '#3d5169', 'stroke-width': 1.4});
+
+    // primed axes: ct' is x = βct, x' is ct = βx
+    const L = composed ? composed.beta : b;
+    const ax = (n) => {
+      const pts = n === 't' ? [[-3.1*L, -3.1], [3.1*L, 3.1]]
+                            : [[-3.1, -3.1*L], [3.1, 3.1*L]];
+      const [x1,y1] = P(pts[0][0], pts[0][1]), [x2,y2] = P(pts[1][0], pts[1][1]);
+      el(G, 'line', {x1, y1, x2, y2, stroke: 'var(--primed)', 'stroke-width': 2});
+    };
+    ax('t'); ax('x');
+
+    // Two dots, and the distinction between them is the physics:
+    //   green  = the event at its unprimed coordinates (it never moves)
+    //   pink   = the NUMBERS the boosted frame reads, plotted on the same axes
+    // The pink one slides along the hyperbola as beta changes. That is the
+    // thing the tool exists to show.
+    const [ex, ey] = P(x, ct);
+    el(G, 'circle', {cx: ex, cy: ey, r: 7, fill: 'var(--evt)'});
+    el(G, 'text', {x: ex+12, y: ey+20, fill: 'var(--evt)', 'font-size': 13},
+       'the event');
+
+    const [px_, py_] = P(xp, ctp);
+    el(G, 'line', {x1: ex, y1: ey, x2: px_, y2: py_, stroke: 'var(--primed)',
+                   'stroke-width': 1.2, 'stroke-dasharray': '3 3', opacity: .6});
+    el(G, 'circle', {cx: px_, cy: py_, r: 7, fill: 'var(--primed)'});
+    // Only label the moving dot once it is clear of the stationary one.
+    if (Math.hypot(px_ - ex, py_ - ey) > 34)
+      el(G, 'text', {x: px_+12, y: py_-10, fill: 'var(--primed)', 'font-size': 13},
+         '(ct′, x′)');
+
+    el(G, 'text', {x: 24, y: 28, fill: 'var(--primed)', 'font-size': 14,
+                   'font-variant-numeric': 'tabular-nums'},
+       `ct′ = ${f(ctp)}   x′ = ${f(xp)}`);
+    el(G, 'text', {x: 24, y: 48, fill: 'var(--muted)', 'font-size': 12},
+       'what the moving frame reads for this event');
+
+    // The invariant hyperbola: the locus of points with this event's value of
+    // (ct)² − x². Boosting slides the event ALONG it, which is the whole point
+    // of the tool, so it gets an explicit label and a ghost of the start point.
+    const s2 = ct*ct - x*x;
+    if (Math.abs(s2) > 0.02){
+      const pts = [];
+      let lab = null;
+      for (let k = -150; k <= 150; k++){
+        const w = k/50;
+        let px, py;
+        if (s2 > 0){ py = Math.sqrt(s2)*Math.cosh(w)*Math.sign(ct); px = Math.sqrt(s2)*Math.sinh(w); }
+        else       { px = Math.sqrt(-s2)*Math.cosh(w)*Math.sign(x);  py = Math.sqrt(-s2)*Math.sinh(w); }
+        if (Math.abs(px) < 8.2 && Math.abs(py) < 3.1){
+          pts.push(P(px, py).join(','));
+          if (px > 2.0 && py > 0.3 && lab === null) lab = P(px, py);  // out on the arm
+        }
+      }
+      if (pts.length > 1)
+        el(G, 'polyline', {points: pts.join(' '), fill: 'none',
+                           stroke: 'var(--ok)', 'stroke-width': 1.8, opacity: .85});
+
+      if (lab)
+        el(G, 'text', {x: Math.min(lab[0] + 12, 700), y: Math.max(lab[1] - 14, 22),
+                       fill: 'var(--ok)', 'font-size': 13},
+           'boosting slides the event along here');
+
+      el(G, 'text', {x: 24, y: 296, fill: 'var(--ok)', 'font-size': 13,
+                     'font-variant-numeric': 'tabular-nums'},
+         `green curve: all points with (ct)² − x² = ${f(s2)}`);
+      el(G, 'text', {x: 24, y: 316, fill: 'var(--muted)', 'font-size': 12},
+         'every frame’s version of this one event');
+    } else {
+      // s² = 0: the hyperbola has degenerated into the light cone itself, so
+      // there is no separate green curve to draw — the gold line IS the locus.
+      const [lx, ly] = P(2.55, 2.55);
+      el(G, 'text', {x: lx - 150, y: ly - 12, fill: 'var(--warn)', 'font-size': 13},
+         'the 45° line is the curve');
+      el(G, 'text', {x: 24, y: 296, fill: 'var(--warn)', 'font-size': 13},
+         '(ct)² − x² = 0 — the “curve” has collapsed onto the light cone');
+      el(G, 'text', {x: 24, y: 316, fill: 'var(--muted)', 'font-size': 12},
+         'so the dot slides along the cone, in every frame');
+    }
+  }
+
+  function update(){
+    const b = +bs.value, ct = +cts.value, x = +xs.value;
+    document.getElementById('bv').textContent = f(b);
+    document.getElementById('ctv').textContent = f(ct);
+    document.getElementById('xv').textContent = f(x);
+
+    const {ctp, xp, L} = drawMatrix(b, ct, x);
+    drawGeo(b, ct, x, ctp, xp);
+
+    const g = gamma(composed ? composed.beta : b);
+    document.getElementById('g').textContent  = g.toFixed(4);
+    document.getElementById('gb').textContent = (g*(composed ? composed.beta : b)).toFixed(4);
+    document.getElementById('det').textContent =
+      (L[0][0]*L[1][1] - L[0][1]*L[1][0]).toFixed(4);
+    document.getElementById('s2').textContent  = (ct*ct - x*x).toFixed(4);
+    document.getElementById('s2p').textContent = (ctp*ctp - xp*xp).toFixed(4);
+  }
+
+  function manual(){
+    stopAnim();
+    document.querySelectorAll('.btnrow button[id^="t-"]')
+            .forEach(b => b.classList.remove('on'));
+  }
+  bs.addEventListener('input', () => { manual(); composed = null;
+    document.getElementById('cmpout').style.display = 'none'; update(); });
+  cts.addEventListener('input', () => { manual(); update(); });
+  xs.addEventListener('input',  () => { manual(); update(); });
+
+  // --- Guided cases: set the column, then sweep beta so the point is made
+  // by motion rather than by the lecturer moving a slider one-handed. ---
+  const CAP = document.getElementById('caption');
+  let anim = null;
+
+  const TOURS = {
+    't-dil': {ct: 1, x: 0, from: 0, to: 0.8,
+      cap: '<b>Δx = 0</b> — one clock, one place. The column’s lower entry is ' +
+           'zero, so ct′ is just γ·ct. Watch the top number grow: <b>time ' +
+           'dilation is the top row of the matrix.</b>'},
+    't-con': {ct: 0, x: 1, from: 0, to: 0.8,
+      cap: '<b>Δt = 0</b> — both ends marked at once. Same matrix, different ' +
+           'column: now the bottom row does the work and x′ = γ·x. ' +
+           '<b>Contraction and dilation are one machine.</b>'},
+    't-lig': {ct: 1, x: 1, from: -0.9, to: 0.9,
+      cap: '<b>A light ray.</b> ct = x, so (ct)² − x² = 0. Sweep β through ' +
+           'every frame: the dot slides along the gold 45° line and <b>never ' +
+           'leaves it.</b> Light is light in every frame — postulate 2, as algebra.'},
+    't-new': {ct: 1, x: 0.5, from: 0.9, to: 0.02,
+      cap: '<b>Down to everyday speeds.</b> As β → 0 the matrix goes to the ' +
+           'identity: 1, 0, 0, 1. It does nothing. <b>Newton is not wrong, ' +
+           'he is the β → 0 corner</b> of this same object.'}
+  };
+
+  function stopAnim(){ if (anim){ cancelAnimationFrame(anim); anim = null; } }
+
+  function runTour(key){
+    const T = TOURS[key];
+    stopAnim();
+    composed = null;
+    document.getElementById('cmpout').style.display = 'none';
+    document.querySelectorAll('.btnrow button[id^="t-"]')
+            .forEach(b => b.classList.toggle('on', b.id === key));
+    CAP.innerHTML = T.cap;
+    cts.value = T.ct; xs.value = T.x;
+    bs.value = T.from;
+    update();
+
+    // Fixed step count rather than a wall clock: Date.now() is not needed and
+    // a frame-counted sweep looks identical on a projector.
+    const STEPS = 90;
+    let i = 0;
+    (function step(){
+      i++;
+      // ease-in-out so the ends of the sweep read clearly
+      const u = i/STEPS, e = u < 0.5 ? 2*u*u : 1 - 2*(1-u)*(1-u);
+      bs.value = (T.from + (T.to - T.from)*e).toFixed(3);
+      update();
+      if (i < STEPS) anim = requestAnimationFrame(step);
+      else anim = null;
+    })();
+  }
+
+  Object.keys(TOURS).forEach(k =>
+    document.getElementById(k).addEventListener('click', () => runTour(k)));
+
+  document.getElementById('cmp').addEventListener('click', () => {
+    stopAnim(); manual();
+    const b1 = 0.6, b2 = 0.7, g1 = gamma(b1), g2 = gamma(b2);
+    const A = [[g1, -g1*b1], [-g1*b1, g1]], B = [[g2, -g2*b2], [-g2*b2, g2]];
+    const L = [[0,0],[0,0]];
+    for (let r = 0; r < 2; r++) for (let c = 0; c < 2; c++)
+      for (let k = 0; k < 2; k++) L[r][c] += B[r][k]*A[k][c];
+    const beta = -L[0][1]/L[0][0];
+    composed = {L, beta};
+    const out = document.getElementById('cmpout');
+    out.style.display = 'block';
+    out.innerHTML =
+      `<div><span class="k">read off &beta;</span><span>${beta.toFixed(6)}</span></div>` +
+      `<div><span class="k">(0.6+0.7)/(1+0.42)</span><span>${((b1+b2)/(1+b1*b2)).toFixed(6)}</span></div>` +
+      `<div><span class="k">Galileo would say</span><span>${(b1+b2).toFixed(6)}</span></div>`;
+    update();
+  });
+
+  document.getElementById('rst').addEventListener('click', () => {
+    stopAnim(); manual();
+    composed = null; bs.value = 0.6; cts.value = 1; xs.value = 0;
+    CAP.innerHTML = 'Each button sets the column and sweeps β for you. ' +
+                    'Same matrix every time — only the column changes.';
+    document.getElementById('cmpout').style.display = 'none'; update();
+  });
+
+  update();
+})();
+</script>
+
+<script>
+// Fullscreen for lecture use. Press F (or Esc to leave). Safari needs the
+// webkit-prefixed calls.
+(function(){
+  var b=document.createElement('button');
+  b.id='fsbtn'; b.textContent='⤢ Fullscreen (F)';
+  b.title='Toggle fullscreen — hides the Safari toolbar';
+  document.body.appendChild(b);
+  function on(){ return document.fullscreenElement||document.webkitFullscreenElement; }
+  function toggle(){
+    var e=document.documentElement;
+    if(on()){ (document.exitFullscreen||document.webkitExitFullscreen).call(document); }
+    else    { (e.requestFullscreen||e.webkitRequestFullscreen).call(e); }
+  }
+  b.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(ev){
+    if(ev.key==='f'||ev.key==='F'){
+      var t=ev.target.tagName;
+      if(t==='INPUT'||t==='TEXTAREA') return;
+      ev.preventDefault(); toggle();
+    }
+  });
+})();
+</script>
+</body>
+</html>

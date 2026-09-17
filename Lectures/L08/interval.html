@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Invariant Interval — PHY 208</title>
+<style>
+  :root{
+    --bg:#0d1620; --panel:#152131; --ink:#e8eaf0; --muted:#98a0b3;
+    --line:#24354a; --accent:#6cb8f5; --warn:#e8a33d; --ok:#5fbf85;
+    --light:#e8a33d; --primed:#ff7a8a; --evt:#5fbf85; --pin:#5fbf85;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  /* 100dvh tracks Safari's collapsing toolbar; 100vh does not. */
+  body{margin:0;background:var(--bg);color:var(--ink);height:100vh;height:100dvh;
+       display:flex;flex-direction:column;overflow:hidden;
+       font:16px/1.5 "Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  header{padding:11px 22px;border-bottom:1px solid var(--line);
+          border-top:4px solid #005bbb;flex:none}
+  h1{margin:0;font-size:19px;font-weight:600}
+  header p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 372px;
+        flex:1;min-height:0;overflow:hidden}
+  /* On a phone the panel goes underneath and the whole page scrolls: students
+     run this on their own devices in pairs, not just on the projector. */
+  @media(max-width:920px){
+    body{height:auto;overflow:auto}
+    .wrap{grid-template-columns:1fr}
+    .panel{border-left:none;border-top:1px solid var(--line)}
+    .stage{min-height:60vh}
+  }
+  .stage{padding:14px;display:flex;align-items:center;justify-content:center;
+         min-width:0;min-height:0;overflow:hidden}
+  .panel{background:var(--panel);border-left:1px solid var(--line);padding:18px;
+         display:flex;flex-direction:column;gap:13px;min-height:0;overflow-y:auto}
+  svg{width:auto;height:auto;max-width:100%;max-height:100%}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;
+        text-transform:uppercase;letter-spacing:.05em}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  input[type=range]:disabled{opacity:.3}
+  input[type=text]{width:100%;background:#0d1620;color:var(--ink);
+                   border:1px solid var(--line);border-radius:7px;
+                   padding:9px 11px;font-size:15px;font-family:inherit}
+  input[type=text]:focus{outline:none;border-color:var(--accent)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}
+  button{background:#1c2c3f;color:var(--ink);border:1px solid var(--line);
+         border-radius:7px;padding:8px 11px;font-size:13px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.on{background:var(--accent);color:#0d1620;border-color:var(--accent);font-weight:600}
+  button:disabled{opacity:.35;cursor:not-allowed}
+  .btnrow{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+     color:var(--muted);margin:0 0 8px;font-weight:600}
+  .note{font-size:12px;color:var(--muted);line-height:1.45;margin:0}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;
+          margin-right:5px;vertical-align:baseline}
+
+  /* ---- step 1: who are you. Everything else is disabled until this is set. ---- */
+  .seedbox{background:rgba(108,184,245,.09);border:1px solid var(--accent);
+           border-radius:8px;padding:13px}
+  .seedbox h2{color:var(--accent)}
+  .seedbox p{margin:0 0 9px;font-size:13px;line-height:1.45}
+  .seedbox button{width:100%;margin-top:8px;background:var(--accent);
+                  color:#0d1620;border-color:var(--accent);font-weight:700}
+  .seedtag{font-size:13px;color:var(--accent);font-weight:700;
+           letter-spacing:.03em}
+  .seedtag span{color:var(--muted);font-weight:400}
+
+  /* ---- step 2: the predict gate. Nothing moves until they have committed. ---- */
+  .gate{background:rgba(232,163,61,.10);border:1px solid var(--warn);
+        border-radius:8px;padding:13px}
+  .gate h2{color:var(--warn);margin-bottom:7px}
+  .gate p{margin:0 0 10px;font-size:13px;line-height:1.45}
+  .gate button{width:100%;background:var(--warn);color:#0d1620;
+               border-color:var(--warn);font-weight:700}
+  .locked .stage{opacity:.30;filter:blur(3px);pointer-events:none}
+  .locked .board{opacity:.30;filter:blur(3px)}
+
+  /* ---- the readout board: the whole point of the tool ---- */
+  .board{font-variant-numeric:tabular-nums}
+  .board .r{display:grid;grid-template-columns:58px 1fr 22px 1fr;
+            align-items:baseline;gap:6px;padding:6px 8px;border-radius:6px;
+            border-bottom:1px solid var(--line);font-size:15px}
+  .board .r .k{color:var(--muted);font-size:13px}
+  .board .r .a{text-align:right;color:var(--muted)}
+  .board .r .arrow{text-align:center;color:var(--line)}
+  .board .r .b{text-align:right;font-weight:700;color:var(--warn)}
+  /* Δs² is the row that must not move. It says so, loudly. */
+  .board .r.pinned{background:rgba(95,191,133,.11);border-bottom-color:var(--pin)}
+  .board .r.pinned .k,.board .r.pinned .a,.board .r.pinned .b{color:var(--pin)}
+  .board .r.pinned .b{font-weight:800}
+  .pinflag{font-size:11px;color:var(--pin);letter-spacing:.06em;
+           text-transform:uppercase;padding:5px 8px 0;display:none}
+  .pinflag.show{display:block}
+
+  /* ---- the three speeds they must write down ---- */
+  .marks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+  .marks button{font-variant-numeric:tabular-nums}
+  .marks button.done{border-color:var(--ok);color:var(--ok)}
+
+  #fsbtn{position:fixed;top:9px;right:14px;z-index:50;background:rgba(0,0,0,.35);
+         color:var(--ink);border:1px solid var(--line);border-radius:6px;
+         padding:4px 9px;font-size:12px;cursor:pointer;opacity:.55}
+  #fsbtn:hover{opacity:1;border-color:var(--accent)}
+  :fullscreen #fsbtn{display:none}
+</style>
+</head>
+<body class="locked">
+
+<button id="fsbtn" title="Fullscreen (F)">⤢ Fullscreen</button>
+
+<header>
+  <h1>The invariant interval — one number that will not move</h1>
+  <p>PHY 208 · Your group gets its own pair of events. Predict first, then boost.</p>
+</header>
+
+<div class="wrap">
+  <div class="stage">
+    <svg id="dia" viewBox="0 0 640 640" role="img"
+         aria-label="Spacetime diagram. The vertical axis is time and the horizontal axis is space, in units where light travels one unit of space per unit of time, so the light cone sits at forty-five degrees. Two green event markers are shown: event O at the origin and event P elsewhere. As the boost slider moves, P slides to new coordinates along a green hyperbola, so its time and space separations from O both change while the interval between the two events stays fixed."></svg>
+  </div>
+
+  <div class="panel">
+
+    <!-- Step 1. Seed. Removed from the DOM once set. -->
+    <div class="seedbox" id="seedbox">
+      <h2>Step 1 — your group</h2>
+      <p>Type your <strong>group name</strong> (Rømer, Fizeau, Michelson, …).
+         Spelling is forgiving: case, spaces, umlauts and accents are ignored —
+         <em>Rømer</em>, <em>Romer</em> and <em>Römer</em> all count as the same
+         group. Your group gets its own pair of events, and the same name always
+         gives the same numbers.</p>
+      <input type="text" id="seed" placeholder="group name" autocomplete="off"
+             spellcheck="false" aria-label="Your group name">
+      <button id="setseed">Get our events</button>
+    </div>
+
+    <div class="seedtag" id="seedtag" style="display:none"></div>
+
+    <!-- Step 2. Predict. Removed from the DOM once revealed. -->
+    <div class="gate" id="gate" style="display:none">
+      <h2>Step 2 — predict, on paper</h2>
+      <p>Both of you write it down <em>before</em> anything moves. I am about to
+         boost to a frame moving past at up to <strong>0.95c</strong>. Which of
+         these comes out unchanged — <strong>Δt</strong>, <strong>Δx</strong>,
+         <strong>Δs²</strong>, all three, or none?</p>
+      <button id="reveal">We have both written it down — reveal</button>
+    </div>
+
+    <div>
+      <div class="row">
+        <label for="beta" style="margin:0">Step 3 — boost the frame</label>
+        <span class="val" id="bval">0.00c</span>
+      </div>
+      <input type="range" id="beta" min="-95" max="95" step="1" value="0" disabled>
+      <div class="btnrow" style="margin-top:9px">
+        <button id="anim" disabled>▶ Sweep</button>
+        <button id="zero" disabled>Reset to 0</button>
+      </div>
+    </div>
+
+    <div>
+      <h2>Step 4 — write these three rows in your notebook</h2>
+      <div class="marks">
+        <button id="m0" disabled>v = 0</button>
+        <button id="m6" disabled>v = 0.60c</button>
+        <button id="m9" disabled>v = 0.90c</button>
+      </div>
+    </div>
+
+    <div class="board" id="board">
+      <h2>At rest &nbsp;→&nbsp; boosted</h2>
+      <div class="r"><span class="k">Δt</span><span class="a" id="a_dt">—</span><span class="arrow">→</span><span class="b" id="b_dt">—</span></div>
+      <div class="r"><span class="k">Δx</span><span class="a" id="a_dx">—</span><span class="arrow">→</span><span class="b" id="b_dx">—</span></div>
+      <div class="r"><span class="k">γ</span><span class="a" id="a_g">1.000</span><span class="arrow">→</span><span class="b" id="b_g">1.000</span></div>
+      <div class="r pinned"><span class="k">Δs²</span><span class="a" id="a_s">—</span><span class="arrow">→</span><span class="b" id="b_s">—</span></div>
+      <div class="pinflag" id="pinflag">◀ pinned — every frame agrees</div>
+    </div>
+
+    <div>
+      <h2>Step 5 — only after you have written them</h2>
+      <div class="btnrow">
+        <button id="tTrace" disabled>Trace the path</button>
+        <button id="tHyp" disabled>Reveal the curve</button>
+      </div>
+      <div class="btnrow" style="margin-top:7px">
+        <button id="pLight" disabled>Put P on the cone</button>
+        <button id="pMine" disabled>Back to our events</button>
+      </div>
+    </div>
+
+    <p class="note" id="verdict"></p>
+
+    <p class="note">
+      <span class="swatch" style="background:#5fbf85"></span>events &nbsp;
+      <span class="swatch" style="background:#e8a33d"></span>light cone &nbsp;
+      <span class="swatch" style="background:#ff7a8a"></span>boosted axes<br>
+      Units: <em>c</em> = 1, so light travels one unit of space per unit of time
+      and the cone sits at 45°. Δs² = Δt² − Δx².
+    </p>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  const S  = document.getElementById('dia');
+  const NS = 'http://www.w3.org/2000/svg';
+  // The interesting action is in the future half-plane, so the origin sits low
+  // and the drawn window is asymmetric: RANGE_T up, RANGE_P down, RANGE_X wide.
+  // The window is recomputed each frame so the boosted event stays in frame at
+  // every speed. A fixed window either clips P at high boost or looks empty at
+  // rest; the scale is quantised so it does not visibly breathe on every pixel
+  // of slider travel.
+  const VW = 640;                 // viewBox is square
+  const CXf = 0.50, CYf = 0.72;   // origin: centred across, low down
+
+  const $ = id => document.getElementById(id);
+  const beta = $('beta');
+
+  const show = {trace:false, hyp:false};
+  let unlocked = false;
+  let P = null;            // the second event currently displayed, {x, t}
+  let kind = '';           // timelike | spacelike | lightlike
+  let mine = null;         // this group's own seeded event, to return to
+
+  // Filled in by setView() before each draw.
+  let U = 80, CX = VW*CXf, CY = VW*CYf, RANGE_X = 3.5, RANGE_T = 4.5, RANGE_P = 1.8;
+  const X = x => CX + x*U;
+  const Y = t => CY - t*U;
+
+  // Choose a scale that keeps the origin, the boosted event and the hyperbola
+  // vertex inside the frame, with margin. Quantised to 1/4-unit steps of reach.
+  function setView(Pb, s2){
+    const vertex = Math.sqrt(Math.abs(s2));
+    // Pick one scale U such that the boosted event and the hyperbola vertex
+    // both sit inside their available half-boxes with margin. Solve each
+    // direction for the U it permits, then take the tightest.
+    const boxUp   = VW * CYf;           // px above the origin
+    const boxDown = VW * (1 - CYf);     // px below
+    const boxSide = VW * CXf;           // px either side (origin is centred)
+    const MARGIN  = 1.22;               // never let content touch the edge
+    const wantUp   = Math.max(Pb.t,  vertex, 2.0) * MARGIN;
+    const wantDown = Math.max(-Pb.t, 0.9)         * MARGIN;
+    const wantSide = Math.max(Math.abs(Pb.x), vertex, 2.0) * MARGIN;
+    U = Math.min(boxUp/wantUp, boxDown/wantDown, boxSide/wantSide);
+    // Quantise so the picture does not visibly breathe on every slider pixel.
+    U = Math.floor(U / 2) * 2;
+    CX = boxSide;
+    CY = boxUp;
+    RANGE_T = boxUp   / U;
+    RANGE_P = boxDown / U;
+    RANGE_X = boxSide / U;
+  }
+
+  // ---- seeding -------------------------------------------------------------
+  // FNV-1a over the normalised name. Deterministic and stable across browsers,
+  // so a group's numbers are reproducible at home and regenerable by me for
+  // grading.
+  //
+  // Normalisation is aggressive on purpose: the group names carry characters
+  // students may not know how to type ("Rømer", "Poincaré"). Case, spacing,
+  // punctuation, umlauts and accents are all ignored, so Rømer, Romer, Römer
+  // and "  ROMER " seed identically. Letters that do not NFD-decompose to a
+  // base letter (ø, æ, ß, ł, đ) are mapped by hand first.
+  function normalizeName(str){
+    let s = str.trim().toLowerCase();
+    s = s.replace(/ø/g,'o').replace(/æ/g,'ae').replace(/ß/g,'ss')
+         .replace(/ł/g,'l').replace(/đ/g,'d');
+    s = s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    return s.replace(/[^a-z0-9]+/g,'');
+  }
+  // SALT folds into the FNV offset basis. 1 was chosen by search so the named
+  // Fall-2026 groups split ~evenly between timelike and spacelike (5/6 over
+  // the 11 known names) with all intervals distinct; random names stay 50/50.
+  const SALT = 1;
+  function hash(str){
+    let h = (0x811c9dc5 ^ SALT) >>> 0;
+    for (let i=0;i<str.length;i++){
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h;
+  }
+  // FNV's low bits track the last character too closely to slice the kind and
+  // the coordinates out of one hash. Mix once more so the two draws come from
+  // decorrelated bits, otherwise similar group names cluster onto one kind.
+  function mix(h){
+    h ^= h >>> 16; h = Math.imul(h, 0x7feb352d) >>> 0;
+    h ^= h >>> 15; h = Math.imul(h, 0x846ca68b) >>> 0;
+    h ^= h >>> 16; return h >>> 0;
+  }
+
+  // Build a group's event pair: a different pair for every group, and a roughly
+  // even split of timelike and spacelike across the room, so the debrief can
+  // put two groups with opposite signs side by side.
+  //
+  // Lightlike is deliberately NOT dealt out here. Δs² = 0 at every speed, so a
+  // lightlike group would have no arithmetic to do and a thin notebook entry.
+  // Every group meets that case together, at the end, via the lightlike button.
+  function eventsFor(name){
+    const h  = mix(hash(normalizeName(name)));
+    const c0 = ((h >>> 8)  & 0xff)/256;
+    const c1 = ((h >>> 16) & 0xff)/256;
+    if ((h & 1) === 0){                           // timelike: t > |x|
+      const x = 0.6 + 1.5*c0;                     // 0.60 .. 2.10
+      const t = x + 0.8 + 1.4*c1;                 // strictly greater than x
+      return {x: +x.toFixed(2), t: +t.toFixed(2), kind: 'timelike'};
+    }
+    const t = 0.4 + 1.1*c0;                       // spacelike: |x| > t
+    const x = t + 0.8 + 1.5*c1;                   // strictly greater than t
+    return {x: +x.toFixed(2), t: +t.toFixed(2), kind: 'spacelike'};
+  }
+
+  function el(tag, attrs){
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function line(x1,y1,x2,y2,stroke,w,dash,op){
+    return el('line',{x1,y1,x2,y2,stroke,'stroke-width':w||1.6,
+                      ...(dash?{'stroke-dasharray':dash}:{}),
+                      ...(op?{'opacity':op}:{})});
+  }
+  function text(x,y,s,fill,size,anchor,weight){
+    const t = el('text',{x,y,fill:fill||'#98a0b3','font-size':size||13,
+                         'text-anchor':anchor||'start','font-family':'inherit',
+                         ...(weight?{'font-weight':weight}:{})});
+    t.textContent = s; return t;
+  }
+
+  // Lorentz boost of (x, t) into a frame moving at b. c = 1.
+  function boost(x, t, b){
+    const g = 1/Math.sqrt(1-b*b);
+    return {x: g*(x - b*t), t: g*(t - b*x)};
+  }
+
+  function draw(){
+    if (!P) return;
+    const b  = +beta.value/100;
+    const g  = 1/Math.sqrt(1-b*b);
+    const Pb = boost(P.x, P.t, b);
+    const s2 = P.t*P.t - P.x*P.x;   // invariant, from the rest-frame values
+    setView(Pb, s2);
+
+    while (S.firstChild) S.removeChild(S.firstChild);
+
+    // ---- background grid ----
+    const gx = Math.floor(RANGE_X), gtHi = Math.floor(RANGE_T), gtLo = Math.ceil(-RANGE_P);
+    for (let i=-gx;i<=gx;i++)      S.appendChild(line(X(i),Y(-RANGE_P),X(i),Y(RANGE_T),'#1b2836',1));
+    for (let i=gtLo;i<=gtHi;i++)   S.appendChild(line(X(-RANGE_X),Y(i),X(RANGE_X),Y(i),'#1b2836',1));
+
+    // ---- unprimed axes ----
+    S.appendChild(line(X(-RANGE_X),Y(0),X(RANGE_X),Y(0),'#4a5a6e',2));
+    S.appendChild(line(X(0),Y(-RANGE_P),X(0),Y(RANGE_T),'#4a5a6e',2));
+    S.appendChild(text(X(RANGE_X)-4,Y(0)+20,'x','#4a5a6e',14,'end'));
+    S.appendChild(text(X(0)+9,Y(RANGE_T)+15,'ct','#4a5a6e',14));
+
+    // ---- light cone ----
+    // The arms run at 45 deg to whichever edge they hit first, so they read as
+    // one straight crossing line rather than stopping short of the window.
+    const armF = Math.min(RANGE_X, RANGE_T);   // future arms
+    const armP = Math.min(RANGE_X, RANGE_P);   // past arms
+    S.appendChild(line(X(0),Y(0),X( armF),Y(armF),'var(--light)',2.4,null,.85));
+    S.appendChild(line(X(0),Y(0),X(-armF),Y(armF),'var(--light)',2.4,null,.85));
+    S.appendChild(line(X(0),Y(0),X( armP),Y(-armP),'var(--light)',2.0,'4 4',.30));
+    S.appendChild(line(X(0),Y(0),X(-armP),Y(-armP),'var(--light)',2.0,'4 4',.30));
+    S.appendChild(text(X(armF)-7,Y(armF)-10,'light','var(--light)',13,'end'));
+
+    // ---- boosted axes: ct' along t = x/b, x' along t = b*x ----
+    if (Math.abs(b) > 0.005){
+      // ct' runs to the top of the window; x' runs to the side.
+      const tEnd = RANGE_T, xEnd = RANGE_X;
+      S.appendChild(line(X(-b*RANGE_P),Y(-RANGE_P),X(b*tEnd),Y(tEnd),
+                         'var(--primed)',1.8,'5 4',.8));
+      S.appendChild(line(X(-xEnd),Y(-b*xEnd),X(xEnd),Y(b*xEnd),
+                         'var(--primed)',1.8,'5 4',.8));
+      S.appendChild(text(X(b*tEnd)+9,Y(tEnd)+13,"ct'",'var(--primed)',13));
+      S.appendChild(text(X(xEnd)-4,Y(b*xEnd)-9,"x'",'var(--primed)',13,'end'));
+    }
+
+    // ---- the curve the event is confined to ----
+    // s2 > 0 timelike: t² − x² = s2, opens along ct.
+    // s2 < 0 spacelike: x² − t² = −s2, opens along x.
+    // s2 = 0 lightlike: the cone itself, already drawn.
+    if (show.hyp && Math.abs(s2) > 1e-9){
+      const branch = (sign) => {
+        const pts = [];
+        for (let k=-300;k<=300;k++){
+          const w = k/100;
+          let px, pt;
+          if (s2 > 0){ const A = Math.sqrt(s2);  pt = A*Math.cosh(w);        px = A*Math.sinh(w); }
+          else       { const A = Math.sqrt(-s2); px = sign*A*Math.cosh(w);   pt = A*Math.sinh(w); }
+          if (Math.abs(px) <= RANGE_X && pt <= RANGE_T && pt >= -RANGE_P) pts.push([X(px),Y(pt)]);
+        }
+        return pts;
+      };
+      const main = branch(1);
+      if (main.length > 1) S.appendChild(el('polyline',{
+        points: main.map(p=>p.join(',')).join(' '), fill:'none',
+        stroke:'var(--ok)','stroke-width':2.2,'stroke-dasharray':'7 5',opacity:.85}));
+      if (s2 < 0){
+        const mir = branch(-1);
+        if (mir.length > 1) S.appendChild(el('polyline',{
+          points: mir.map(p=>p.join(',')).join(' '), fill:'none',
+          stroke:'var(--ok)','stroke-width':2.2,'stroke-dasharray':'7 5',opacity:.40}));
+      }
+    }
+
+    // ---- breadcrumbs: where the event sat at other speeds ----
+    if (show.trace){
+      for (let k=-95;k<=95;k+=5){
+        const q = boost(P.x, P.t, k/100);
+        if (Math.abs(q.x) <= RANGE_X && q.t <= RANGE_T && q.t >= -RANGE_P)
+          S.appendChild(el('circle',{cx:X(q.x),cy:Y(q.t),r:2.6,
+                                     fill:'var(--ok)',opacity:.38}));
+      }
+    }
+
+    // ---- the two events ----
+    S.appendChild(el('circle',{cx:X(0),cy:Y(0),r:7,fill:'var(--evt)'}));
+    S.appendChild(text(X(0)-13,Y(0)+21,'O','var(--evt)',14,'end',700));
+
+    const inView = Math.abs(Pb.x) <= RANGE_X && Pb.t <= RANGE_T && Pb.t >= -RANGE_P;
+    if (inView){
+      S.appendChild(line(X(0),Y(0),X(Pb.x),Y(Pb.t),'var(--evt)',1.6,'4 3',.5));
+      S.appendChild(el('circle',{cx:X(Pb.x),cy:Y(Pb.t),r:8,fill:'var(--evt)',
+                                 stroke:'#0d1620','stroke-width':2}));
+      S.appendChild(text(X(Pb.x)+14,Y(Pb.t)+5,'P','var(--evt)',14,'start',700));
+    } else {
+      S.appendChild(text(CX,44,'P has run off the picture — its coordinates are huge',
+                         'var(--evt)',13,'middle'));
+    }
+
+    // ---- readout ----
+    $('bval').textContent = b.toFixed(2)+'c';
+    $('a_dt').textContent = P.t.toFixed(2);
+    $('a_dx').textContent = P.x.toFixed(2);
+    $('a_g').textContent  = '1.000';
+    $('a_s').textContent  = s2.toFixed(2);
+    $('b_dt').textContent = Pb.t.toFixed(2);
+    $('b_dx').textContent = Pb.x.toFixed(2);
+    $('b_g').textContent  = g.toFixed(3);
+    // Recomputed from the BOOSTED coordinates rather than copied: the claim is
+    // that it comes out the same, so it has to actually be computed again.
+    $('b_s').textContent  = (Pb.t*Pb.t - Pb.x*Pb.x).toFixed(2);
+    $('pinflag').classList.toggle('show', unlocked && Math.abs(b) > 0.02);
+
+    const V = {
+      timelike:  'Δs² > 0 — <strong>timelike</strong>. A slower-than-light signal can run from O to P, '
+               + 'so every frame agrees P happened after O. No boost reverses them.',
+      spacelike: 'Δs² &lt; 0 — <strong>spacelike</strong>. Boost far enough and P drops below the x axis: '
+               + 'some frames put P first. Nothing can travel between them, so nothing breaks.',
+      lightlike: 'Δs² = 0 — <strong>lightlike</strong>. P sits on the cone and stays on it at every speed. '
+               + 'Zero in every frame: that is the second postulate, written as one number.'
+    };
+    $('verdict').innerHTML = V[kind];
+  }
+
+  // ---- step 1: set the seed ------------------------------------------------
+  function applySeed(){
+    const raw = $('seed').value.trim();
+    if (!raw){ $('seed').focus(); return; }
+    const e = eventsFor(raw);
+    mine = {x: e.x, t: e.t, kind: e.kind};
+    P = {x: e.x, t: e.t};
+    kind = e.kind;
+    $('seedtag').innerHTML = raw + ' &nbsp;<span>· O = (0, 0) &nbsp; P = ('
+                           + e.x.toFixed(2) + ', ' + e.t.toFixed(2) + ')</span>';
+    $('seedtag').style.display = '';
+    $('seedbox').remove();
+    $('gate').style.display = '';
+    draw();
+  }
+  $('setseed').addEventListener('click', applySeed);
+  $('seed').addEventListener('keydown', e => { if (e.key === 'Enter') applySeed(); });
+
+  // ---- step 2: the predict gate --------------------------------------------
+  $('reveal').addEventListener('click', () => {
+    unlocked = true;
+    document.body.classList.remove('locked');
+    $('gate').remove();
+    ['beta','anim','zero','tTrace','tHyp','m0','m6','m9','pLight','pMine']
+      .forEach(id => $(id).disabled = false);
+    draw();
+  });
+
+  beta.addEventListener('input', draw);
+  $('zero').addEventListener('click', () => { beta.value = 0; draw(); });
+
+  // ---- step 4: the three speeds to record ----------------------------------
+  for (const [id, v] of [['m0',0],['m6',60],['m9',90]]){
+    $(id).addEventListener('click', () => {
+      beta.value = v;
+      $(id).classList.add('done');
+      draw();
+    });
+  }
+
+  // ---- step 5: the case everybody sees, whatever they were dealt ----------
+  // P is put exactly on the cone, keeping the group's own x, so the shape of
+  // their diagram is recognisable and only the interval has changed.
+  $('pLight').addEventListener('click', () => {
+    P = {x: mine.x, t: mine.x};
+    kind = 'lightlike';
+    $('pLight').classList.add('on'); $('pMine').classList.remove('on');
+    draw();
+  });
+  $('pMine').addEventListener('click', () => {
+    P = {x: mine.x, t: mine.t};
+    kind = mine.kind;
+    $('pMine').classList.add('on'); $('pLight').classList.remove('on');
+    draw();
+  });
+
+  for (const [id, key] of [['tTrace','trace'],['tHyp','hyp']]){
+    $(id).addEventListener('click', () => {
+      show[key] = !show[key];
+      $(id).classList.toggle('on', show[key]);
+      draw();
+    });
+  }
+
+  // ---- sweep ----
+  let timer = null;
+  $('anim').addEventListener('click', () => {
+    if (timer){ clearInterval(timer); timer = null; $('anim').classList.remove('on');
+                $('anim').textContent = '▶ Sweep'; return; }
+    $('anim').classList.add('on'); $('anim').textContent = '■ Stop';
+    let d = 1;
+    timer = setInterval(() => {
+      const v = +beta.value + d;
+      if (v >= 95 || v <= -95) d = -d;
+      beta.value = Math.max(-95, Math.min(95, v));
+      draw();
+    }, 40);
+  });
+
+  // ---- fullscreen ----
+  const fs = () => { if (document.fullscreenElement) document.exitFullscreen();
+                     else document.documentElement.requestFullscreen(); };
+  $('fsbtn').addEventListener('click', fs);
+  document.addEventListener('keydown', e => {
+    if ((e.key === 'f' || e.key === 'F') && e.target.tagName !== 'INPUT') fs();
+  });
+
+  $('seed').focus();
+})();
+</script>
+</body>
+</html>

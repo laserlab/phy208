@@ -6,7 +6,7 @@ The images below retain the licenses of their original sources.
 | File | Source | License | Page |
 |---|---|---|---|
 | `cloud_chamber.png` | Cosmic radiations in a diffusion cloud chamber, by Mauswiesel | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Cosmic_radiations_in_a_diffusion_cloud_chamber.png) |
-| `nist_f2.jpg` | NIST-F2 cesium fountain atomic clock, NIST | Public domain (US Gov) | [Commons](https://commons.wikimedia.org/wiki/File:NIST-F2_cesium_fountain_atomic_clock.jpg) |
+| `nist_f2.jpg` | Steve Jefferts (foreground) and Tom Heavner with NIST-F2, the cesium fountain clock they designed; NIST press photo, April 2014 | Public domain (US Gov) | [Commons](https://commons.wikimedia.org/wiki/File:NIST-F2_cesium_fountain_atomic_clock.jpg) |
 | `gps_nasa.jpg` | GPS Block II satellite, artist's rendering, NASA | Public domain (US Gov) | [Commons](https://commons.wikimedia.org/wiki/File:GPS_Satellite_NASA_art-iif.jpg) |
 | `einstein.jpg` | Portrait of Albert Einstein | Public domain | copy of `Lectures/_shared/img/einstein.jpg` |
 | `exit_qr.png` | Generated for this course | CC BY-SA 4.0 | — |
