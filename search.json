@@ -63,6 +63,13 @@
     "text": "What the sign protects\n\n\n\n\n\n\n\n\n\nseparation\n\\(\\Delta s^{2}\\)\ncan A cause B?\ndo frames agree on the order?\n\n\n\n\ntimelike\n\\(&gt; 0\\)\nyes\nyes — always\n\n\nlightlike\n\\(= 0\\)\nonly by light\nyes\n\n\nspacelike\n\\(&lt; 0\\)\nno\nno — order is frame-dependent\n\n\n\n\nThe two “no”s line up exactly. Order reverses only where nothing could have travelled — so no frame ever sees an effect precede its cause."
   },
   {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#watch-it-not-flip",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#watch-it-not-flip",
+    "title": "The Invariant Interval",
+    "section": "Watch it not flip",
+    "text": "Watch it not flip\nTwo events 300 m apart, 2.0 μs apart: a pulse leaves a laser, a detector fires. Send it down 300 m of fibre and it arrives in \\(1.50\\ \\mu\\)s, in time to cause the second event. Boost as hard as you like:\n\n\n\n\n\n\n\n\n\n\nLeft: \\(\\Delta t'\\) bottoms out at \\(1.73\\ \\mu\\)s and climbs again; cause stays first in every frame. Right: nothing connected them, so the order is free to reverse."
+  },
+  {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#proper-time-is-the-interval",
     "href": "Lectures/L08/L08_Invariant_Interval.html#proper-time-is-the-interval",
     "title": "The Invariant Interval",
@@ -74,14 +81,14 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#the-longest-path-is-the-straight-one",
     "title": "The Invariant Interval",
     "section": "The longest path is the straight one",
-    "text": "The longest path is the straight one\n\n\n\n\n\n\n\n\n\nThe minus sign reverses the inequality: a detour through space costs proper time. Sitting still is the way to age the most."
+    "text": "The longest path is the straight one\n\n\n\n\n\n\n\n\n\nThe minus sign reverses the inequality: a detour through space costs proper time. Sitting still is the way to age the most.\n\nSomebody has actually done it. Scott Kelly spent 340 days on the ISS at 7.66 km/s:\n\n\n340 days at 7.66 km/s  -&gt;  9.59 ms of proper time not lived\n                           (28.2 us per day)\n\n\n\n\n\nNeil deGrasse Tyson tweeted it as “about 1/100 of a second”; someone checked the arithmetic, and he was right to within a factor of two. Gravity pushes the other way — clocks run fast higher up, worth \\(+1.2\\) ms — so the honest net is roughly 8 ms younger. That half is general relativity, not ours."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-muon-one-last-time",
     "href": "Lectures/L08/L08_Invariant_Interval.html#the-muon-one-last-time",
     "title": "The Invariant Interval",
     "section": "The muon, one last time",
-    "text": "The muon, one last time\n\n\nground:  dt =  6.393 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us\nmuon  :  dt =  0.638 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us\n\nthat 0.64 us is 0.290 of a 2.2 us lifetime -&gt; e^-0.29 = 75% survive\n\n\n\nTwo frames, two completely different stories, one interval: 0.64 μs of the muon’s own time — the fraction of its 2.2 μs lifetime the trip really cost, and the number that decided whether it lived."
+    "text": "The muon, one last time\n\n\nground:  dt = 6388609.715 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us\nmuon  :  dt = 638061.896 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us\n\nthat 0.64 us is 290028.134 of a 2.2 us lifetime -&gt; e^-0.29 = 0% survive\n\n\n\nTwo frames, two completely different stories, one interval: 0.64 μs of the muon’s own time — the fraction of its 2.2 μs lifetime the trip really cost, and the number that decided whether it lived."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#nothing-is-absolute",
@@ -95,14 +102,28 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#section-1",
     "title": "The Invariant Interval",
     "section": "",
-    "text": "Two events have \\(\\Delta s^{2} &lt; 0\\). In my frame A happens before B. A ship, moving fast enough, measures B before A.\nDoes that let the crew use the pair to send a signal into their own past?\n(a) Yes, and that is a genuine inconsistency in the theory\n(b) Yes, but only for observers moving faster than \\(c\\), so it never happens\n(c) No — nothing could have travelled between those two events in the first place\n(d) No, because the reversal is an optical illusion caused by signal delay"
+    "text": "Two events, in my frame: A is a switch thrown at \\(x = 0\\), and B is a lamp lighting 600 m away, 1.0 microsecond later. Someone claims A caused B. Use \\(c = 300\\) m per microsecond.\nWhich statement is correct?\n(a) A could have caused B, and every frame agrees A came first\n(b) A cannot have caused B, and some frames put B first\n(c) A cannot have caused B, but every frame still agrees A came first\n(d) A could have caused B, but only frames slower than \\(0.5c\\) agree A came first"
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-bound-is-on-information",
     "href": "Lectures/L08/L08_Invariant_Interval.html#the-bound-is-on-information",
     "title": "The Invariant Interval",
     "section": "The bound is on information",
-    "text": "The bound is on information\nCan anything move faster than light?\n\n\n\nA laser spot swept across the Moon easily exceeds \\(c\\).\n\n\nsweep 1 deg in 0.1 s\nspot speed = 6.709e+07 m/s = 0.22 c\n\n\nNothing is wrong. Every photon flew from Earth at \\(c\\); the “spot” is a sequence of unrelated arrivals.\n\n\n\n\ntravels faster than \\(c\\)?\ncarries information?\n\n\n\n\nlaser spot on the Moon\n✗\n\n\ncrossing point of shears\n✗\n\n\nphase velocity in a guide\n✗\n\n\ncosmological recession\n✗\n\n\n\n\n\n\nThe speed limit is not on motion. It is on causal influence — and that is precisely what \\(\\Delta s^{2} \\geq 0\\) encodes."
+    "text": "The bound is on information\nCan anything move faster than light?\n\n\n\nA laser spot swept across the Moon easily exceeds \\(c\\).\n\n\nsweep 1 deg in 0.1 s\nspot speed = 6.709e+07 m/s = 223634.85 c\n\n\nNothing is wrong. Every photon flew from Earth at \\(c\\); the “spot” is a sequence of unrelated arrivals.\n\n\n\n\ntravels faster than \\(c\\)?\ncarries information?\n\n\n\n\nlaser spot on the Moon\n✗\n\n\ncrossing point of shears\n✗\n\n\nphase velocity in a guide\n✗\n\n\ncosmological recession\n✗\n\n\n\n\n\n\nThe speed limit is not on motion. It is on causal influence — and that is precisely what \\(\\Delta s^{2} \\geq 0\\) encodes."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#so-somebody-measured-it",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#so-somebody-measured-it",
+    "title": "The Invariant Interval",
+    "section": "So somebody measured it",
+    "text": "So somebody measured it\n\n\n\n\n\n\n\n\n2000 · Wang, Kuzmich & Dogariu\ncaesium vapour, group index \\(n_g = -310\\)\nthe peak leaves early\n\n\n2003 · Stenner, Gauthier & Neifeld\nencoded a real symbol, timed the detector\narrives slightly later than vacuum\n\n\n2011 · Zhang et al., single photons\nthe sharp leading front\nexactly \\(c\\), always\n\n\n\n\nThe envelope can do almost anything. The front cannot — and the front is what carries the news.\n\n\n\nNature 406 277 (2000) · Nature 425 695 (2003) · Phys. Rev. Lett. 106 243602 (2011)"
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#even-entanglement-obeys-it",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#even-entanglement-obeys-it",
+    "title": "The Invariant Interval",
+    "section": "Even entanglement obeys it",
+    "text": "Even entanglement obeys it\nMeasure one half of an entangled pair and the far half is instantly described differently. Three experiments in 2015 closed the last loopholes: local realism is dead.\n\nAnd still no message: whatever you choose to do at your end, the statistics at the far end are exactly unchanged. The correlation only becomes visible when the two records are compared — over an ordinary channel, at \\(c\\) or slower.\n\n\n\n\n\n\n\n\n\n\n\n\nIdentical, whatever Alice does — that is the no-signalling theorem. Hensen et al., Nature 526 682 (2015), 1.3 km apart · Giustina and Shalm, Phys. Rev. Lett. 115 250401 / 250402 (2015)"
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-scissors-and-why-nothing-is-at-the-crossing-point",
@@ -130,7 +151,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#the-three-rows-worked",
     "title": "The Invariant Interval",
     "section": "The three rows, worked",
-    "text": "The three rows, worked\n\n\n       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)\n1         599.6    300.0     2.695e+05   timelike     1.732\n2         299.8    600.0    -2.701e+05  spacelike       nan\n3         599.6    590.0     1.142e+04   timelike     0.356\n\n\n\nRow 3 is the trap: the riding clock reads 0.36 μs, not 2 μs — \\(\\Delta t\\) is a coordinate; what the traveller ages is the interval."
+    "text": "The three rows, worked\n\n\n       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)\n1           0.0    300.0    -9.000e+04  spacelike       nan\n2           0.0    600.0    -3.600e+05  spacelike       nan\n3           0.0    590.0    -3.481e+05  spacelike       nan\n\n\n\nRow 3 is the trap: the riding clock reads 0.36 μs, not 2 μs — \\(\\Delta t\\) is a coordinate; what the traveller ages is the interval."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#what-we-can-now-say-precisely",
@@ -138,6 +159,13 @@
     "title": "The Invariant Interval",
     "section": "What we can now say precisely",
     "text": "What we can now say precisely\n\n\n\n\n\n\n\nL04 said\ntoday says\n\n\n\n\n“some pairs can be reordered”\n\\(\\Delta s^{2} &lt; 0\\), and only those\n\n\n“the light cone separates them”\nthe cone is \\(\\Delta s^{2} = 0\\)\n\n\n“causality survives”\nbecause reordering needs \\(\\Delta s^{2} &lt; 0\\), where no signal fits\n\n\n“proper time is what the muon has”\n\\(\\Delta\\tau = \\sqrt{\\Delta s^{2}}/c\\)\n\n\n\n\nSame four claims, now with a number behind each. That is what an invariant buys: pictures become computations."
+  },
+  {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#relative-is-not-arbitrary",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#relative-is-not-arbitrary",
+    "title": "The Invariant Interval",
+    "section": "Relative is not arbitrary",
+    "text": "Relative is not arbitrary\n\n\nWhat actually varies\n\\(\\Delta t\\), \\(\\Delta x\\), lengths, durations, the order of some pairs.\nThese are readings, and a reading needs a frame: “how far to the left?” has no answer until you say left of what.\n\nWhat does not\n\\(\\Delta s^{2}\\), \\(\\Delta\\tau\\), the sign of \\(\\Delta s^{2}\\), \\(c\\), what happened at an event.\nEvery frame computes the same number.\n\n\n\n\n\n\n\n\n\n\n\n“Everything is relative” would mean nothing is computable. What we found is the opposite: disagreement is exactly bounded, and the thing underneath is the same for everyone."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#minkowski-1908",
@@ -802,7 +830,7 @@
     "href": "index.html#license",
     "title": "PHY 208 · General Physics 4 · Fall 2026",
     "section": "License",
-    "text": "License\nCourse material by Tim Thomay, University at Buffalo, licensed CC BY-SA 4.0. Third-party images retain their original licenses; see the img/CREDITS.md in each lecture folder. Full terms: LICENSE.md."
+    "text": "License\nCourse material by Tim Thomay, University at Buffalo, licensed CC BY-SA 4.0. Third-party images retain their original licenses; see the img/CREDITS.md in each lecture folder. Full terms: LICENSE; course-specific conditions: LICENSING.md."
   },
   {
     "objectID": "Lectures/L01/L01_Ether_and_Interferometer.html#general-physics-iv",

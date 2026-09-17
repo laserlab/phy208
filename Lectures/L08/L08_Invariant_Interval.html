@@ -181,7 +181,7 @@ Tim Thomay
 <p>durations, lengths, simultaneity, velocities, the order of events.</p>
 <p><strong>Is there anything left that everyone agrees on?</strong></p>
 </div><div class="column" style="width:43%;">
-<div id="5da79c14" class="cell" data-execution_count="2">
+<div id="8f39d361" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -207,7 +207,7 @@ Tim Thomay
                             -\sinh\phi &amp; \phantom{-}\cosh\phi \end{pmatrix}\]</span></p>
 <p>preserves <span class="wrong"><strong>?</strong></span> — the thing I refused to name.</p>
 </div></div>
-<div id="c5195b54" class="cell" data-execution_count="3">
+<div id="868207c5" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -282,7 +282,7 @@ Tim Thomay
 <p><strong>Show of hands first: who predicted the bottom row?</strong></p>
 <p><span class="math display">\[\boxed{\;\Delta s^{2} = c^{2}\Delta t^{2} - \Delta x^{2}\;}
 \qquad\text{(with } c = 1\text{: the tool's } \Delta t^{2} - \Delta x^{2}\text{)}\]</span></p>
-<div id="086cbf2e" class="cell" data-execution_count="4">
+<div id="bea61fcd" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>   v/c        dt        dx        ds^2
   0.00     3.000     1.000    8.000000
@@ -335,7 +335,7 @@ Tim Thomay
 </section>
 <section id="three-signs-three-meanings" class="slide level2">
 <h2>Three signs, three meanings</h2>
-<div id="eecc5ffa" class="cell" data-execution_count="5">
+<div id="c6cddfc7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -387,13 +387,29 @@ Tim Thomay
 <p>The two “no”s line up <strong>exactly</strong>. Order reverses only where nothing could have travelled — so no frame ever sees an effect precede its cause.</p>
 </div>
 </section>
-<section id="proper-time-is-the-interval" class="slide level2">
-<h2>Proper time is the interval</h2>
-<div id="8a9fa85c" class="cell" data-execution_count="6">
+<section id="watch-it-not-flip" class="slide level2">
+<h2>Watch it not flip</h2>
+<p>Two events <strong>300 m</strong> apart, <strong>2.0 μs</strong> apart: a pulse leaves a laser, a detector fires. Send it down 300 m of fibre and it arrives in <span class="math inline">\(1.50\ \mu\)</span>s, in time to <strong>cause</strong> the second event. Boost as hard as you like:</p>
+<div id="0edb9b62" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-7-output-1.png" width="1006" height="258"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-7-output-1.png" width="1001" height="230"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="keyresult">
+<p>Left: <span class="math inline">\(\Delta t'\)</span> bottoms out at <span class="math inline">\(1.73\ \mu\)</span>s and <span class="right">climbs again</span>; cause stays first in <strong>every</strong> frame. Right: nothing connected them, so <span class="wrong">the order is free to reverse</span>.</p>
+</div>
+</section>
+<section id="proper-time-is-the-interval" class="slide level2">
+<h2>Proper time is the interval</h2>
+<div id="435d8a92" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-8-output-1.png" width="1006" height="258"></p>
 </figure>
 </div>
 </div>
@@ -405,25 +421,37 @@ Tim Thomay
 </section>
 <section id="the-longest-path-is-the-straight-one" class="slide level2">
 <h2>The longest path is the straight one</h2>
-<div id="2eed3bf2" class="cell" data-execution_count="7">
+<div id="8944d443" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-8-output-1.png" width="1006" height="269"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-9-output-1.png" width="1006" height="269"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The minus sign reverses the inequality: a <strong>detour through space costs proper time</strong>. Sitting still is the way to age the most.</p>
-</section>
+<div class="fragment">
+<p><strong>Somebody has actually done it.</strong> Scott Kelly spent 340 days on the ISS at 7.66 km/s:</p>
+<div id="a1e3e257" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>340 days at 7.66 km/s  -&gt;  9.59 ms of proper time not lived
+                           (28.2 us per day)</code></pre>
+</div>
+</div>
+
+</div>
+<aside><div>
+<p>Neil deGrasse Tyson tweeted it as “about 1/100 of a second”; someone checked the arithmetic, and he was right to within a factor of two. Gravity pushes the other way — clocks run fast higher up, worth <span class="math inline">\(+1.2\)</span> ms — so the honest net is roughly <strong>8 ms younger</strong>. That half is general relativity, not ours.</p>
+</div></aside></section>
 <section id="the-muon-one-last-time" class="slide level2">
 <h2>The muon, one last time</h2>
-<div id="41479984" class="cell" data-execution_count="8">
+<div id="5d35aa8a" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
-<pre><code>ground:  dt =  6.393 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us
-muon  :  dt =  0.638 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us
+<pre><code>ground:  dt = 6388609.715 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us
+muon  :  dt = 638061.896 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us
 
-that 0.64 us is 0.290 of a 2.2 us lifetime -&gt; e^-0.29 = 75% survive</code></pre>
+that 0.64 us is 290028.134 of a 2.2 us lifetime -&gt; e^-0.29 = 0% survive</code></pre>
 </div>
 </div>
 <div class="keyresult">
@@ -469,12 +497,12 @@ that 0.64 us is 0.290 of a 2.2 us lifetime -&gt; e^-0.29 = 75% survive</code></p
 <section id="section-1" class="slide level2 center">
 <h2></h2>
 <div class="concept">
-<p>Two events have <span class="math inline">\(\Delta s^{2} &lt; 0\)</span>. In my frame A happens before B. A ship, moving fast enough, measures <strong>B before A</strong>.</p>
-<h3 id="does-that-let-the-crew-use-the-pair-to-send-a-signal-into-their-own-past">Does that let the crew use the pair to send a signal into their own past?</h3>
-<p><strong>(a)</strong> Yes, and that is a genuine inconsistency in the theory</p>
-<p><strong>(b)</strong> Yes, but only for observers moving faster than <span class="math inline">\(c\)</span>, so it never happens</p>
-<p><strong>(c)</strong> No — nothing could have travelled between those two events in the first place</p>
-<p><strong>(d)</strong> No, because the reversal is an optical illusion caused by signal delay</p>
+<p>Two events, in my frame: A is a switch thrown at <span class="math inline">\(x = 0\)</span>, and B is a lamp lighting <strong>600 m</strong> away, <strong>1.0 microsecond</strong> later. Someone claims A caused B. Use <span class="math inline">\(c = 300\)</span> m per microsecond.</p>
+<h3 id="which-statement-is-correct">Which statement is correct?</h3>
+<p><strong>(a)</strong> A could have caused B, and every frame agrees A came first</p>
+<p><strong>(b)</strong> A cannot have caused B, and some frames put B first</p>
+<p><strong>(c)</strong> A cannot have caused B, but every frame still agrees A came first</p>
+<p><strong>(d)</strong> A could have caused B, but only frames slower than <span class="math inline">\(0.5c\)</span> agree A came first</p>
 </div>
 </section>
 <section id="the-bound-is-on-information" class="slide level2">
@@ -484,10 +512,10 @@ that 0.64 us is 0.290 of a 2.2 us lifetime -&gt; e^-0.29 = 75% survive</code></p
 <div class="columns">
 <div class="column" style="width:52%;">
 <p>A laser spot swept across the Moon <strong>easily</strong> exceeds <span class="math inline">\(c\)</span>.</p>
-<div id="13c4d529" class="cell" data-execution_count="9">
+<div id="6f61f1ea" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>sweep 1 deg in 0.1 s
-spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
+spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 </div>
 </div>
 <p>Nothing is wrong. Every photon flew from Earth at <span class="math inline">\(c\)</span>; the “spot” is a sequence of <span class="wrong">unrelated arrivals</span>.</p>
@@ -524,13 +552,65 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 <p>The speed limit is not on <em>motion</em>. It is on <strong>causal influence</strong> — and that is precisely what <span class="math inline">\(\Delta s^{2} \geq 0\)</span> encodes.</p>
 </div>
 </section>
-<section id="the-scissors-and-why-nothing-is-at-the-crossing-point" class="slide level2">
-<h2>The scissors, and why nothing is at the crossing point</h2>
-<div id="d8ebe4a9" class="cell" data-execution_count="10">
+<section id="so-somebody-measured-it" class="slide level2">
+<h2>So somebody measured it</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>2000</strong> · Wang, Kuzmich &amp; Dogariu</td>
+<td>caesium vapour, group index <span class="math inline">\(n_g = -310\)</span></td>
+<td>the <em>peak</em> leaves early</td>
+</tr>
+<tr class="even">
+<td><strong>2003</strong> · Stenner, Gauthier &amp; Neifeld</td>
+<td>encoded a real symbol, timed the <strong>detector</strong></td>
+<td>arrives <span class="right">slightly <em>later</em></span> than vacuum</td>
+</tr>
+<tr class="odd">
+<td><strong>2011</strong> · Zhang <em>et al.</em>, single photons</td>
+<td>the sharp leading <strong>front</strong></td>
+<td>exactly <span class="math inline">\(c\)</span>, always</td>
+</tr>
+</tbody>
+</table>
+<div class="keyresult">
+<p>The envelope can do almost anything. <span class="right">The front cannot</span> — and the front is what carries the news.</p>
+</div>
+
+<aside><div>
+<p><em>Nature</em> <strong>406</strong> 277 (2000) · <em>Nature</em> <strong>425</strong> 695 (2003) · <em>Phys. Rev.&nbsp;Lett.</em> <strong>106</strong> 243602 (2011)</p>
+</div></aside></section>
+<section id="even-entanglement-obeys-it" class="slide level2">
+<h2>Even entanglement obeys it</h2>
+<p>Measure one half of an entangled pair and the far half is <strong>instantly</strong> described differently. Three experiments in 2015 closed the last loopholes: local realism is <span class="wrong">dead</span>.</p>
+<div class="fragment">
+<p>And still <strong>no message</strong>: whatever you choose to do at your end, the statistics at the far end are <span class="right">exactly unchanged</span>. The correlation only becomes visible when the two records are compared — over an ordinary channel, at <span class="math inline">\(c\)</span> or slower.</p>
+</div>
+<div id="443ce43d" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-11-output-1.png" width="1005" height="305"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-13-output-1.png" width="1006" height="143"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Identical, whatever Alice does — that is the no-signalling theorem. Hensen <em>et al.</em>, <em>Nature</em> <strong>526</strong> 682 (2015), 1.3 km apart · Giustina and Shalm, <em>Phys. Rev.&nbsp;Lett.</em> <strong>115</strong> 250401 / 250402 (2015)</p>
+</div></aside></section>
+<section id="the-scissors-and-why-nothing-is-at-the-crossing-point" class="slide level2">
+<h2>The scissors, and why nothing is at the crossing point</h2>
+<div id="c7b9b448" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-14-output-1.png" width="1005" height="305"></p>
 </figure>
 </div>
 </div>
@@ -556,11 +636,11 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </blockquote>
 <p><span class="right">True, and structural</span> — it is what <span class="math inline">\(\Delta s^{2} \geq 0\)</span> says.</p>
 </div></div>
-<div id="de8005e1" class="cell" data-execution_count="11">
+<div id="5d9f85ac" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-12-output-1.png" width="1006" height="121"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-15-output-1.png" width="1006" height="121"></p>
 </figure>
 </div>
 </div>
@@ -616,12 +696,12 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </section>
 <section id="the-three-rows-worked" class="slide level2">
 <h2>The three rows, worked</h2>
-<div id="2bbdfba1" class="cell" data-execution_count="12">
+<div id="2ed03f1e" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-stdout">
 <pre><code>       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)
-1         599.6    300.0     2.695e+05   timelike     1.732
-2         299.8    600.0    -2.701e+05  spacelike       nan
-3         599.6    590.0     1.142e+04   timelike     0.356</code></pre>
+1           0.0    300.0    -9.000e+04  spacelike       nan
+2           0.0    600.0    -3.600e+05  spacelike       nan
+3           0.0    590.0    -3.481e+05  spacelike       nan</code></pre>
 </div>
 </div>
 <div class="keyresult">
@@ -662,6 +742,31 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </table>
 <div class="keyresult">
 <p>Same four claims, now with a <strong>number</strong> behind each. That is what an invariant buys: pictures become computations.</p>
+</div>
+</section>
+<section id="relative-is-not-arbitrary" class="slide level2">
+<h2>Relative is not arbitrary</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<p><strong>What actually varies</strong></p>
+<p><span class="math inline">\(\Delta t\)</span>, <span class="math inline">\(\Delta x\)</span>, lengths, durations, the order of <em>some</em> pairs.</p>
+<p>These are <strong>readings</strong>, and a reading needs a frame: “how far to the left?” has no answer until you say left of what.</p>
+</div><div class="column" style="width:49%;">
+<p><strong>What does not</strong></p>
+<p><span class="math inline">\(\Delta s^{2}\)</span>, <span class="math inline">\(\Delta\tau\)</span>, the sign of <span class="math inline">\(\Delta s^{2}\)</span>, <span class="math inline">\(c\)</span>, what happened at an event.</p>
+<p>Every frame computes the <strong>same number</strong>.</p>
+</div></div>
+<div id="5d335560" class="cell" data-execution_count="16">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-17-output-1.png" width="1005" height="122"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="keyresult">
+<p>“Everything is relative” would mean <span class="wrong">nothing is computable</span>. What we found is the opposite: disagreement is <strong>exactly bounded</strong>, and the thing underneath is <span class="right">the same for everyone</span>.</p>
 </div>
 </section>
 <section id="minkowski-1908" class="slide level2">

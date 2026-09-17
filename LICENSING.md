@@ -1,4 +1,7 @@
-# License — PHY 208 course materials
+# Licensing — PHY 208 course materials
+
+*The full CC BY-SA 4.0 legal text is in [`LICENSE`](LICENSE). This file records
+what the grant does and does not cover for this course.*
 
 **Copyright © 2026 Tim Thomay, University at Buffalo.**
 
