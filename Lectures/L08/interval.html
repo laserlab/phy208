@@ -80,6 +80,12 @@
 
   /* ---- the readout board: the whole point of the tool ---- */
   .board{font-variant-numeric:tabular-nums}
+  /* Step 4 confused people: the buttons are SPEEDS, the rows are quantities.
+     Say which is which, and mark the column that gets transcribed. */
+  .hint{font-size:12px;color:var(--muted);line-height:1.45;margin:0 0 8px}
+  .copyme{float:right;font-size:11px;color:var(--warn);font-weight:600;
+          letter-spacing:.04em;text-transform:none}
+  .locked .copyme{display:none}
   .board .r{display:grid;grid-template-columns:58px 1fr 22px 1fr;
             align-items:baseline;gap:6px;padding:6px 8px;border-radius:6px;
             border-bottom:1px solid var(--line);font-size:15px}
@@ -162,7 +168,9 @@
     </div>
 
     <div>
-      <h2>Step 4 — write these three rows in your notebook</h2>
+      <h2>Step 4 — copy the box below, once per speed</h2>
+      <p class="hint">Press a speed, then write down all four numbers from
+         the <b>boosted</b> column. Three speeds &rarr; three sets.</p>
       <div class="marks">
         <button id="m0" disabled>v = 0</button>
         <button id="m6" disabled>v = 0.60c</button>
@@ -171,7 +179,7 @@
     </div>
 
     <div class="board" id="board">
-      <h2>At rest &nbsp;→&nbsp; boosted</h2>
+      <h2>At rest &nbsp;→&nbsp; boosted &nbsp;<span class="copyme">copy this column ↓</span></h2>
       <div class="r"><span class="k">Δt</span><span class="a" id="a_dt">—</span><span class="arrow">→</span><span class="b" id="b_dt">—</span></div>
       <div class="r"><span class="k">Δx</span><span class="a" id="a_dx">—</span><span class="arrow">→</span><span class="b" id="b_dx">—</span></div>
       <div class="r"><span class="k">γ</span><span class="a" id="a_g">1.000</span><span class="arrow">→</span><span class="b" id="b_g">1.000</span></div>
@@ -265,12 +273,20 @@
   // punctuation, umlauts and accents are all ignored, so Rømer, Romer, Römer
   // and "  ROMER " seed identically. Letters that do not NFD-decompose to a
   // base letter (ø, æ, ß, ł, đ) are mapped by hand first.
+  //
+  // "oe" collapses to "o" as well, because Rømer/Römer is routinely typed
+  // "Roemer" by anyone without the keyboard for it, and that spelling has to
+  // land on the same events. Deliberately NOT done for "ae"/"ue": those are
+  // ordinary letter pairs (Michael, Israel) and collapsing them would corrupt
+  // names that never had an umlaut. This maps a new spelling onto an existing
+  // seed; it does not move any name that already worked.
   function normalizeName(str){
     let s = str.trim().toLowerCase();
     s = s.replace(/ø/g,'o').replace(/æ/g,'ae').replace(/ß/g,'ss')
          .replace(/ł/g,'l').replace(/đ/g,'d');
     s = s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    return s.replace(/[^a-z0-9]+/g,'');
+    s = s.replace(/[^a-z0-9]+/g,'');
+    return s.replace(/oe/g,'o');
   }
   // SALT folds into the FNV offset basis. 1 was chosen by search so the named
   // Fall-2026 groups split ~evenly between timelike and spacelike (5/6 over

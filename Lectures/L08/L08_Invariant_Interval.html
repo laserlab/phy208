@@ -152,7 +152,8 @@ Tim Thomay
 <section id="before-we-start" class="slide level2">
 <h2>Before we start</h2>
 <div class="housekeeping">
-<p><strong>Today needs a device.</strong> One laptop or phone per pair, for the demonstration. Sit with your pair now.</p>
+<p><strong>Today needs a device.</strong> One laptop or phone per pair. Sit with your pair now and open this, before the physics starts:</p>
+<h3 id="laserlab.github.iophy208lecturesl08interval.html"><span class="right">laserlab.github.io/phy208/Lectures/L08/interval.html</span></h3>
 <p><strong>Notebook entry due 11:00 Tuesday</strong> — today’s demonstration. Prediction written <em>before</em> we run anything, as always.</p>
 <p><strong>Milestone 1</strong> due <strong>Fri Oct 2</strong>. <strong>Prep check 4</strong> due <strong>Tue 10:30</strong>.</p>
 </div>
@@ -180,7 +181,7 @@ Tim Thomay
 <p>durations, lengths, simultaneity, velocities, the order of events.</p>
 <p><strong>Is there anything left that everyone agrees on?</strong></p>
 </div><div class="column" style="width:43%;">
-<div id="487bbcbc" class="cell" data-execution_count="2">
+<div id="c63258e3" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -206,7 +207,7 @@ Tim Thomay
                             -\sinh\phi &amp; \phantom{-}\cosh\phi \end{pmatrix}\]</span></p>
 <p>preserves <span class="wrong"><strong>?</strong></span> — the thing I refused to name.</p>
 </div></div>
-<div id="eb456533" class="cell" data-execution_count="3">
+<div id="b54e1d8a" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -219,6 +220,42 @@ Tim Thomay
 <p><span class="math inline">\(\cos^{2} + \sin^{2} = 1\)</span> → a <strong>sum</strong> is preserved. &nbsp;&nbsp; <span class="math inline">\(\cosh^{2} - \sinh^{2} = 1\)</span> → a <span class="right"><strong>difference</strong></span> is.</p>
 </div>
 </section>
+<section id="four-numbers-on-that-screen" class="slide level2">
+<h2>Four numbers on that screen</h2>
+<p>Your page shows <strong>one pair of events</strong>, and a readout with four entries. Know what each one is before you touch anything. <span class="right">laserlab.github.io/phy208/Lectures/L08/interval.html</span></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Delta t\)</span></td>
+<td>time between the two events</td>
+<td>in <em>this</em> frame</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta x\)</span></td>
+<td>distance between them</td>
+<td>in <em>this</em> frame</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\gamma\)</span></td>
+<td><span class="math inline">\(1/\sqrt{1-v^{2}/c^{2}}\)</span></td>
+<td>set by the slider</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta s^{2}\)</span></td>
+<td><span class="math inline">\((\Delta t)^{2} - (\Delta x)^{2}\)</span></td>
+<td><span class="right">watch this one</span></td>
+</tr>
+</tbody>
+</table>
+
+<aside><div>
+<p>The tool works in units where <span class="math inline">\(c = 1\)</span>, so times and distances are the same kind of number and <span class="math inline">\(\Delta s^{2}\)</span> is a plain difference of squares. The <span class="math inline">\(c\)</span>’s come back in the next slide’s formula.</p>
+</div></aside></section>
 <section id="section" class="slide level2" data-background-iframe="interval.html" data-background-interactive="true">
 <h2></h2>
 </section>
@@ -230,7 +267,7 @@ Tim Thomay
 <div class="column" style="width:52%;">
 <p><strong>Before you touch the slider</strong>, both of you write in your notebook:</p>
 <blockquote>
-<p>I am going to boost the frame, up to <span class="math inline">\(0.95c\)</span>. Of <span class="math inline">\(\Delta t\)</span>, <span class="math inline">\(\Delta x\)</span> and <span class="math inline">\(\Delta s^{2} = \Delta t^{2} - \Delta x^{2}\)</span> (the tool’s units set <span class="math inline">\(c = 1\)</span>), which comes out <strong>unchanged</strong>? All three? None?</p>
+<p>I am going to boost the frame, up to <span class="math inline">\(0.95c\)</span>. Of the four numbers just defined, which come out <strong>unchanged</strong>? All of them? None?</p>
 </blockquote>
 <p>Commit. Then press reveal.</p>
 </div><div class="column" style="width:45%;">
@@ -245,7 +282,7 @@ Tim Thomay
 <p><strong>Show of hands first: who predicted the bottom row?</strong></p>
 <p><span class="math display">\[\boxed{\;\Delta s^{2} = c^{2}\Delta t^{2} - \Delta x^{2}\;}
 \qquad\text{(with } c = 1\text{: the tool's } \Delta t^{2} - \Delta x^{2}\text{)}\]</span></p>
-<div id="ae4d8d3e" class="cell" data-execution_count="4">
+<div id="263e5b8d" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>   v/c        dt        dx        ds^2
   0.00     3.000     1.000    8.000000
@@ -298,7 +335,7 @@ Tim Thomay
 </section>
 <section id="three-signs-three-meanings" class="slide level2">
 <h2>Three signs, three meanings</h2>
-<div id="26cc4d66" class="cell" data-execution_count="5">
+<div id="39e581b5" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -352,7 +389,7 @@ Tim Thomay
 </section>
 <section id="proper-time-is-the-interval" class="slide level2">
 <h2>Proper time is the interval</h2>
-<div id="c6a25e07" class="cell" data-execution_count="6">
+<div id="604a627d" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -368,7 +405,7 @@ Tim Thomay
 </section>
 <section id="the-longest-path-is-the-straight-one" class="slide level2">
 <h2>The longest path is the straight one</h2>
-<div id="1c0853db" class="cell" data-execution_count="7">
+<div id="187aea50" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -381,7 +418,7 @@ Tim Thomay
 </section>
 <section id="the-muon-one-last-time" class="slide level2">
 <h2>The muon, one last time</h2>
-<div id="1d8a78cb" class="cell" data-execution_count="8">
+<div id="a2643811" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>ground:  dt =  6.393 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us
 muon  :  dt =  0.638 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 0.638 us
@@ -447,7 +484,7 @@ that 0.64 us is 0.290 of a 2.2 us lifetime -&gt; e^-0.29 = 75% survive</code></p
 <div class="columns">
 <div class="column" style="width:52%;">
 <p>A laser spot swept across the Moon <strong>easily</strong> exceeds <span class="math inline">\(c\)</span>.</p>
-<div id="7f2a04d1" class="cell" data-execution_count="9">
+<div id="aa72dabb" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>sweep 1 deg in 0.1 s
 spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
@@ -489,7 +526,7 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </section>
 <section id="the-scissors-and-why-nothing-is-at-the-crossing-point" class="slide level2">
 <h2>The scissors, and why nothing is at the crossing point</h2>
-<div id="d07eee27" class="cell" data-execution_count="10">
+<div id="dd7de011" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -519,7 +556,7 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </blockquote>
 <p><span class="right">True, and structural</span> — it is what <span class="math inline">\(\Delta s^{2} \geq 0\)</span> says.</p>
 </div></div>
-<div id="310bc0bb" class="cell" data-execution_count="11">
+<div id="1d7eef6d" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -579,7 +616,7 @@ spot speed = 6.709e+07 m/s = 0.22 c</code></pre>
 </section>
 <section id="the-three-rows-worked" class="slide level2">
 <h2>The three rows, worked</h2>
-<div id="a45bc26b" class="cell" data-execution_count="12">
+<div id="5f45139c" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)
 1         599.6    300.0     2.695e+05   timelike     1.732

@@ -4,7 +4,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#before-we-start",
     "title": "The Invariant Interval",
     "section": "Before we start",
-    "text": "Before we start\n\nToday needs a device. One laptop or phone per pair, for the demonstration. Sit with your pair now.\nNotebook entry due 11:00 Tuesday — today’s demonstration. Prediction written before we run anything, as always.\nMilestone 1 due Fri Oct 2. Prep check 4 due Tue 10:30."
+    "text": "Before we start\n\nToday needs a device. One laptop or phone per pair. Sit with your pair now and open this, before the physics starts:\nlaserlab.github.io/phy208/Lectures/L08/interval.html\nNotebook entry due 11:00 Tuesday — today’s demonstration. Prediction written before we run anything, as always.\nMilestone 1 due Fri Oct 2. Prep check 4 due Tue 10:30."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#tuesdays-exit-ticket",
@@ -21,11 +21,18 @@
     "text": "Tuesday left a promise\n\n\nRotation\n\\[R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\\n                      \\sin\\theta & \\phantom{-}\\cos\\theta \\end{pmatrix}\\]\npreserves \\(x^{2} + y^{2}\\) — the length of the vector.\n\nBoost\n\\[\\Lambda = \\begin{pmatrix} \\cosh\\phi & -\\sinh\\phi \\\\\n                            -\\sinh\\phi & \\phantom{-}\\cosh\\phi \\end{pmatrix}\\]\npreserves ? — the thing I refused to name.\n\n\n\n\n\n\n\n\n\n\n\n\\(\\cos^{2} + \\sin^{2} = 1\\) → a sum is preserved.    \\(\\cosh^{2} - \\sinh^{2} = 1\\) → a difference is."
   },
   {
+    "objectID": "Lectures/L08/L08_Invariant_Interval.html#four-numbers-on-that-screen",
+    "href": "Lectures/L08/L08_Invariant_Interval.html#four-numbers-on-that-screen",
+    "title": "The Invariant Interval",
+    "section": "Four numbers on that screen",
+    "text": "Four numbers on that screen\nYour page shows one pair of events, and a readout with four entries. Know what each one is before you touch anything. laserlab.github.io/phy208/Lectures/L08/interval.html\n\n\n\n\n\n\n\n\n\\(\\Delta t\\)\ntime between the two events\nin this frame\n\n\n\\(\\Delta x\\)\ndistance between them\nin this frame\n\n\n\\(\\gamma\\)\n\\(1/\\sqrt{1-v^{2}/c^{2}}\\)\nset by the slider\n\n\n\\(\\Delta s^{2}\\)\n\\((\\Delta t)^{2} - (\\Delta x)^{2}\\)\nwatch this one\n\n\n\n\n\nThe tool works in units where \\(c = 1\\), so times and distances are the same kind of number and \\(\\Delta s^{2}\\) is a plain difference of squares. The \\(c\\)’s come back in the next slide’s formula."
+  },
+  {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-demonstration-predict-first",
     "href": "Lectures/L08/L08_Invariant_Interval.html#the-demonstration-predict-first",
     "title": "The Invariant Interval",
     "section": "The demonstration: predict first",
-    "text": "The demonstration: predict first\n\nIn your pairs, on your own device. Open the page, enter your group name — spelling is forgiving: Rømer, Romer and Römer all count the same. You get your own pair of events; nobody else has your numbers.\n\n\nBefore you touch the slider, both of you write in your notebook:\n\nI am going to boost the frame, up to \\(0.95c\\). Of \\(\\Delta t\\), \\(\\Delta x\\) and \\(\\Delta s^{2} = \\Delta t^{2} - \\Delta x^{2}\\) (the tool’s units set \\(c = 1\\)), which comes out unchanged? All three? None?\n\nCommit. Then press reveal.\n\nThen record three rows, at \\(v = 0\\), \\(0.60c\\), \\(0.90c\\):\n\\[\\Delta t \\qquad \\Delta x \\qquad \\gamma \\qquad \\Delta s^{2}\\]\nCopy the numbers by hand. They are your evidence."
+    "text": "The demonstration: predict first\n\nIn your pairs, on your own device. Open the page, enter your group name — spelling is forgiving: Rømer, Romer and Römer all count the same. You get your own pair of events; nobody else has your numbers.\n\n\nBefore you touch the slider, both of you write in your notebook:\n\nI am going to boost the frame, up to \\(0.95c\\). Of the four numbers just defined, which come out unchanged? All of them? None?\n\nCommit. Then press reveal.\n\nThen record three rows, at \\(v = 0\\), \\(0.60c\\), \\(0.90c\\):\n\\[\\Delta t \\qquad \\Delta x \\qquad \\gamma \\qquad \\Delta s^{2}\\]\nCopy the numbers by hand. They are your evidence."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#what-every-pair-just-found",
@@ -788,7 +795,7 @@
     "href": "index.html#interactive-simulations",
     "title": "PHY 208 · General Physics 4 · Fall 2026",
     "section": "Interactive simulations",
-    "text": "Interactive simulations\nStandalone pages, also embedded in the lectures above.\n\nMinkowski diagram — boost the frame and watch simultaneity tilt\nMuon detector — the cosmic-ray rain, made audible\nInvariant interval — boost the frame and watch what refuses to change\n\nTwo further simulations are used live in class and are not published, so the demonstrations they support are not spent in advance."
+    "text": "Interactive simulations\nStandalone pages, also embedded in the lectures above.\n\nMinkowski diagram — boost the frame and watch simultaneity tilt\nMuon detector — the cosmic-ray rain, made audible\nBoost matrix — the Lorentz transformation as one machine\nInvariant interval — boost the frame and watch what refuses to change"
   },
   {
     "objectID": "index.html#license",
