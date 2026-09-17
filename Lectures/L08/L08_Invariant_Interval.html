@@ -167,8 +167,55 @@ Tim Thomay
 </div>
 <p>The answer: because <span class="right">simultaneity is frame-dependent</span>. Two events at different <span class="math inline">\(x\)</span> get different <span class="math inline">\(t'\)</span> precisely because the frames disagree about which clocks are synchronised.</p>
 <div class="fragment">
-<p>The loose version to watch for: <em>“because space and time are the same thing.”</em></p>
-<p>They are <strong>mixed</strong> by a boost, <span class="wrong">not identified</span>. One sign in the matrix keeps them apart, and that sign is today.</p>
+<p>The reading to rule out: <em>“the term corrects for how long light took to reach me.”</em></p>
+<p><span class="wrong">No</span>. Every event is stamped by the <strong>local clock standing next to it</strong>, in a lattice we synchronised in L03. There is no travel time left to correct — the disagreement is about <span class="right">whose clocks read zero together</span>.</p>
+</div>
+</section>
+<section id="the-question-in-the-room" class="slide level2">
+<h2>The question in the room</h2>
+<div class="elicit">
+<blockquote>
+<p><em>I understand what the muon sees and what we see are different. I don’t understand how both descriptions predict the muon reaches the ground, when they are different.</em></p>
+</blockquote>
+</div>
+<p>Two frames, two <strong>completely different</strong> accounts. The muon’s clock is fine and the mountain is short; our clock is fine and the muon’s is slow. Neither is a correction to the other.</p>
+<div id="b0926b70" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-3-output-1.png" width="990" height="137"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>And they agree to the last digit.</strong> Not luck, and not a coincidence to shrug at — it needs a reason.</p>
+</div>
+</section>
+<section id="why-they-cannot-disagree" class="slide level2">
+<h2>Why they cannot disagree</h2>
+<p>Both stories carry <strong>the same</strong> <span class="math inline">\(\gamma\)</span>:</p>
+<div class="columns">
+<div class="column" style="width:49%;">
+<p><strong>Our books</strong></p>
+<p>lifetime stretched: <span class="math inline">\(\gamma\,\tau\)</span></p>
+<p>distance full: <span class="math inline">\(h\)</span></p>
+</div><div class="column" style="width:49%;">
+<p><strong>The muon’s books</strong></p>
+<p>lifetime normal: <span class="math inline">\(\tau\)</span></p>
+<p>distance shrunk: <span class="math inline">\(h/\gamma\)</span></p>
+</div></div>
+<div id="478fbe06" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-4-output-1.png" width="997" height="110"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="keyresult">
+<p>Divide one by the other and <span class="math inline">\(\gamma\)</span> <strong>cancels</strong>: same speed, both rows. The two accounts are one statement, <span class="right">scaled by the same factor</span> in opposite places. <em>(Mt Washington, <span class="math inline">\(\gamma = 8.4\)</span>, as in prep check 3.)</em></p>
 </div>
 </section>
 <section>
@@ -181,11 +228,11 @@ Tim Thomay
 <p>durations, lengths, simultaneity, velocities, the order of events.</p>
 <p><strong>Is there anything left that everyone agrees on?</strong></p>
 </div><div class="column" style="width:43%;">
-<div id="8f39d361" class="cell" data-execution_count="2">
+<div id="7119d045" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-3-output-1.png" width="544" height="379"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-5-output-1.png" width="544" height="379"></p>
 </figure>
 </div>
 </div>
@@ -207,11 +254,11 @@ Tim Thomay
                             -\sinh\phi &amp; \phantom{-}\cosh\phi \end{pmatrix}\]</span></p>
 <p>preserves <span class="wrong"><strong>?</strong></span> — the thing I refused to name.</p>
 </div></div>
-<div id="868207c5" class="cell" data-execution_count="3">
+<div id="b38743b9" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-4-output-1.png" width="611" height="214"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-6-output-1.png" width="611" height="214"></p>
 </figure>
 </div>
 </div>
@@ -222,7 +269,11 @@ Tim Thomay
 </section>
 <section id="four-numbers-on-that-screen" class="slide level2">
 <h2>Four numbers on that screen</h2>
-<p>Your page shows <strong>one pair of events</strong>, and a readout with four entries. Know what each one is before you touch anything. <span class="right">laserlab.github.io/phy208/Lectures/L08/interval.html</span></p>
+<div class="columns">
+<div class="column" style="width:76%;">
+<p><strong>Open this now, before the physics starts:</strong></p>
+<h3 id="laserlab.github.iophy208lecturesl08interval.html-1"><span class="right">laserlab.github.io/phy208/Lectures/L08/interval.html</span></h3>
+<p>Your page shows <strong>one pair of events</strong> and a readout with four entries. Know what each one is before you touch anything:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -252,6 +303,9 @@ Tim Thomay
 </tr>
 </tbody>
 </table>
+</div><div class="column" style="width:22%;">
+<p><img data-src="img/interval_qr.png" alt="QR code linking to the invariant-interval simulation at laserlab.github.io/phy208/Lectures/L08/interval.html" width="190"></p>
+</div></div>
 
 <aside><div>
 <p>The tool works in units where <span class="math inline">\(c = 1\)</span>, so times and distances are the same kind of number and <span class="math inline">\(\Delta s^{2}\)</span> is a plain difference of squares. The <span class="math inline">\(c\)</span>’s come back once we write the formula properly, after the demonstration.</p>
@@ -282,7 +336,7 @@ Tim Thomay
 <p><strong>Show of hands first: who predicted the bottom row?</strong></p>
 <p><span class="math display">\[\boxed{\;\Delta s^{2} = c^{2}\Delta t^{2} - \Delta x^{2}\;}
 \qquad\text{(with } c = 1\text{: the tool's } \Delta t^{2} - \Delta x^{2}\text{)}\]</span></p>
-<div id="bea61fcd" class="cell" data-execution_count="4">
+<div id="d6742933" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>   v/c        dt        dx        ds^2
   0.00     3.000     1.000    8.000000
@@ -335,11 +389,11 @@ Tim Thomay
 </section>
 <section id="three-signs-three-meanings" class="slide level2">
 <h2>Three signs, three meanings</h2>
-<div id="c6cddfc7" class="cell" data-execution_count="5">
+<div id="67f19865" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-6-output-1.png" width="1050" height="379"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-8-output-1.png" width="1050" height="379"></p>
 </figure>
 </div>
 </div>
@@ -390,11 +444,11 @@ Tim Thomay
 <section id="watch-it-not-flip" class="slide level2">
 <h2>Watch it not flip</h2>
 <p>Two events <strong>300 m</strong> apart, <strong>2.0 μs</strong> apart: a pulse leaves a laser, a detector fires. Send it down 300 m of fibre and it arrives in <span class="math inline">\(1.50\ \mu\)</span>s, in time to <strong>cause</strong> the second event. Boost as hard as you like:</p>
-<div id="0edb9b62" class="cell" data-execution_count="6">
+<div id="4eec65ec" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-7-output-1.png" width="1001" height="230"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-9-output-1.png" width="1001" height="230"></p>
 </figure>
 </div>
 </div>
@@ -405,11 +459,11 @@ Tim Thomay
 </section>
 <section id="proper-time-is-the-interval" class="slide level2">
 <h2>Proper time is the interval</h2>
-<div id="435d8a92" class="cell" data-execution_count="7">
+<div id="6f8863c5" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-8-output-1.png" width="1006" height="258"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-10-output-1.png" width="1006" height="258"></p>
 </figure>
 </div>
 </div>
@@ -421,11 +475,11 @@ Tim Thomay
 </section>
 <section id="the-longest-path-is-the-straight-one" class="slide level2">
 <h2>The longest path is the straight one</h2>
-<div id="8944d443" class="cell" data-execution_count="8">
+<div id="2cc646f5" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-9-output-1.png" width="1006" height="269"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-11-output-1.png" width="1006" height="269"></p>
 </figure>
 </div>
 </div>
@@ -433,7 +487,7 @@ Tim Thomay
 <p>The minus sign reverses the inequality: a <strong>detour through space costs proper time</strong>. Sitting still is the way to age the most.</p>
 <div class="fragment">
 <p><strong>Somebody has actually done it.</strong> Scott Kelly spent 340 days on the ISS at 7.66 km/s:</p>
-<div id="a1e3e257" class="cell" data-execution_count="9">
+<div id="87597e4f" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>340 days at 7.66 km/s  -&gt;  9.59 ms of proper time not lived
                            (28.2 us per day)</code></pre>
@@ -446,7 +500,7 @@ Tim Thomay
 </div></aside></section>
 <section id="the-muon-one-last-time" class="slide level2">
 <h2>The muon, one last time</h2>
-<div id="5d35aa8a" class="cell" data-execution_count="10">
+<div id="43c74ebe" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>ground:  dt = 6388609.715 us   dx =  1907.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us
 muon  :  dt = 638061.896 us   dx =     0.0 m   -&gt;  ds^2 =   36641.1 m^2   tau = 638061.896 us
@@ -512,7 +566,7 @@ that 0.64 us is 290028.134 of a 2.2 us lifetime -&gt; e^-0.29 = 0% survive</code
 <div class="columns">
 <div class="column" style="width:52%;">
 <p>A laser spot swept across the Moon <strong>easily</strong> exceeds <span class="math inline">\(c\)</span>.</p>
-<div id="6f61f1ea" class="cell" data-execution_count="11">
+<div id="fb08fd31" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>sweep 1 deg in 0.1 s
 spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
@@ -591,11 +645,11 @@ spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 <div class="fragment">
 <p>And still <strong>no message</strong>: whatever you choose to do at your end, the statistics at the far end are <span class="right">exactly unchanged</span>. The correlation only becomes visible when the two records are compared — over an ordinary channel, at <span class="math inline">\(c\)</span> or slower.</p>
 </div>
-<div id="443ce43d" class="cell" data-execution_count="12">
+<div id="38b6268d" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-13-output-1.png" width="1006" height="143"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-15-output-1.png" width="1006" height="143"></p>
 </figure>
 </div>
 </div>
@@ -606,11 +660,11 @@ spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 </div></aside></section>
 <section id="the-scissors-and-why-nothing-is-at-the-crossing-point" class="slide level2">
 <h2>The scissors, and why nothing is at the crossing point</h2>
-<div id="c7b9b448" class="cell" data-execution_count="13">
+<div id="1201b38f" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-14-output-1.png" width="1005" height="305"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-16-output-1.png" width="1005" height="305"></p>
 </figure>
 </div>
 </div>
@@ -636,11 +690,11 @@ spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 </blockquote>
 <p><span class="right">True, and structural</span> — it is what <span class="math inline">\(\Delta s^{2} \geq 0\)</span> says.</p>
 </div></div>
-<div id="5d9f85ac" class="cell" data-execution_count="14">
+<div id="d23f60e3" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-15-output-1.png" width="1006" height="121"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-17-output-1.png" width="1006" height="121"></p>
 </figure>
 </div>
 </div>
@@ -696,7 +750,7 @@ spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 </section>
 <section id="the-three-rows-worked" class="slide level2">
 <h2>The three rows, worked</h2>
-<div id="2ed03f1e" class="cell" data-execution_count="15">
+<div id="79189062" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>       c*dt (m)   dx (m)    ds^2 (m^2)       kind  tau (us)
 1           0.0    300.0    -9.000e+04  spacelike       nan
@@ -756,11 +810,11 @@ spot speed = 6.709e+07 m/s = 223634.85 c</code></pre>
 <p><span class="math inline">\(\Delta s^{2}\)</span>, <span class="math inline">\(\Delta\tau\)</span>, the sign of <span class="math inline">\(\Delta s^{2}\)</span>, <span class="math inline">\(c\)</span>, what happened at an event.</p>
 <p>Every frame computes the <strong>same number</strong>.</p>
 </div></div>
-<div id="5d335560" class="cell" data-execution_count="16">
+<div id="ed444073" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-17-output-1.png" width="1005" height="122"></p>
+<p><img data-src="L08_Invariant_Interval_files/figure-revealjs/cell-19-output-1.png" width="1005" height="122"></p>
 </figure>
 </div>
 </div>
