@@ -25,7 +25,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#four-numbers-on-that-screen",
     "title": "The Invariant Interval",
     "section": "Four numbers on that screen",
-    "text": "Four numbers on that screen\nYour page shows one pair of events, and a readout with four entries. Know what each one is before you touch anything. laserlab.github.io/phy208/Lectures/L08/interval.html\n\n\n\n\n\n\n\n\n\\(\\Delta t\\)\ntime between the two events\nin this frame\n\n\n\\(\\Delta x\\)\ndistance between them\nin this frame\n\n\n\\(\\gamma\\)\n\\(1/\\sqrt{1-v^{2}/c^{2}}\\)\nset by the slider\n\n\n\\(\\Delta s^{2}\\)\n\\((\\Delta t)^{2} - (\\Delta x)^{2}\\)\nwatch this one\n\n\n\n\n\nThe tool works in units where \\(c = 1\\), so times and distances are the same kind of number and \\(\\Delta s^{2}\\) is a plain difference of squares. The \\(c\\)’s come back in the next slide’s formula."
+    "text": "Four numbers on that screen\nYour page shows one pair of events, and a readout with four entries. Know what each one is before you touch anything. laserlab.github.io/phy208/Lectures/L08/interval.html\n\n\n\n\n\n\n\n\n\\(\\Delta t\\)\ntime between the two events\nin this frame\n\n\n\\(\\Delta x\\)\ndistance between them\nin this frame\n\n\n\\(\\gamma\\)\n\\(1/\\sqrt{1-v^{2}/c^{2}}\\)\nset by the slider\n\n\n\\(\\Delta s^{2}\\)\n\\((\\Delta t)^{2} - (\\Delta x)^{2}\\)\nwatch this one\n\n\n\n\n\nThe tool works in units where \\(c = 1\\), so times and distances are the same kind of number and \\(\\Delta s^{2}\\) is a plain difference of squares. The \\(c\\)’s come back once we write the formula properly, after the demonstration."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#the-demonstration-predict-first",
