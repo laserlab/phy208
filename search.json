@@ -1,171 +1,87 @@
 [
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#before-we-start",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#before-we-start",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#before-we-start",
+    "href": "Lectures/L10/L10_Paradoxes.html#before-we-start",
+    "title": "Paradoxes and Their Resolutions",
     "section": "Before we start",
-    "text": "Before we start\n\nPresentations round 1 continues — today’s pair sees me at 10:55.\nNotebook entry from Tuesday’s hyperbola demo due 11:00 today.\nPrep check 5 due Tue 10:30 — the twin paradox, TW ch. 4. Milestone 1 due Fri Oct 2: Part 3 needs your L08 interval numbers."
+    "text": "Before we start\n\nPresentations start today: Michelson, Bradley, Rømer. 8 minutes each, then 4 of questions.\nOne question per presentation — UB Learns → Discussions → Audience questions, posted while they present. Three lowest dropped.\nNotebook entry from Tuesday’s hyperbola demo due 11:00 today. Prep check 5 due Tue 10:30 — the twin paradox, which we did Tuesday. Milestone 1 due Fri Oct 2."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#is-it-real-or-is-it-bookkeeping",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#is-it-real-or-is-it-bookkeeping",
-    "title": "The Twin Paradox",
-    "section": "Is it real, or is it bookkeeping?",
-    "text": "Is it real, or is it bookkeeping?\n\n\n\n\n\n\n\nthe objection\nthe answer\n\n\n\n\n“the watches only look different”\nthey are read side by side, at one event\n\n\n“it is a measurement artefact”\nthe muon does this trip with no engine and no observer\n\n\n“surely you could argue it the other way”\nyou could, if both worldlines were straight. Only one is\n\n\n“so travel makes you immortal”\nno: your own watch ticks normally the whole way\n\n\n\n\nNothing slows down for the traveller. Their coffee cools normally, their heart beats normally, their watch ticks once a second. They simply take a shorter route between the same two events."
+    "objectID": "Lectures/L10/L10_Paradoxes.html#round-1-begins",
+    "href": "Lectures/L10/L10_Paradoxes.html#round-1-begins",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "Round 1 begins",
+    "text": "Round 1 begins\n\nThree presentations, 12 minutes each.\n\n\n\n\n\n\n\n\n\ngroup\nexercise\n\n\n\n\n1\nMichelson\nTW 3-12 — the interferometer, worked at the board\n\n\n2\nBradley\nTW 3-9 — stellar aberration\n\n\n3\nRømer\nTW 3-7 — the moons of Jupiter, and the first speed of light\n\n\n\n8 minutes at the board, then 4 minutes of questions — the questions carry the grade.\nEveryone else: one question per presentation, in that group’s UB Learns topic."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#tuesdays-exit-ticket",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#tuesdays-exit-ticket",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#tuesdays-exit-ticket",
+    "href": "Lectures/L10/L10_Paradoxes.html#tuesdays-exit-ticket",
+    "title": "Paradoxes and Their Resolutions",
     "section": "Tuesday’s exit ticket",
-    "text": "Tuesday’s exit ticket\n\n\nTwo events on the same invariant hyperbola: what do they share, and what does the page distance tell you?\n\n\nThey share the interval from the origin, so a clock riding to either one reads the same. Page distance tells you nothing physical.\n\nThe answer worth flagging: “they are the same distance apart.”\nWhich distance? On the page, no. In interval, yes. The whole difficulty of reading these diagrams is that your eyes are Euclidean and the geometry is not."
+    "text": "Tuesday’s exit ticket\n\n\nTwo events on the same invariant hyperbola: what do they share, and what does the page distance tell you?\n\n\nThey share the interval from the origin, so a clock riding to either one reads the same. Page distance tells you nothing physical."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#the-argument-that-has-to-be-wrong",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#the-argument-that-has-to-be-wrong",
-    "title": "The Twin Paradox",
-    "section": "The argument that has to be wrong",
-    "text": "The argument that has to be wrong\n\n\nEarth says\nThe ship moves at \\(0.80c\\).\n\\(\\gamma = 1.667\\), so the ship’s clock runs slow.\nThe traveller comes back younger.\n\nThe ship says\nEarth moves at \\(0.80c\\).\n\\(\\gamma = 1.667\\), so Earth’s clock runs slow.\nEarth should be younger.\n\n\n\n\n\n\n\n\n\n\n\nBoth arguments use the same physics, correctly. They cannot both be right, because the twins meet — and at a reunion the two watches show two numbers that anyone standing there can read.\n\n\nSo one of the two setups is not what it claims to be. Which, and why?"
+    "objectID": "Lectures/L10/L10_Paradoxes.html#the-pole-and-the-barn-you-already-did-this",
+    "href": "Lectures/L10/L10_Paradoxes.html#the-pole-and-the-barn-you-already-did-this",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "The pole and the barn: you already did this",
+    "text": "The pole and the barn: you already did this\n\n\nA 20 m pole runs through a 10 m barn at \\(\\gamma = 2\\).\nBarn frame · the pole is 10 m, so it fits, and both doors could shut for an instant. Pole frame · the barn is 5 m, so it never fits.\nThis is the L06 tunnel, renamed. You voted on it, and (d) was correct.\n\n\n\n\n\n\n\n\n\n\n\n\n“Fits” means both ends inside at the same time. That is a simultaneity claim, not an event — so frames may disagree, and no door ever touches the pole."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#ask-each-twin-a-fair-question",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#ask-each-twin-a-fair-question",
-    "title": "The Twin Paradox",
-    "section": "Ask each twin a fair question",
-    "text": "Ask each twin a fair question\n\n\n\n\n\n\n\n\n\n“Did you stay in one inertial frame the whole time?”\n\nEarth: yes. The traveller: no — one frame out, a different frame back. The two histories are not mirror images, and the diagram shows it before any number is computed."
+    "objectID": "Lectures/L10/L10_Paradoxes.html#the-rigid-rod-push-one-end",
+    "href": "Lectures/L10/L10_Paradoxes.html#the-rigid-rod-push-one-end",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "The rigid rod: push one end",
+    "text": "The rigid rod: push one end\n\n\nA steel rod, one light-second long. You push the near end.\nWhen does the far end move?\n\nNot immediately, and not at \\(c\\) either. The push travels as a compression wave, at the speed of sound in steel — about \\(5{,}000\\) m/s.\n\n\n\n\n\n\n\n\n\n\n\n\n\nA truly rigid body would move its far end at the moment you pushed — outside the light cone. So perfectly rigid bodies cannot exist: rigidity is a signal travelling, and signals obey \\(c\\)."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#what-a-wristwatch-measures",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#what-a-wristwatch-measures",
-    "title": "The Twin Paradox",
-    "section": "What a wristwatch measures",
-    "text": "What a wristwatch measures\n\n\nA clock does not read the coordinate time of any frame. It reads the interval along its own worldline, and nothing else.\n\\[\\Delta\\tau = \\sqrt{\\Delta t^{2} - \\Delta x^{2}}\\]\nFor a bent path, add it up leg by leg. That is the entire calculation, and it is the same one from Thursday’s activity.\n\n\n\n\n\n\n\n\n\n\n\n\n5 years of coordinate time, 4 light-years of travel, and the watch on board reads 3 years. A 3-4-5 triangle, with the minus sign."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#count-the-ticks-along-each-line",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#count-the-ticks-along-each-line",
-    "title": "The Twin Paradox",
-    "section": "Count the ticks along each line",
-    "text": "Count the ticks along each line\n\n\nbeta = 0.80   gamma = 1.667   star at 4.0 ly\nstay-at-home:  10.00 yr   (straight worldline)\ntraveller:      6.00 yr   = 2 x sqrt(25 - 16) = 2 x 3.0\ndifference:     4.00 yr\n\n\nEach leg is a straight worldline, so each leg’s proper time is just its interval: \\(\\Delta\\tau = \\sqrt{\\Delta t^{2} - \\Delta x^{2}}\\), in years and light-years.\n\n6 years against 10. Not an opinion and not an illusion: the two watches are read side by side at the reunion event."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#straight-is-longest-again",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#straight-is-longest-again",
-    "title": "The Twin Paradox",
-    "section": "Straight is longest, again",
-    "text": "Straight is longest, again\n\n\n\n\n\n\n\n\n\n\nSame two events, four different routes, four different ages. The straight one ages the most, and the closer a route hugs the 45° cone, the less time it records — down to zero for light itself."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#what-the-turnaround-does-not-do",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#what-the-turnaround-does-not-do",
-    "title": "The Twin Paradox",
-    "section": "What the turnaround does not do",
-    "text": "What the turnaround does not do\n\n\nIt is tempting to say the acceleration causes the ageing. It does not.\nSend the traveller twice as far at the same speed, with an identical turnaround, and the gap grows:\n\n\n\nstar at   2.0 ly:  Earth   5.00 yr   ship   3.00 yr   gap   2.00\nstar at   4.0 ly:  Earth  10.00 yr   ship   6.00 yr   gap   4.00\nstar at   8.0 ly:  Earth  20.00 yr   ship  12.00 yr   gap   8.00\nstar at  16.0 ly:  Earth  40.00 yr   ship  24.00 yr   gap  16.00\n\n\n\n\nIdentical turnaround every time, wildly different gaps. The acceleration marks where the symmetry breaks. What sets the size of the difference is the length of the coasting legs."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#the-travellers-view-of-earths-clock",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#the-travellers-view-of-earths-clock",
-    "title": "The Twin Paradox",
-    "section": "The traveller’s view of Earth’s clock",
-    "text": "The traveller’s view of Earth’s clock\n\n\n\n\n\n\n\n\n\n\nAt the turn, the ship’s “now on Earth” jumps from 3 years to 7 — not because anything happened on Earth, but because the ship swapped which tilted line it calls the present."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#section",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#section",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#section",
+    "href": "Lectures/L10/L10_Paradoxes.html#section",
+    "title": "Paradoxes and Their Resolutions",
     "section": "",
-    "text": "Two twins part, and reunite. The traveller coasts out at \\(0.80c\\), turns quickly, and coasts back — Earth ages 10 years, the traveller 6.\nNow run it again with a turnaround that takes a full year of gentle thrust instead of a moment, everything else the same.\nWhat happens to the 4-year gap?\n(a) It disappears, because a gentle turn is nearly inertial and the symmetry is restored\n(b) It grows a lot, because the gap comes from the acceleration and there is now much more of it\n(c) It changes by roughly a year’s worth, because the turnaround is where the ageing happens\n(d) It stays close to 4 years, because the coasting legs are almost unchanged and they are what sets it"
+    "text": "A bug sits at the bottom of a hole 1 cm deep. A rivet with a 1 cm shank falls in fast enough that \\(\\gamma = 2\\).\nRivet frame · the hole is contracted to 0.5 cm, so the shank reaches the bug. Bug frame · the shank is contracted to 0.5 cm, so it stops 0.5 cm short.\nDoes the bug get squashed?\n(a) No — in the bug’s frame the shank is too short, and the bug’s frame is the one it lives in\n(b) Yes — and the two frames disagree about when the shank reached it, not whether\n(c) It depends which frame you ask, exactly as with the pole and the barn\n(d) No — the rivet head stops on the surface, and nothing can move after that"
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#so-compute-it",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#so-compute-it",
-    "title": "The Twin Paradox",
-    "section": "So compute it",
-    "text": "So compute it\n\n\nturn lasting  0.0 yr:  Earth  10.00 yr   ship   6.00 yr   gap  4.00\nturn lasting  0.5 yr:  Earth  10.50 yr   ship   6.37 yr   gap  4.13\nturn lasting  1.0 yr:  Earth  11.00 yr   ship   6.74 yr   gap  4.26\nturn lasting  2.0 yr:  Earth  12.00 yr   ship   7.49 yr   gap  4.51\n\n\n\nA whole year of turning moves the gap by a fraction of a year. The legs set the answer; the turn only decides which twin is on the bent line."
+    "objectID": "Lectures/L10/L10_Paradoxes.html#why-the-bug-is-different",
+    "href": "Lectures/L10/L10_Paradoxes.html#why-the-bug-is-different",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "Why the bug is different",
+    "text": "Why the bug is different\n\n\nThe pole and barn asked “does it fit?” — a statement about two events at once, so frames disagree and nothing happens.\nThe bug asks “is the bug hit?” — one event, at one place. Every frame agrees on that, or the theory is broken.\n\n\n\n\n\n\n\n\n\n\n\n\nThe head stopping is news, and it cannot reach the tip faster than \\(c\\). The tip is still moving when it arrives at the bug: squashed, in every frame."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#the-traveller-is-not-special",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#the-traveller-is-not-special",
-    "title": "The Twin Paradox",
-    "section": "The traveller is not special",
-    "text": "The traveller is not special\n\n\nNothing about the trip requires a person, a rocket, or a decision. Put an unstable particle on the bent worldline and it decays late by exactly the same factor.\nThat is the muon, from week 3, restated: it is the travelling twin, and the mountain is the round trip we never ran.\n\n\n\n\n\n\n\n\n\n\n\n\nNo observer, no awareness, no acceleration story required. The difference is a property of the path, and a particle with no clock face on it records it just as faithfully."
+    "objectID": "Lectures/L10/L10_Paradoxes.html#your-turn-which-kind-of-claim-is-it",
+    "href": "Lectures/L10/L10_Paradoxes.html#your-turn-which-kind-of-claim-is-it",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "Your turn: which kind of claim is it?",
+    "text": "Your turn: which kind of claim is it?\n\nIn pairs, ten minutes. For each, decide: is the disputed thing an event (frames must agree) or a claim about two events at once (frames may disagree)? Then say what actually happens.\n\n\n\n\n\n\n\n\n\nthe claim\nevent or simultaneity?\n\n\n\n\n1\n“The pole fits inside the barn”\nsimultaneity — frames disagree, nothing is struck\n\n\n2\n“The bug is squashed”\n?\n\n\n3\n“The two doors shut together”\n?\n\n\n4\n“The far end of the rod started moving”\n?\n\n\n\nRow 1 is done for you. Match the reasoning, then do 2, 3 and 4. Stuck on one \\(\\to\\) hand up."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#three-resolutions-one-answer",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#three-resolutions-one-answer",
-    "title": "The Twin Paradox",
-    "section": "Three resolutions, one answer",
-    "text": "Three resolutions, one answer\n\n\n\n\n\n\n\n\nroute\nwhat it uses\nwhat it says\n\n\n\n\ninterval\n\\(\\Delta\\tau = \\sqrt{\\Delta t^{2} - \\Delta x^{2}}\\) per leg\nthe bent path is shorter in proper time\n\n\nsimultaneity\nthe ship’s now-lines swap at the turn\nthe missing 4 years is in the swap\n\n\nDoppler\ncount signals actually received\nboth twins agree on the count\n\n\n\n\nThree arguments, three different tools, 10 and 6 every time. That agreement is not a coincidence: they are three readings of the same diagram."
+    "objectID": "Lectures/L10/L10_Paradoxes.html#the-one-question-to-ask",
+    "href": "Lectures/L10/L10_Paradoxes.html#the-one-question-to-ask",
+    "title": "Paradoxes and Their Resolutions",
+    "section": "The one question to ask",
+    "text": "The one question to ask\n\n\n\n\n\n\n\n\nask this\nif the answer is\nthen\n\n\n\n\nIs the disputed thing one event?\nyes\nevery frame agrees it happens\n\n\nDoes the claim contain “at the same time”?\nyes\nframes may disagree, and nothing breaks\n\n\nDoes it need a signal to arrive?\nyes\nit travels at \\(c\\) or slower, never instantly\n\n\n\n\nEvery paradox in special relativity is one of these three, and none of them is a contradiction. They are places where Newtonian habits are still running."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#just-count-the-birthday-signals",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#just-count-the-birthday-signals",
-    "title": "The Twin Paradox",
-    "section": "Just count the birthday signals",
-    "text": "Just count the birthday signals\nEach twin sends one flash per year of their own time. Nothing to interpret: count what arrives.\n\n\nDoppler factor k = 3.000 approaching, 0.333 receding\n\ntraveller receives Earth's flashes:\n  outbound 3.0 yr x  0.333 =  1.00\n  inbound  3.0 yr x  3.000 =  9.00\n  total                      = 10.00  -&gt; Earth aged 10\n\nEarth receives the traveller's flashes:\n  first   9.0 yr at  0.333 -&gt;  3.00\n  then    1.0 yr at  3.000 -&gt;  3.00\n  total                      =  6.00  -&gt; traveller aged 6\n\n\n\nEach twin counts the other’s flashes and gets the right answer for the other. No frames, no simultaneity, no diagram: just arrivals."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#where-the-counting-asymmetry-lives",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#where-the-counting-asymmetry-lives",
-    "title": "The Twin Paradox",
-    "section": "Where the counting asymmetry lives",
-    "text": "Where the counting asymmetry lives\n\n\n\n\n\n\n\n\n\n\nEarth spends 9 of 10 years receiving the slow rate and one year receiving the fast one. The traveller splits 3 and 3. That lopsidedness is the paradox, with no interpretation in it at all."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#somebody-actually-did-it",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#somebody-actually-did-it",
-    "title": "The Twin Paradox",
-    "section": "Somebody actually did it",
-    "text": "Somebody actually did it\n\n\nHafele and Keating, 1971. Four caesium clocks, commercial airliners, eastward and westward round the world, checked against the clocks at the US Naval Observatory.\n\n\n            predicted  measured   +/-  (ns)\neastward          -59       -51    10\nwestward          273       280    21\n\n\nNanoseconds, and the signs are opposite: an eastward flight loses time, a westward flight gains it.\n\n\n\n\n\n\n\n\n\n\n\n\n\nHafele & Keating, Science 177 166 and 168 (1972). Half of each prediction is gravitational — general relativity, not ours — and the two effects have opposite signs, which is why the eastward number is small."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#your-turn-three-trips",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#your-turn-three-trips",
-    "title": "The Twin Paradox",
-    "section": "Your turn: three trips",
-    "text": "Your turn: three trips\n\nIn pairs, ten minutes. Same three steps every row; all distances in light-years, all times in years, so \\(c = 1\\).\n1 Earth time \\(t = 2d/\\beta\\) · 2 one leg’s interval \\(\\sqrt{(t/2)^{2} - d^{2}}\\) · 3 double it for the round trip.\n\n\n\n\n\n\n\n\n\n\n\\(\\beta\\)\nstar at \\(d\\)\nask\n\n\n\n\n1\n\\(0.80\\)\n4.0 ly\nEarth 10.0 yr, traveller 6.0 yr, gap 4.0\n\n\n2\n\\(0.60\\)\n3.0 ly\nhow much younger does the traveller come back?\n\n\n3\n\\(0.995\\)\n10.0 ly\nsame question, and: what is \\(\\gamma\\) here?\n\n\n\nRow 1 is done for you — reproduce it, then run rows 2 and 3. No match on row 1 \\(\\to\\) hand up now."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#the-three-trips-worked",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#the-three-trips-worked",
-    "title": "The Twin Paradox",
-    "section": "The three trips, worked",
-    "text": "The three trips, worked\n\n\n       beta   d (ly)    Earth    ship     gap   gamma\n1     0.800      4.0    10.00    6.00    4.00    1.67\n2     0.600      3.0    10.00    8.00    2.00    1.25\n3     0.995     10.0    20.10    2.01   18.09   10.01\n\n\n\nRow 3 is the one to notice: 20 years of Earth history for 2 years of wristwatch. The gap is not proportional to anything simple — it runs away as \\(\\beta \\to 1\\), which is exactly \\(\\gamma\\) doing its work."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#one-more-time-with-the-diagram",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#one-more-time-with-the-diagram",
-    "title": "The Twin Paradox",
-    "section": "One more time, with the diagram",
-    "text": "One more time, with the diagram\n\n\n\n\n\n\n\n\n\n\n\n\nThree events: A they part, B the turn, C they meet.\n\n\n\nworldline\nroute\nproper time\n\n\n\n\nstay-at-home\nA \\(\\to\\) C direct\n10 yr\n\n\ntraveller\nA \\(\\to\\) B \\(\\to\\) C\n3 + 3 = 6 yr\n\n\n\nBoth start at A. Both end at C. The route is the only difference, and the route is what a clock measures."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#what-survives-this-lecture",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#what-survives-this-lecture",
-    "title": "The Twin Paradox",
-    "section": "What survives this lecture",
-    "text": "What survives this lecture\n\n\n\n\n\n\n\nthe claim\nverdict\n\n\n\n\n“each twin sees the other’s clock slow”\ntrue, while both coast\n\n\n“so the situation is symmetric”\nfalse — only one changes frames\n\n\n“the acceleration causes the ageing”\nfalse — the legs set the gap\n\n\n“you need general relativity”\nfalse — SR handles accelerated observers\n\n\n“the traveller really is younger”\ntrue, and two watches prove it\n\n\n\n\nThere is no paradox. There is a bent worldline and a straight one between the same two events, and in this geometry straight is longest."
-  },
-  {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#tuesday",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#tuesday",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#tuesday",
+    "href": "Lectures/L10/L10_Paradoxes.html#tuesday",
+    "title": "Paradoxes and Their Resolutions",
     "section": "Tuesday",
-    "text": "Tuesday\nParadoxes and their resolutions\n\n\n\nThe pole and the barn\na 20 m pole inside a 10 m barn, doors shut\n\n\nThe bug and the rivet\nwho gets squashed, and in whose frame\n\n\nThe tool\nrelativity of simultaneity, every single time\n\n\nPrep check 5\ndue Tue 10:30 — TW ch. 4\n\n\nPresentations\nround 1 continues"
+    "text": "Tuesday\nRelativistic momentum and energy\n\n\n\nPresentations\nfour groups — Poincaré, Fizeau, Maxwell, Fresnel\n\n\nThe problem\n\\(\\sum m\\vec{v}\\) cannot be conserved in every frame\n\n\nWhat replaces it\nand where \\(E = \\gamma mc^{2}\\) comes from\n\n\nPrep check 6\ndue Tue Oct 6 10:30 — momentum, energy, LIGO\n\n\nPS 4\ndue Sun Sep 27"
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#exit-ticket",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#exit-ticket",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#exit-ticket",
+    "href": "Lectures/L10/L10_Paradoxes.html#exit-ticket",
+    "title": "Paradoxes and Their Resolutions",
     "section": "Exit ticket",
-    "text": "Exit ticket\n\nA classmate says: “The traveller is younger because accelerating slows your clock down.”\nThis gets the right answer for the wrong reason. What is the reason, in one or two sentences?\n\nOn UB Learns, under Quizzes. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
+    "text": "Exit ticket\n\nA classmate says: “The bug is only squashed in the rivet’s frame. In its own frame it is fine.”\nWhat is wrong with this, in one or two sentences?\n\nOn UB Learns, under Quizzes. Due 11:59 tonight.\nNot graded, ever — I read these to decide what to spend class time on. “I don’t follow this, and here is where I lost it” is a useful answer."
   },
   {
-    "objectID": "Lectures/L10/L10_Twin_Paradox.html#section-1",
-    "href": "Lectures/L10/L10_Twin_Paradox.html#section-1",
-    "title": "The Twin Paradox",
+    "objectID": "Lectures/L10/L10_Paradoxes.html#section-1",
+    "href": "Lectures/L10/L10_Paradoxes.html#section-1",
+    "title": "Paradoxes and Their Resolutions",
     "section": "",
-    "text": "PHY 208 — The Twin Paradox Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
+    "text": "PHY 208 — Paradoxes and Their Resolutions Tim Thomay · University at Buffalo · Fall 2026\nCourse material licensed CC BY-SA 4.0\nImages retain their original licenses — see img/CREDITS.md"
   },
   {
     "objectID": "Lectures/L07/L07_Lorentz_Transformation.html#before-we-start",
@@ -1635,7 +1551,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#before-we-start",
     "title": "The Invariant Interval",
     "section": "Before we start",
-    "text": "Before we start\n\nToday needs a device. One laptop or phone per pair. Sit with your pair now and open this, before the physics starts:\nlaserlab.github.io/phy208/Lectures/L08/interval.html\nNotebook entry due 11:00 Tuesday — today’s demonstration. Prediction written before we run anything, as always.\nMilestone 1 due Fri Oct 2. Prep check 4 due Tue 10:30."
+    "text": "Before we start\n\nToday needs a device. One laptop or phone per pair. Sit with your pair now.\nNotebook entry due 11:00 Tuesday — today’s demonstration. Prediction written before we run anything, as always.\nMilestone 1 due Fri Oct 2. Prep check 4 due Tue 10:30."
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#tuesdays-exit-ticket",
@@ -1761,7 +1677,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#so-somebody-measured-it",
     "title": "The Invariant Interval",
     "section": "So somebody measured it",
-    "text": "So somebody measured it\n\n\n\n\n\n\n\n\n2000 · Wang, Kuzmich & Dogariu\ncaesium vapour, group index \\(n_g = -310\\)\nthe peak leaves early\n\n\n2003 · Stenner, Gauthier & Neifeld\nencoded a real symbol, timed the detector\narrives slightly later than vacuum\n\n\n2011 · Zhang et al., single photons\nthe sharp leading front\nexactly \\(c\\), always\n\n\n\n\nThe envelope can do almost anything. The front cannot — and the front is what carries the news.\n\n\n\nNature 406 277 (2000) · Nature 425 695 (2003) · Phys. Rev. Lett. 106 243602 (2011)"
+    "text": "So somebody measured it\n\n\n\n\n\n\n\n\n\n\nwhat went in\nwhat was timed\nresult\n\n\n\n\n2000 Wang et al.\nsmooth pulse, caesium vapour, gain-assisted anomalous dispersion\nthe envelope peak, \\(n_g = -310\\)\npeak exits before it enters\n\n\n2003 Stenner et al.\none of two waveforms — a real message\nwhen a detector can tell which\nlater than through vacuum\n\n\n2011 Zhang et al.\nsingle photons, step-shaped, cold atoms\nthe precursor, the sharp front\nexactly \\(c\\), always\n\n\n\n\nThe medium never creates that early peak: it rebuilds it from the leading edge already received. The envelope can do almost anything; the front cannot, and the front carries the news.\n\n\n\nNature 406 277 (2000) · Nature 425 695 (2003) · Phys. Rev. Lett. 106 243602 (2011)"
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#even-entanglement-obeys-it",
@@ -1824,7 +1740,7 @@
     "href": "Lectures/L08/L08_Invariant_Interval.html#tuesday",
     "title": "The Invariant Interval",
     "section": "Tuesday",
-    "text": "Tuesday\nSpacetime diagrams\n\n\n\nWhat we get\nthe whole unit as one picture you can draw\n\n\nThe calibration\nthose hyperbolae you traced today become the ruler\n\n\nAlso Tuesday\npresentations round 1 begins\n\n\nPrep check 4\ndue Tue 10:30 — transformation & interval\n\n\nNotebook\ntoday’s demo entry due 11:00 Tuesday"
+    "text": "Tuesday\nSpacetime diagrams\n\n\n\nWhat we get\nthe whole unit as one picture you can draw\n\n\nThe calibration\nthose hyperbolae you traced today become the ruler\n\n\nToday\npresentation topics go out\n\n\nPrep check 4\ndue Tue 10:30 — transformation & interval\n\n\nNotebook\ntoday’s demo entry due 11:00 Tuesday"
   },
   {
     "objectID": "Lectures/L08/L08_Invariant_Interval.html#exit-ticket",
