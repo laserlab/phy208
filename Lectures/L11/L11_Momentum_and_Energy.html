@@ -10,8 +10,8 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Tim Thomay">
-  <meta name="dcterms.date" content="2026-09-24">
-  <title>PHY 208 · General Physics 4 – Paradoxes and Their Resolutions</title>
+  <meta name="dcterms.date" content="2026-09-29">
+  <title>PHY 208 · General Physics 4 – Relativistic Momentum and Energy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -136,8 +136,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Paradoxes and Their Resolutions</h1>
-  <p class="subtitle">PHY 208 · Special Relativity · Lecture 10</p>
+  <h1 class="title">Relativistic Momentum and Energy</h1>
+  <p class="subtitle">PHY 208 · Special Relativity · Lecture 11</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -147,48 +147,22 @@ Tim Thomay
 </div>
 </div>
 
-  <p class="date">2026-09-24</p>
+  <p class="date">2026-09-29</p>
 </section>
 <section id="before-we-start" class="slide level2">
 <h2>Before we start</h2>
 <div class="housekeeping">
-<p><strong>Presentations start today: Michelson, Bradley, Rømer.</strong> 8 minutes each, then 4 of questions.</p>
-<p><strong>One question per presentation</strong> — UB Learns → Discussions → <strong>Audience questions</strong>, posted while they present. Three lowest dropped.</p>
-<p><strong>Notebook entry</strong> from Tuesday’s hyperbola demo due <strong>11:00 today</strong>. <strong>Prep check 5</strong> due <strong>Tue 10:30</strong> — the twin paradox, which we did Tuesday. <strong>Milestone 1</strong> due <strong>Fri Oct 2</strong>.</p>
+<p><strong>Four presentations today: Poincaré, Fizeau, Maxwell, Fresnel.</strong> 12 minutes each. Then <strong>the exam, explained</strong>, then 20 minutes of physics.</p>
+<p><strong>One question per presentation</strong> in that group’s UB Learns topic, posted while they present.</p>
+<p><strong>Prep check 5</strong> closed at 10:30. <strong>Milestone 1</strong> due <strong>Fri Oct 2</strong>, one submission per group. <strong>PS 5</strong> due <strong>Sun Oct 4</strong>. <strong>Exam 1: Tue Oct 6.</strong></p>
+<p>No demonstration this week. The notebook rests until after the exam.</p>
 </div>
 </section>
-<section id="before-you-start-the-four-that-matter" class="slide level2">
-<h2>Before you start: the four that matter</h2>
-<div class="columns">
-<div class="column" style="width:49%;">
-<p><strong>Write the problem at the top</strong>, or someone will ask what we are solving.</p>
-<p><strong>Label the frame of every quantity.</strong> A <span class="math inline">\(t\)</span> with no frame is <span class="wrong">not a time, it is a rumour</span>.</p>
-</div><div class="column" style="width:49%;">
-<div id="807416c9" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-3-output-1.png" width="381" height="225"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>Draw the picture</strong>, label the frames, <strong>mix in words</strong> — and box the result.</p>
-</div></div>
-<div class="keyresult">
-<p>And the one that decides your grade: <strong>know why every step is allowed.</strong> Almost every question is a version of <span class="right"><em>why does that step work?</em></span></p>
-</div>
-</section>
-<section id="round-1-begins" class="slide level2">
-<h2>Round 1 begins</h2>
+<section id="round-1-day-two" class="slide level2">
+<h2>Round 1, day two</h2>
 <div class="activity">
-<p><strong>Three presentations, 12 minutes each.</strong></p>
+<p><strong>Four presentations, 12 minutes each.</strong></p>
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -199,315 +173,59 @@ Tim Thomay
 <tbody>
 <tr class="odd">
 <td><strong>1</strong></td>
-<td>Michelson</td>
-<td>TW 3-12 — the interferometer, worked at the board</td>
+<td>Poincaré</td>
+<td>TW 5-4 — the pole and the barn</td>
 </tr>
 <tr class="even">
 <td><strong>2</strong></td>
-<td>Bradley</td>
-<td>TW 3-9 — stellar aberration</td>
+<td>Fizeau</td>
+<td>TW L-16 — light dragged by moving water</td>
 </tr>
 <tr class="odd">
 <td><strong>3</strong></td>
-<td>Rømer</td>
-<td>TW 3-7 — the moons of Jupiter, and the first speed of light</td>
+<td>Maxwell</td>
+<td>TW 3-6 — down with relativity!</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>Fresnel</td>
+<td>TW L-9 — the headlight effect</td>
 </tr>
 </tbody>
 </table>
-<p>8 minutes at the board, then <strong>4 minutes of questions</strong> — the questions carry the grade.</p>
+<p>8 minutes at the board, then <strong>4 minutes of questions</strong>. The questions carry the grade.</p>
 <p><strong>Everyone else: one question per presentation, in that group’s UB Learns topic.</strong></p>
 </div>
 </section>
-<section id="from-tuesdays-demo-why-doesnt-a-move" class="slide level2">
-<h2>From Tuesday’s demo: “why doesn’t A move?”</h2>
-<div class="notebook">
-<p><strong>The most common note in your demo entries</strong> — and the answer is: it should not. The tool is not broken.</p>
-<div class="columns">
-<div class="column" style="width:48%;">
-<p><strong>There is no such thing as <span class="math inline">\(A'\)</span>.</strong> There is one event A, and two sets of numbers you can attach to it.</p>
-<p>An event does not <em>have</em> coordinates — it is <strong>given</strong> them, by whichever grid you lay over it. The slider changes the grid, so <span class="math inline">\(x'\)</span> and <span class="math inline">\(t'\)</span> change while <span class="right">A stays exactly where it is</span>.</p>
-</div><div class="column" style="width:49%;">
-<div id="6e75e2c1" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-4-output-1.png" width="522" height="291"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<p><strong>Same dot, two readings.</strong> The primes live on the <strong>coordinates</strong>, never on the event: <span class="math inline">\(x'\)</span> and <span class="math inline">\(t'\)</span> yes, <span class="wrong"><span class="math inline">\(A'\)</span> no</span>.</p>
-</div>
+<section id="exam-1-tuesday-october-6" class="slide level2">
+<h2>Exam 1: Tuesday, October 6</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>When</strong></td>
+<td><strong>11:00 to 12:20</strong>, in this room.</td>
+</tr>
+<tr class="even">
+<td><strong>Bring</strong></td>
+<td>a <strong>pencil</strong>, a <strong>ruler</strong>, and <strong>coloured pencils</strong>. A calculator is allowed, but there is nothing on the paper that needs one.</td>
+</tr>
+<tr class="odd">
+<td><strong>Do not bring</strong></td>
+<td>any electronic device. Phones, laptops, watches that measure time dilation.</td>
+</tr>
+<tr class="even">
+<td><strong>The paper</strong></td>
+<td><strong>42 points, four parts.</strong></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="what-a-rotation-keeps-what-a-boost-keeps" class="slide level2">
-<h2>What a rotation keeps, what a boost keeps</h2>
-<div id="242ddc77" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-5-output-1.png" width="806" height="302"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="keyresult">
-<p><strong>Both arrows keep changing their components.</strong> A rotation pins a <strong>sum</strong> and sweeps a circle; a boost pins a <span class="right"><strong>difference</strong></span> and sweeps a hyperbola. One sign, and that is the whole difference between space and spacetime.</p>
-</div>
-</section>
-<section id="section" class="slide level2" data-background-iframe="invariant.html" data-background-interactive="true">
-<h2></h2>
-</section>
-<section id="section-1" class="slide level2" data-background-iframe="minkowski.html" data-background-interactive="true">
-<h2></h2>
-</section>
-<section>
-<section id="one-tool-four-paradoxes" class="title-slide slide level1 center">
-<h1>One tool, four paradoxes</h1>
-<div class="elicit">
-<div class="columns">
-<div class="column" style="width:54%;">
-<p>Tuesday’s twin was resolved by a <strong>bend</strong> in a worldline. You could see it.</p>
-<p>Today: four paradoxes with <strong>no acceleration at all</strong>. Nobody turns around, every observer coasts.</p>
-<p><strong>So what is left to break the symmetry?</strong></p>
-</div><div class="column" style="width:43%;">
-<div id="985e159d" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-6-output-1.png" width="511" height="336"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</div>
-</section>
-<section id="the-pole-and-the-barn-you-already-did-this" class="slide level2">
-<h2>The pole and the barn: you already did this</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>A <strong>20 m</strong> pole runs through a <strong>10 m</strong> barn at <span class="math inline">\(\gamma = 2\)</span>.</p>
-<p><strong>Barn frame</strong> · the pole is 10 m, so it fits, and both doors could shut for an instant. <strong>Pole frame</strong> · the barn is 5 m, so it <span class="wrong">never fits</span>.</p>
-<p>This is the <strong>L06 tunnel</strong>, renamed. You voted on it, and (d) was correct.</p>
-</div><div class="column" style="width:47%;">
-<div id="199b16bf" class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-7-output-1.png" width="522" height="335"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p>“Fits” means <em>both ends inside <strong>at the same time</strong></em>. That is a <span class="right">simultaneity claim</span>, not an event — so frames may disagree, and <span class="right">no door ever touches the pole</span>.</p>
-</div>
-</section>
-<section id="the-rigid-rod-push-one-end" class="slide level2">
-<h2>The rigid rod: push one end</h2>
-<div class="columns">
-<div class="column" style="width:48%;">
-<p>A steel rod, one light-second long. You push the near end.</p>
-<p><strong>When does the far end move?</strong></p>
-<div class="fragment">
-<p>Not immediately, and not at <span class="math inline">\(c\)</span> either. The push travels as a <strong>compression wave</strong>, at the speed of sound in steel — about <span class="math inline">\(5{,}000\)</span> m/s.</p>
-</div>
-</div><div class="column" style="width:49%;">
-<div id="c264edf0" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-8-output-1.png" width="544" height="324"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p>A truly rigid body would move its far end <strong>at the moment</strong> you pushed — <span class="wrong">outside the light cone</span>. So perfectly rigid bodies <span class="right">cannot exist</span>: rigidity is a signal travelling, and signals obey <span class="math inline">\(c\)</span>.</p>
-</div>
-</section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<div class="concept">
-<p>A bug sits at the bottom of a <strong>1 cm</strong> hole. A rivet with a <strong>1 cm</strong> shank falls in at <span class="math inline">\(\gamma = 2\)</span>. Rivet frame: the hole is contracted, the shank reaches. Bug frame: the shank is contracted, it stops short. <strong>The bug is struck either way.</strong></p>
-<h3 id="what-does-the-bugs-frame-say-happened">What does the <em>bug’s</em> frame say happened?</h3>
-<div class="columns">
-<div class="column" style="width:34%;">
-<div id="2a670fd0" class="cell" data-execution_count="8">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-9-output-1.png" width="456" height="214"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:64%;">
-<p><strong>(a)</strong> The hole was shorter than it looked, so the shank reached the bottom after all</p>
-<p><strong>(b)</strong> The bug’s own frame is the one it lives in, so the bug’s account is the correct one</p>
-<p><strong>(c)</strong> The head stopped, but that news could not reach the tip instantly, so the tip kept moving and closed the gap</p>
-<p><strong>(d)</strong> The shank is contracted in flight but springs back to 1 cm the instant it stops</p>
-</div></div>
-</div>
-</section>
-<section id="why-the-bug-is-different" class="slide level2">
-<h2>Why the bug is different</h2>
-<div class="columns">
-<div class="column" style="width:47%;">
-<p>The pole and barn asked <em>“does it fit?”</em> — a statement about <strong>two events at once</strong>, so frames disagree and nothing happens.</p>
-<p>The bug asks <em>“is the bug hit?”</em> — <strong>one event</strong>, at one place. Every frame agrees on that, <span class="right">or the theory is broken</span>.</p>
-</div><div class="column" style="width:50%;">
-<div id="45c504f1" class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-10-output-1.png" width="544" height="324"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p>The head stopping is <strong>news</strong>, and it cannot reach the tip faster than <span class="math inline">\(c\)</span>. The tip is still moving when it arrives at the bug: <span class="right">squashed, in every frame</span>.</p>
-</div>
-</section>
-<section id="the-crossing-point-beats-light" class="slide level2">
-<h2>The crossing point beats light</h2>
-<div class="columns">
-<div class="column" style="width:44%;">
-<p>Two blades meet at angle <span class="math inline">\(\theta\)</span>. Close them at speed <span class="math inline">\(u\)</span> and the <strong>crossing point</strong> runs out at <span class="math inline">\(v = u/\tan\theta\)</span> — which grows <span class="wrong">without any limit</span> as <span class="math inline">\(\theta\to0\)</span>, including past <span class="math inline">\(c\)</span>.</p>
-<div class="fragment">
-<p><strong>Easier to build:</strong> sweep a laser across the Moon. Move your arm at a lazy <strong>60°/s</strong> and the spot crosses at <span class="wrong"><strong>1.3 c</strong></span>.</p>
-</div>
-</div><div class="column" style="width:53%;">
-<div id="928cf4c7" class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-11-output-1.png" width="566" height="268"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p><strong>Nothing is wrong.</strong> No atom moves that fast, and the crossing point <span class="wrong">carries no message</span> — it is a coincidence of two edges, not a thing.</p>
-</div>
-</section>
-<section id="someone-measured-it-m87" class="slide level2">
-<h2>Someone measured it: M87</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>M87</strong> is the giant galaxy at the centre of the Virgo cluster, <strong>54 million light-years</strong> away. Its core holds a black hole of <strong>6.5 billion solar masses</strong> — the one the Event Horizon Telescope photographed in 2019.</p>
-<p>Out of that core comes a <strong>jet</strong> of plasma 5000 light-years long, glowing where electrons spiral through its magnetic field.</p>
-<div class="fragment">
-<p>Hubble has tracked the bright <strong>knots</strong> in this jet since 1994. Year by year they cross the sky at an apparent <span class="wrong"><strong>4 to 6 times <span class="math inline">\(c\)</span></strong></span>.</p>
-</div>
-</div><div class="column" style="width:47%;">
-<p><img data-src="img/m87_jet.jpg" class="photo" alt="Hubble Space Telescope image of the galaxy M87: a bright yellow core at lower right with a narrow blue jet of plasma streaming toward the upper left, dotted with bright knots." width="400"></p>
-</div></div>
-</section>
-<section id="the-same-jet-at-three-scales" class="slide level2">
-<h2>The same jet at three scales</h2>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img data-src="img/m87_three_scales.jpg" class="photo" alt="Three-panel composite of the M87 jet: a VLA radio image of the 4000-light-year lobes, a Hubble visible-light image of the 2000-light-year jet with its knots, and a VLBA radio close-up of the innermost 0.1 light-year near the black hole." width="560"></p>
-</div><div class="column" style="width:40%;">
-<div id="335a3d9f" class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-12-output-1.png" width="457" height="324"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<p>Radio sees the <strong>lobes</strong>, thousands of light-years across. Hubble sees the optical jet and its knots. The VLBA radio array resolves the innermost <strong>0.1 light-year</strong>, a few hundred black-hole diameters from the centre.</p>
-</section>
-<section id="seven-years-of-hubble-frames" class="slide level2">
-<h2>Seven years of Hubble frames</h2>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img data-src="img/m87_hst1_frames.jpg" class="photo" style="max-height:70vh" alt="Six Hubble ultraviolet frames of the M87 nucleus from May 1999 to November 2006. The nucleus is the bright blob at lower left of each frame; the knot HST-1 just to its right drifts outward frame by frame and flares brightly in 2005." width="700"></p>
-</div><div class="column" style="width:39%;">
-<p>Same field, <strong>1999 to 2006</strong>, in ultraviolet so the starlight is gone. The bright blob at lower left is the <strong>nucleus</strong>. The smaller one beside it is the knot <strong>HST-1</strong>, about 200 light-years out.</p>
-<div class="fragment">
-<p>Frame by frame it pulls away to the right, and flares in 2005. In seven years it moves about <strong>a tenth of an arcsecond</strong>: some 25 light-years, so roughly <span class="wrong"><strong>4 c</strong></span> across the sky.</p>
-</div>
-</div></div>
-</section>
-<section id="why-the-sky-lies-light-that-nearly-keeps-up" class="slide level2">
-<h2>Why the sky lies: light that nearly keeps up</h2>
-<p>The knot runs at <span class="math inline">\(0.99c\)</span> <strong>almost straight at us</strong>. A flash sent a year later has nearly a light-year <strong>less</strong> to travel — two flashes, weeks apart on arrival.</p>
-<div class="columns">
-<div class="column" style="width:47%;">
-<div id="b7e8c35e" class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-13-output-1.png" width="500" height="220"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:51%;">
-<div id="d6f58626" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-14-output-1.png" width="523" height="241"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p><span class="math inline">\(v_\text{app} = \beta\sin\theta\,/\,(1-\beta\cos\theta)\;c\)</span> — at <span class="math inline">\(0.99c\)</span> and <span class="math inline">\(15°\)</span> that is <span class="wrong"><strong>5.9 c</strong></span>. Nothing in the jet exceeds <span class="math inline">\(c\)</span>; the <span class="right"><strong>arrival times</strong></span> are squeezed. The scissors, written across the sky.</p>
-</div>
-</section>
-<section id="a-short-history-of-paradoxes" class="slide level2">
-<h2>A short history of paradoxes</h2>
-<p>Before 1905 physics had <strong>puzzles</strong>: Olbers’ dark night sky (1823), Gibbs’ mixing entropy (1875). Each dissolved once the missing physics was found. From 1905 on a new kind appears: two observers, <span class="right">both right</span>, telling different stories.</p>
-<div id="912d602f" class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-15-output-1.png" width="1235" height="445"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="why-only-here-and-in-quantum-mechanics" class="slide level2">
-<h2>Why only here, and in quantum mechanics</h2>
-<div class="columns">
-<div class="column" style="width:52%;">
-<p>Newton has puzzles, not paradoxes: you can be <strong>wrong</strong>, but no two Newtonian observers ever contradict each other.</p>
-<p><strong>Relativity is different.</strong> Two correct observers genuinely disagree, and where that looks like a contradiction you get a paradox.</p>
-<div class="fragment">
-<p><strong>Quantum mechanics has the same shape</strong> — the cat, EPR, measurement. Two correct descriptions, sitting uneasily together.</p>
-</div>
-</div><div class="column" style="width:45%;">
-<div id="3320f122" class="cell" data-execution_count="15">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="L10_Paradoxes_files/figure-revealjs/cell-16-output-1.png" width="500" height="246"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<div class="keyresult">
-<p>A paradox is not a flaw. It marks a theory where <span class="right">more than one description can be right at once</span> — and physics has only two.</p>
-</div>
-</section>
-<section id="the-one-question-to-ask" class="slide level2">
-<h2>The one question to ask</h2>
+<section id="what-the-four-parts-are" class="slide level2">
+<h2>What the four parts are</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -516,62 +234,244 @@ Tim Thomay
 </colgroup>
 <thead>
 <tr class="header">
-<th>ask this</th>
-<th>if the answer is</th>
-<th>then</th>
+<th>part</th>
+<th>what</th>
+<th>practise with</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Is the disputed thing <strong>one event</strong>?</td>
-<td>yes</td>
-<td><span class="right">every frame agrees it happens</span></td>
+<td><strong>A</strong></td>
+<td>general questions on special relativity</td>
+<td>the lecture, the textbook</td>
 </tr>
 <tr class="even">
-<td>Does the claim contain <em>“at the same time”</em>?</td>
-<td>yes</td>
-<td><span class="wrong">frames may disagree, and nothing breaks</span></td>
+<td><strong>B</strong></td>
+<td>problems</td>
+<td>the concept questions since L05</td>
 </tr>
 <tr class="odd">
-<td>Does it need a signal to arrive?</td>
-<td>yes</td>
-<td>it travels at <span class="math inline">\(c\)</span> or slower, <span class="right">never instantly</span></td>
+<td><strong>C</strong></td>
+<td>problems, <strong>drawn</strong> on spacetime grids</td>
+<td>the pair activities</td>
 </tr>
 <tr class="even">
-<td>Is the fast thing <strong>a thing</strong>?</td>
-<td>no</td>
-<td>then it may exceed <span class="math inline">\(c\)</span> — it carries nothing</td>
+<td><strong>D</strong></td>
+<td>out-of-the-box questions</td>
+<td>nothing. Think.</td>
 </tr>
 </tbody>
 </table>
 <div class="keyresult">
-<p>Every paradox in special relativity is one of these, and none is a contradiction. They are <span class="wrong">places where Newtonian habits are still running</span> — absolute simultaneity, or infinite signal speed.</p>
+<p><strong>Drawing over calculation.</strong> Thursday is a pair run of Part C with fresh numbers. Bring a ruler.</p>
 </div>
 </section>
-<section id="tuesday" class="slide level2">
-<h2>Tuesday</h2>
-<h3 id="relativistic-momentum-and-energy">Relativistic momentum and energy</h3>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="concept">
+<p>A photon has no mass and moves at the speed of light. Sunlight, all the same, pushes a sail.</p>
+<h3 id="what-is-the-kinetic-energy-of-a-photon">What is the kinetic energy of a photon?</h3>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><strong>(a)</strong> Zero: kinetic energy is one half of mass times speed squared, and a photon has no mass</p>
+<p><strong>(b)</strong> Infinite: it moves at the speed of light, so the factor gamma is infinite</p>
+<p><strong>(c)</strong> It carries energy, but not kinetic energy; light energy is a different kind of energy</p>
+<p><strong>(d)</strong> All of it: a photon is nothing but motion, so every bit of energy it carries is kinetic</p>
+</div><div class="column" style="width:40%;">
+<div id="b6656c56" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-3-output-1.png" width="343" height="258"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<section id="before-trusting-newton-on-a-photon-test-him-on-clay" class="slide level2">
+<h2>Before trusting Newton on a photon, test him on clay</h2>
+<div class="elicit">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Two identical lumps of clay meet head-on at <span class="math inline">\(0.6c\)</span> and stick. In the lab the total momentum is <strong>zero</strong> before and after.</p>
+<p>Now watch from the frame of the <strong>right-hand lump</strong>.</p>
+<div class="fragment">
+<p>Newton’s <span class="math inline">\(\sum m\vec v\)</span>: before <span class="math inline">\(-0.88\,m\)</span>, after <span class="math inline">\(-1.20\,m\)</span>. <span class="wrong">Not conserved.</span> Same events, other frame, broken bookkeeping.</p>
+</div>
+<div class="fragment">
+<p><strong>For the photon:</strong> Newton’s formulas are <strong>low-speed</strong>, and a photon is never at low speed. So <span class="math inline">\(\tfrac12 mv^{2}\)</span> was never the formula to ask.</p>
+</div>
+</div><div class="column" style="width:47%;">
+<div id="1b6c4253" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-4-output-1.png" width="511" height="291"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<section id="divide-by-the-right-clock" class="slide level2">
+<h2>Divide by the right clock</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>Newton: <span class="math inline">\(\;p = m\,\Delta x/\Delta t\)</span>. Whose <span class="math inline">\(\Delta t\)</span>? The lab’s: a frame-dependent length over a <span class="wrong">frame-dependent time</span>.</p>
+<div class="fragment">
+<p>Use the one clock every frame agrees about, <strong>the particle’s own</strong> <span class="math inline">\(\Delta\tau\)</span>:</p>
+<p><span class="math display">\[p = m\,\frac{\Delta x}{\Delta\tau} = m\,\frac{\Delta x}{\Delta t}\,\frac{\Delta t}{\Delta\tau} = \gamma\, m\, v\]</span></p>
+</div>
+</div><div class="column" style="width:49%;">
+<div id="69ab33bb" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-5-output-1.png" width="521" height="291"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="keyresult">
+<p><span class="math inline">\(p = \gamma m v\)</span>. The speed saturates at <span class="math inline">\(c\)</span>; the momentum <span class="right">does not</span>.</p>
+</div>
+<div class="fragment">
+<p><strong>For the photon:</strong> <span class="wrong">no clock of its own</span>, no <span class="math inline">\(\Delta\tau\)</span>, so this route cannot start. We need a formula that never divides by its clock.</p>
+</div>
+</section>
+<section id="kinetic-energy-is-what-is-left-after-the-rest-energy" class="slide level2">
+<h2>Kinetic energy is what is left after the rest energy</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>A displacement in spacetime has a <strong>time component</strong> too. Divide it by the same clock: <span class="math inline">\(\;m\,\dfrac{c\,\Delta t}{\Delta\tau} = \gamma m c\)</span>.</p>
+<div class="fragment">
+<p>Times <span class="math inline">\(c\)</span>, and <span class="math inline">\(\gamma\)</span> expanded for small <span class="math inline">\(v\)</span>:</p>
+<p><span class="math display">\[E = \gamma m c^{2} = m c^{2} + \tfrac12 m v^{2} + \dots\]</span></p>
+</div>
+</div><div class="column" style="width:49%;">
+<div id="5c00ee36" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-6-output-1.png" width="521" height="214"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="keyresult">
+<p><span class="math inline">\(E = \gamma m c^{2}\)</span>. At rest <span class="math inline">\(E = mc^{2}\)</span>, the <strong>rest energy</strong>; Newton’s <span class="math inline">\(\tfrac12 mv^{2}\)</span> is only the next term. Kinetic energy is <span class="right">everything above the rest energy</span>: <span class="math inline">\(E - mc^{2}\)</span>.</p>
+</div>
+<div class="fragment">
+<p><strong>For the photon:</strong> kinetic energy is <span class="math inline">\(E - mc^{2}\)</span>, so the question is now sharp: <strong>what is a photon’s <span class="math inline">\(mc^{2}\)</span>?</strong></p>
+</div>
+</section>
+<section id="mass-is-the-length-of-the-arrow" class="slide level2">
+<h2>Mass is the length of the arrow</h2>
+<div class="columns">
+<div class="column" style="width:46%;">
+<p>The two components make one arrow, Taylor and Wheeler’s <strong>momenergy</strong>, <span class="math inline">\((E,\ pc)\)</span>. Its invariant, like <span class="math inline">\(\Delta s^{2}\)</span> for a displacement:</p>
+<p><span class="math display">\[E^{2} - (pc)^{2} = (mc^{2})^{2}\]</span></p>
+</div><div class="column" style="width:51%;">
+<div id="502b7441" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-7-output-1.png" width="311" height="198"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="keyresult">
+<p><strong>Mass is the invariant length of the momenergy arrow</strong>, <span class="wrong">not something that grows with speed</span>. <span class="math inline">\(E\)</span> and <span class="math inline">\(p\)</span> grow; <span class="math inline">\(\gamma m\)</span> is a component, not a mass.</p>
+</div>
+<div class="fragment">
+<p><strong>For the photon:</strong> only <span class="math inline">\(E\)</span> and <span class="math inline">\(p\)</span> needed, no clock. One fact left: <strong>its length.</strong></p>
+</div>
+</section>
+<section id="the-photon-zero-length-so-all-of-it-is-kinetic" class="slide level2">
+<h2>The photon: zero length, so all of it is kinetic</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>photon</th>
+<th>massive particle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>speed</td>
+<td><span class="math inline">\(c\)</span>, always</td>
+<td>anything <strong>but</strong> <span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="even">
+<td>rest frame</td>
+<td>none</td>
+<td>one</td>
+</tr>
+<tr class="odd">
+<td>needs <span class="math inline">\(\gamma\)</span></td>
+<td>no</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E\)</span> and <span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(E = pc\)</span></td>
+<td><span class="math inline">\(E^{2} = (pc)^{2} + (mc^{2})^{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:47%;">
+<div id="a2b99592" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="L11_Momentum_and_Energy_files/figure-revealjs/cell-8-output-1.png" width="266" height="203"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="keyresult">
+<p><strong>The opening question:</strong> <span class="math inline">\(m = 0\)</span>, nothing to subtract, so the kinetic energy is <span class="right">all of it</span>: <span class="math inline">\(E = pc\)</span>. The arrow lies <strong>on the light cone</strong>, zero length, not zero arrow. Light is the <strong>simple</strong> case.</p>
+</div>
+</section>
+<section id="thursday" class="slide level2">
+<h2>Thursday</h2>
+<h3 id="mass-and-energy-in-the-world-and-the-review">Mass and energy in the world, and the review</h3>
 <table class="caption-top">
 <tbody>
 <tr class="odd">
 <td><strong>Presentations</strong></td>
-<td>four groups — Poincaré, Fizeau, Maxwell, Fresnel</td>
+<td>four groups — Foucault, Young, Kennedy, Lorentz</td>
 </tr>
 <tr class="even">
-<td>The problem</td>
-<td><span class="math inline">\(\sum m\vec{v}\)</span> cannot be conserved in every frame</td>
+<td>Where <span class="math inline">\(E = mc^{2}\)</span> bites</td>
+<td>the nucleus, the Sun, a PET scanner</td>
 </tr>
 <tr class="odd">
-<td>What replaces it</td>
-<td>and where <span class="math inline">\(E = \gamma mc^{2}\)</span> comes from</td>
+<td>The review</td>
+<td>Part C with fresh numbers, in pairs; a Part-A drill</td>
+</tr>
+<tr class="even">
+<td>Milestone 1</td>
+<td>due <strong>Fri Oct 2</strong>, one submission per group</td>
+</tr>
+<tr class="odd">
+<td>PS 5</td>
+<td>due <strong>Sun Oct 4</strong></td>
 </tr>
 <tr class="even">
 <td>Prep check 6</td>
-<td>due <strong>Tue Oct 6 10:30</strong> — momentum, energy, LIGO</td>
-</tr>
-<tr class="odd">
-<td>PS 4</td>
-<td>due <strong>Sun Sep 27</strong></td>
+<td>due <strong>Tue Oct 6, 10:30</strong>, the morning of the exam</td>
 </tr>
 </tbody>
 </table>
@@ -579,22 +479,22 @@ Tim Thomay
 <section id="one-to-leave-with" class="slide level2">
 <h2>One to leave with</h2>
 <div class="concept">
-<p>A classmate says: <em>“The bug is only squashed in the rivet’s frame. In its own frame it is fine.”</em></p>
+<p>A classmate says: <em>“Nothing goes faster than light, so there has to be a maximum momentum as well.”</em></p>
 <h3 id="what-is-wrong-with-this">What is wrong with this?</h3>
 </div>
 <p><em>Asked aloud — nothing to submit tonight.</em></p>
 <div class="fragment">
-<p>Being squashed is an <strong>event</strong>. Every frame agrees it happens — they differ only in the <span class="right">description</span>, never in <span class="wrong">whether</span>.</p>
+<p><span class="math inline">\(p = \gamma m v\)</span>. The <strong>speed</strong> saturates at <span class="math inline">\(c\)</span>; <span class="math inline">\(\gamma\)</span> <span class="right">does not</span>. Push harder and the momentum keeps growing, the speed barely moves. That is what the LHC’s magnets are for.</p>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
-<p><strong>PHY 208 — Paradoxes and Their Resolutions</strong> Tim Thomay · University at Buffalo · Fall 2026</p>
+<p><strong>PHY 208 — Relativistic Momentum and Energy</strong> Tim Thomay · University at Buffalo · Fall 2026</p>
 <p>Course material licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p>Images retain their original licenses — see <code>img/CREDITS.md</code></p>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

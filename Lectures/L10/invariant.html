@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Stays the Same — PHY 208</title>
+<style>
+  :root{ --bg:#0d1620; --panel:#152131; --ink:#e8eaf0; --muted:#98a0b3;
+         --line:#24354a; --accent:#6cb8f5; --x:#ff7a8a; --y:#6cb8f5;
+         --keep:#5fbf85; }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{background:var(--bg);color:var(--ink);height:100vh;height:100dvh;
+       display:flex;flex-direction:column;overflow:hidden;
+       font:16px/1.5 "Helvetica Neue",-apple-system,BlinkMacSystemFont,sans-serif}
+  header{padding:10px 20px;border-bottom:1px solid var(--line);
+         border-top:4px solid #005bbb;flex:none}
+  h1{margin:0;font-size:18px;font-weight:600}
+  header p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;flex:1;
+        min-height:0;overflow:hidden}
+  @media(max-width:900px){.wrap{grid-template-columns:1fr}}
+  .stage{padding:12px;display:flex;align-items:center;justify-content:center;
+         min-width:0;min-height:0}
+  svg{width:auto;height:100%;max-width:100%}
+  .panel{background:var(--panel);border-left:1px solid var(--line);padding:16px;
+         display:flex;flex-direction:column;gap:14px;overflow-y:auto}
+  .modes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  button{background:#1c2c3f;color:var(--ink);border:1px solid var(--line);
+         border-radius:7px;padding:9px;font-size:13.5px;cursor:pointer}
+  button.on{background:var(--accent);color:#0d1620;border-color:var(--accent);
+            font-weight:700}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;
+        text-transform:uppercase;letter-spacing:.05em}
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  td{padding:7px 4px;border-bottom:1px solid var(--line);font-size:15px}
+  td.lab{color:var(--muted);font-size:13px}
+  td.num{text-align:right;font-weight:700}
+  .keep{background:rgba(95,191,133,.13);border:1px solid var(--keep);
+        border-radius:8px;padding:11px;margin-top:2px}
+  .keep .big{font-size:25px;font-weight:700;color:var(--keep);
+             font-variant-numeric:tabular-nums}
+  .keep .cap{font-size:12px;color:var(--muted);margin-top:2px}
+  .note{font-size:12.5px;color:var(--muted);line-height:1.45}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="ttl">Rotating in space</h1>
+  <p id="sub">Turn the axes. Both coordinates change. Watch the bottom box.</p>
+</header>
+<div class="wrap">
+  <div class="stage"><svg id="s" viewBox="0 0 560 560" role="img"
+       aria-label="A fixed point with rotating or boosted axes, and its coordinates."></svg></div>
+  <div class="panel">
+    <div class="modes">
+      <button id="mRot" class="on">Rotation</button>
+      <button id="mBoost">Boost</button>
+    </div>
+    <button id="tGrid" class="on">Grid</button>
+    <button id="tTrace">Plot the readings on the fixed grid</button>
+    <div>
+      <label id="slab">Angle <span id="sval">0°</span></label>
+      <input type="range" id="sl" min="0" max="90" step="1" value="0">
+    </div>
+    <table>
+      <tr><td class="lab" id="l1">x′</td><td class="num" id="v1">2.00</td>
+          <td class="lab" id="l1s">x′²</td><td class="num" id="v1s">4.00</td></tr>
+      <tr><td class="lab" id="l2">y′</td><td class="num" id="v2">1.90</td>
+          <td class="lab" id="l2s">y′²</td><td class="num" id="v2s">3.61</td></tr>
+    </table>
+    <div class="keep">
+      <div class="big" id="inv">7.61</div>
+      <div class="cap" id="invlab">x′² + y′²  — never changes</div>
+    </div>
+    <p class="note" id="note">Both coordinates move as you turn the axes. Their
+      <b>sum of squares</b> does not: that is the length of the arrow, and
+      turning your head does not change how long a stick is.</p>
+  </div>
+</div>
+<script>
+(function(){
+  // P sits at exactly 30 deg, r = 2.5, so the slider CAN put it on an
+// axis: y' = 0 at 30 deg, and ct' = 0 at 0.58c. Integer steps would
+// otherwise never reach the aligned case.
+var P = {x:2.1651, y:1.25}, mode='rot', t=0, trace=false, grid=true;
+  var S=document.getElementById('s'), W=560, R=3.2, C=W/2, K=(W/2-40)/R;
+  var $=function(i){return document.getElementById(i);};
+  var Xc=function(u){return C+u*K;}, Yc=function(v){return C-v*K;};
+  function el(n,a){var e=document.createElementNS('http://www.w3.org/2000/svg',n);
+    for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function ln(x1,y1,x2,y2,c,w,d,o){var e=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,
+    stroke:c,'stroke-width':w||1.5});if(d)e.setAttribute('stroke-dasharray',d);
+    if(o)e.setAttribute('opacity',o);return e;}
+  function tx(x,y,s,c,sz){var e=el('text',{x:x,y:y,fill:c,'font-size':sz||13,
+    'font-family':'inherit'});e.textContent=s;return e;}
+
+  function draw(){
+    var out=[], a, xp, yp, inv, lab1, lab2, invlab;
+    S.innerHTML='';
+    // Fixed unit grid first, so everything else sits on top of it.
+    if(grid){
+      for(var gi=-3;gi<=3;gi++){
+        if(!gi) continue;
+        S.appendChild(ln(Xc(gi),Yc(-R),Xc(gi),Yc(R),'#243449',1,'',1));
+        S.appendChild(ln(Xc(-R),Yc(gi),Xc(R),Yc(gi),'#243449',1,'',1));
+      }
+      for(var gi=-3;gi<=3;gi++){
+        if(!gi) continue;
+        S.appendChild(tx(Xc(gi)-4,Yc(0)+16,String(gi),'#5a6b82',11));
+        S.appendChild(tx(Xc(0)+7,Yc(gi)+4,String(gi),'#5a6b82',11));
+      }
+    }
+    // fixed grey axes
+    S.appendChild(ln(Xc(-R),Yc(0),Xc(R),Yc(0),'#4a5568',1.4));
+    S.appendChild(ln(Xc(0),Yc(-R),Xc(0),Yc(R),'#4a5568',1.4));
+
+    if(mode==='rot'){
+      a = t*Math.PI/180;
+      xp =  P.x*Math.cos(a) + P.y*Math.sin(a);
+      yp = -P.x*Math.sin(a) + P.y*Math.cos(a);
+      inv = xp*xp + yp*yp;
+      // the circle of constant length
+      var r=Math.sqrt(P.x*P.x+P.y*P.y);
+      S.appendChild(el('circle',{cx:Xc(0),cy:Yc(0),r:r*K,fill:'none',
+        stroke:'var(--keep)','stroke-width':1.6,opacity:.45}));
+      // rotated axes
+      // Axis DIRECTIONS are the columns of the inverse rotation, not
+      // the rows of the forward one. Getting this backwards mirrors the
+      // x' axis and P then appears to miss it at the aligned angle.
+      var ux=[Math.cos(a),Math.sin(a)], uy=[-Math.sin(a),Math.cos(a)];
+      S.appendChild(ln(Xc(-R*ux[0]),Yc(-R*ux[1]),Xc(R*ux[0]),Yc(R*ux[1]),
+        'var(--x)',2));
+      S.appendChild(ln(Xc(-R*uy[0]),Yc(-R*uy[1]),Xc(R*uy[0]),Yc(R*uy[1]),
+        'var(--y)',2));
+      if(grid){
+        for(var gi=-3;gi<=3;gi++){
+          if(!gi) continue;
+          // line of constant x' : P = gi*ux + s*uy
+          S.appendChild(ln(Xc(gi*ux[0]-R*uy[0]),Yc(gi*ux[1]-R*uy[1]),
+                           Xc(gi*ux[0]+R*uy[0]),Yc(gi*ux[1]+R*uy[1]),
+                           'var(--x)',0.8,'',0.28));
+          S.appendChild(ln(Xc(gi*uy[0]-R*ux[0]),Yc(gi*uy[1]-R*ux[1]),
+                           Xc(gi*uy[0]+R*ux[0]),Yc(gi*uy[1]+R*ux[1]),
+                           'var(--y)',0.8,'',0.28));
+        }
+      }
+      S.appendChild(tx(Xc(R*ux[0])-16,Yc(R*ux[1])-8,"x′",'var(--x)',16));
+      S.appendChild(tx(Xc(R*uy[0])+6,Yc(R*uy[1])+14,"y′",'var(--y)',16));
+      // drop the point onto each rotated axis
+      var fx=[xp*ux[0],xp*ux[1]], fy=[yp*uy[0],yp*uy[1]];
+      S.appendChild(ln(Xc(P.x),Yc(P.y),Xc(fx[0]),Yc(fx[1]),'var(--x)',1.3,'4 4',.85));
+      S.appendChild(ln(Xc(P.x),Yc(P.y),Xc(fy[0]),Yc(fy[1]),'var(--y)',1.3,'4 4',.85));
+      S.appendChild(el('circle',{cx:Xc(fx[0]),cy:Yc(fx[1]),r:5,fill:'var(--x)'}));
+      S.appendChild(el('circle',{cx:Xc(fy[0]),cy:Yc(fy[1]),r:5,fill:'var(--y)'}));
+      lab1="x′"; lab2="y′"; invlab="x′² + y′²  — never changes";
+    } else {
+      var b = t/100;
+      var g = 1/Math.sqrt(1-b*b);
+      xp = g*(P.x - b*P.y);
+      yp = g*(P.y - b*P.x);
+      inv = yp*yp - xp*xp;
+      // the hyperbola of constant interval
+      var s2=P.y*P.y-P.x*P.x, q=Math.sqrt(Math.abs(s2)), d='';
+      for(var i=0;i<=160;i++){
+        var w=-3.0+i*(6.0/160);
+        var hx=(s2>0)?q*Math.sinh(w):q*Math.cosh(w);
+        var hy=(s2>0)?q*Math.cosh(w):q*Math.sinh(w);
+        if(Math.abs(hx)<R&&Math.abs(hy)<R) d+=(d?' L ':'M ')+Xc(hx)+' '+Yc(hy);
+      }
+      if(d) S.appendChild(el('path',{d:d,fill:'none',stroke:'var(--keep)',
+        'stroke-width':1.6,opacity:.45}));
+      // light cone
+      S.appendChild(ln(Xc(0),Yc(0),Xc(R),Yc(R),'#e8a33d',1.4,'5 4',.7));
+      S.appendChild(ln(Xc(0),Yc(0),Xc(-R),Yc(R),'#e8a33d',1.4,'5 4',.7));
+      // tilted axes
+      S.appendChild(ln(Xc(-R*b),Yc(-R),Xc(R*b),Yc(R),'var(--y)',2));
+      S.appendChild(ln(Xc(-R),Yc(-R*b),Xc(R),Yc(R*b),'var(--x)',2));
+      if(grid){
+        for(var gi=-3;gi<=3;gi++){
+          if(!gi) continue;
+          var gg2=1/Math.sqrt(1-b*b);
+          // constant ct' : ct = b*x + gi/gg2 ; constant x' : ct = (x - gi/gg2)/b
+          var c0=gi/gg2;
+          S.appendChild(ln(Xc(-R),Yc(b*(-R)+c0),Xc(R),Yc(b*R+c0),
+                           'var(--y)',0.8,'',0.28));
+          S.appendChild(ln(Xc(-R*b+c0),Yc(-R),Xc(R*b+c0),Yc(R),
+                           'var(--x)',0.8,'',0.28));
+        }
+      }
+      S.appendChild(tx(Xc(R*b)+6,Yc(R)+16,"ct′",'var(--y)',16));
+      S.appendChild(tx(Xc(R)-20,Yc(R*b)-8,"x′",'var(--x)',16));
+      var ft=[g*b*yp,g*yp], fx2=[g*xp,g*b*xp];
+      S.appendChild(ln(Xc(P.x),Yc(P.y),Xc(ft[0]),Yc(ft[1]),'var(--y)',1.3,'4 4',.85));
+      S.appendChild(ln(Xc(P.x),Yc(P.y),Xc(fx2[0]),Yc(fx2[1]),'var(--x)',1.3,'4 4',.85));
+      S.appendChild(el('circle',{cx:Xc(ft[0]),cy:Yc(ft[1]),r:5,fill:'var(--y)'}));
+      S.appendChild(el('circle',{cx:Xc(fx2[0]),cy:Yc(fx2[1]),r:5,fill:'var(--x)'}));
+      lab1="x′"; lab2="ct′"; invlab="ct′² − x′²  — never changes";
+    }
+    // The READINGS, plotted as a pair on the fixed grid. This is the thing
+    // that actually travels along the green curve -- not the point, which
+    // never moves. Labelled as numbers, because there is no second point.
+    if(trace){
+      var tr='', N=60, lim=(mode==='rot')?t:t;
+      for(var j=0;j<=N;j++){
+        var u=lim*j/N, ax, ay;
+        if(mode==='rot'){
+          var aa=u*Math.PI/180;
+          ax= P.x*Math.cos(aa)+P.y*Math.sin(aa);
+          ay=-P.x*Math.sin(aa)+P.y*Math.cos(aa);
+        } else {
+          var bb=u/100, gg=1/Math.sqrt(1-bb*bb);
+          ax=gg*(P.x-bb*P.y); ay=gg*(P.y-bb*P.x);
+        }
+        tr+=(tr?' L ':'M ')+Xc(ax)+' '+Yc(ay);
+      }
+      if(tr) S.appendChild(el('path',{d:tr,fill:'none',stroke:'#ffd166',
+        'stroke-width':3,opacity:.9}));
+      S.appendChild(el('circle',{cx:Xc(xp),cy:Yc(yp),r:7,fill:'none',
+        stroke:'#ffd166','stroke-width':3}));
+      S.appendChild(tx(Xc(xp)+12,Yc(yp)+20,
+        '('+xp.toFixed(2)+', '+yp.toFixed(2)+')','#ffd166',13));
+      S.appendChild(tx(Xc(xp)+12,Yc(yp)+36,'the readings, not a point',
+        '#ffd166',11));
+    }
+    // the fixed point, drawn last
+    S.appendChild(ln(Xc(0),Yc(0),Xc(P.x),Yc(P.y),'#e8eaf0',2.4));
+    S.appendChild(el('circle',{cx:Xc(P.x),cy:Yc(P.y),r:8,fill:'var(--keep)',
+      stroke:'#0d1620','stroke-width':2}));
+    S.appendChild(tx(Xc(P.x)+13,Yc(P.y)-10,'P','#e8eaf0',17));
+
+    $('v1').textContent=xp.toFixed(2);  $('v1s').textContent=(xp*xp).toFixed(2);
+    $('v2').textContent=yp.toFixed(2);  $('v2s').textContent=(yp*yp).toFixed(2);
+    $('l1').textContent=lab1;           $('l1s').textContent=lab1+'²';
+    $('l2').textContent=lab2;           $('l2s').textContent=lab2+'²';
+    // Flag the moment an axis reading hits zero: the point lies ON that axis.
+    var zero = (Math.abs(yp)<0.005) ? lab2 : (Math.abs(xp)<0.005 ? lab1 : null);
+    if(zero) S.appendChild(tx(Xc(-R)+10,Yc(R)-6,
+      'P lies on the other axis: '+zero+' = 0','#ffd166',15));
+    $('inv').textContent=(inv>=0?'':'−')+Math.abs(inv).toFixed(2);
+    $('invlab').textContent=invlab;
+  }
+
+  function setMode(m){
+    mode=m; t=0;
+    $('mRot').classList.toggle('on',m==='rot');
+    $('mBoost').classList.toggle('on',m==='boost');
+    var sl=$('sl');
+    if(m==='rot'){ sl.min=0; sl.max=90; sl.step=0.5; sl.value=0;
+      $('slab').innerHTML='Angle <span id="sval">0°</span>';
+      $('ttl').textContent='Rotating in space';
+      $('sub').textContent='Turn the axes. Both coordinates change. Watch the bottom box.';
+      $('note').innerHTML='Both coordinates move as you turn the axes. Their <b>sum of squares</b> does not: that is the length of the arrow, and turning your head does not change how long a stick is.';
+    } else { sl.min=0; sl.max=95; sl.step=0.5; sl.value=0;
+      $('slab').innerHTML='Speed <span id="sval">0.00c</span>';
+      $('ttl').textContent='Boosting in spacetime';
+      $('sub').textContent='Same story, one sign flipped. Watch the bottom box.';
+      $('note').innerHTML='Both coordinates move as you change frame. Their <b>difference of squares</b> does not. A sum would be a distance and could never be negative; this one can, and the sign says whether the events can be causally connected.';
+    }
+    draw(); updLab();
+  }
+  function updLab(){
+    $('sval') && ($('sval').textContent = mode==='rot'
+      ? t.toFixed(0)+'°' : (t/100).toFixed(2)+'c');
+  }
+  $('sl').addEventListener('input',function(){ t=+this.value; draw(); updLab(); });
+  $('tGrid').addEventListener('click',function(){
+    grid=!grid; this.classList.toggle('on',grid); draw(); });
+  $('tTrace').addEventListener('click',function(){
+    trace=!trace; this.classList.toggle('on',trace); draw(); });
+  $('mRot').addEventListener('click',function(){setMode('rot');});
+  $('mBoost').addEventListener('click',function(){setMode('boost');});
+  setMode('rot');
+})();
+</script>
+</body>
+</html>
